@@ -15,6 +15,7 @@
 		813DF6C51DBECA9C00D2E0D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 813DF6C31DBECA9C00D2E0D9 /* LaunchScreen.storyboard */; };
 		813DF6D01DBECA9C00D2E0D9 /* EasyEventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DF6CF1DBECA9C00D2E0D9 /* EasyEventsTests.swift */; };
 		813DF6DB1DBECA9C00D2E0D9 /* EasyEventsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DF6DA1DBECA9C00D2E0D9 /* EasyEventsUITests.swift */; };
+		B5C042D51DBECEAA00DEB06B /* EventChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C042D41DBECEAA00DEB06B /* EventChecklistViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		813DF6D61DBECA9C00D2E0D9 /* EasyEventsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyEventsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		813DF6DA1DBECA9C00D2E0D9 /* EasyEventsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyEventsUITests.swift; sourceTree = "<group>"; };
 		813DF6DC1DBECA9C00D2E0D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5C042D41DBECEAA00DEB06B /* EventChecklistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventChecklistViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				813DF6B71DBECA9C00D2E0D9 /* AppDelegate.swift */,
 				813DF6B91DBECA9C00D2E0D9 /* ViewController.swift */,
 				813DF6BB1DBECA9C00D2E0D9 /* Main.storyboard */,
+				B5C042D41DBECEAA00DEB06B /* EventChecklistViewController.swift */,
 				813DF6C11DBECA9C00D2E0D9 /* Assets.xcassets */,
 				813DF6C31DBECA9C00D2E0D9 /* LaunchScreen.storyboard */,
 				813DF6C61DBECA9C00D2E0D9 /* Info.plist */,
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5C042D51DBECEAA00DEB06B /* EventChecklistViewController.swift in Sources */,
 				813DF6C01DBECA9C00D2E0D9 /* EasyEvents.xcdatamodeld in Sources */,
 				813DF6BA1DBECA9C00D2E0D9 /* ViewController.swift in Sources */,
 				813DF6B81DBECA9C00D2E0D9 /* AppDelegate.swift in Sources */,
@@ -507,6 +511,7 @@
 				813DF6E11DBECA9C00D2E0D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		813DF6E21DBECA9C00D2E0D9 /* Build configuration list for PBXNativeTarget "EasyEventsTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +520,7 @@
 				813DF6E41DBECA9C00D2E0D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		813DF6E51DBECA9C00D2E0D9 /* Build configuration list for PBXNativeTarget "EasyEventsUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +529,7 @@
 				813DF6E71DBECA9C00D2E0D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
