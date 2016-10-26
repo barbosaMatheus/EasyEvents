@@ -1,20 +1,18 @@
 //
-//  EventChecklistViewController.swift
+//  SplashScreenViewController.swift
 //  EasyEvents
 //
-//  Created by Asaph Matheus Moraes Barbosa on 10/24/16.
+//  Created by Ryan Thomas McIver on 10/25/16.
 //  Copyright © 2016 Oklahoma State University. All rights reserved.
 //
 
 import UIKit
 
-class EventChecklistViewController: UIViewController {
-    
-    var event: String = ""
-    
+class SplashScreenViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "\(event) Checklist"
+
         // Do any additional setup after loading the view.
     }
 
