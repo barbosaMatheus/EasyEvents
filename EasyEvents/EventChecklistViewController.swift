@@ -10,19 +10,59 @@ import UIKit
 
 class EventChecklistViewController: UIViewController {
     
+    //event name
     var event: String = ""
+    
+    @IBOutlet weak var curr_image: UIButton!
+
+    //step description label
+    @IBOutlet weak var step_label: UILabel!
+    
+    //array holding all steps for any event
+    let all_steps: [(pic:UIImage,name:String)] = [(#imageLiteral(resourceName: "date.png"),"Event Date"),(#imageLiteral(resourceName: "budget.png"),"Budget"),(#imageLiteral(resourceName: "catering.png"),"Catering"),(#imageLiteral(resourceName: "details.png"),"Details & Decorations"),(#imageLiteral(resourceName: "favors.png"),"Party Favors"),(#imageLiteral(resourceName: "flowers.png"),"Flowers"),(#imageLiteral(resourceName: "guests.png"),"Guestlist"),(#imageLiteral(resourceName: "invite.png"),"Invitations"),(#imageLiteral(resourceName: "license.png"),"Marriage License & Officiant"),(#imageLiteral(resourceName: "music.png"),"Music/Entertainment"),(#imageLiteral(resourceName: "party.png"),"Reception/Party"),(#imageLiteral(resourceName: "photographer.png"),"Photographer"),(#imageLiteral(resourceName: "registration.png"),"Registration"),(#imageLiteral(resourceName: "theme.png"),"Theme"),(#imageLiteral(resourceName: "ty_cards.png"),"\'Thank You\' Cards"),(#imageLiteral(resourceName: "venue.png"),"Venue/Location"),(#imageLiteral(resourceName: "wardrobe.png"),"Wardrobe")]
+    //array holding the steps needed for the current type of event
+    var current_steps: [(pic:UIImage,name:String)] = []
+    //aray index for the current step being displayed
+    var step_index: Int = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "\(event) Checklist"
         // Do any additional setup after loading the view.
+        
+        pick_icons( event: "wedding" )
+        display( )
     }
-
+    
+    func pick_icons( event: String ) {
+        if event == "wedding" {
+            current_steps = all_steps
+        }
+        else {
+            current_steps = all_steps
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    func display( ) {
+        curr_image.setImage( current_steps[step_index].pic, for: UIControlState.normal )
+        step_label.text = current_steps[step_index].name
+    }
+    
+    @IBAction func increment(_ sender: AnyObject) {
+        if step_index == ( current_steps.count-1 ) {
+            step_index = 0
+        }
+        else {
+            step_index += 1
+        }
+        display( )
+    }
 
     /*
     // MARK: - Navigation
