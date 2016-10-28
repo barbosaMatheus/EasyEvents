@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		086647021DC2E873009FA2DA /* MAD_EE_Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 086646FC1DC2E873009FA2DA /* MAD_EE_Background.png */; };
+		086647031DC2E873009FA2DA /* MAD_EE_ClearAllButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 086646FD1DC2E873009FA2DA /* MAD_EE_ClearAllButton.png */; };
+		086647041DC2E873009FA2DA /* MAD_EE_HelpButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 086646FE1DC2E873009FA2DA /* MAD_EE_HelpButton.png */; };
+		086647051DC2E873009FA2DA /* MAD_EE_NewEventButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 086646FF1DC2E873009FA2DA /* MAD_EE_NewEventButton.png */; };
+		086647061DC2E873009FA2DA /* MAD_EE_PlayButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 086647001DC2E873009FA2DA /* MAD_EE_PlayButton.png */; };
+		086647071DC2E873009FA2DA /* MAD_EE_PlusButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 086647011DC2E873009FA2DA /* MAD_EE_PlusButton.png */; };
 		813DF6B81DBECA9C00D2E0D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DF6B71DBECA9C00D2E0D9 /* AppDelegate.swift */; };
 		813DF6BD1DBECA9C00D2E0D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 813DF6BB1DBECA9C00D2E0D9 /* Main.storyboard */; };
 		813DF6C01DBECA9C00D2E0D9 /* EasyEvents.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 813DF6BE1DBECA9C00D2E0D9 /* EasyEvents.xcdatamodeld */; };
@@ -55,6 +61,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		086646FC1DC2E873009FA2DA /* MAD_EE_Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MAD_EE_Background.png; sourceTree = "<group>"; };
+		086646FD1DC2E873009FA2DA /* MAD_EE_ClearAllButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MAD_EE_ClearAllButton.png; sourceTree = "<group>"; };
+		086646FE1DC2E873009FA2DA /* MAD_EE_HelpButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MAD_EE_HelpButton.png; sourceTree = "<group>"; };
+		086646FF1DC2E873009FA2DA /* MAD_EE_NewEventButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MAD_EE_NewEventButton.png; sourceTree = "<group>"; };
+		086647001DC2E873009FA2DA /* MAD_EE_PlayButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MAD_EE_PlayButton.png; sourceTree = "<group>"; };
+		086647011DC2E873009FA2DA /* MAD_EE_PlusButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MAD_EE_PlusButton.png; sourceTree = "<group>"; };
 		813DF6B41DBECA9C00D2E0D9 /* EasyEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		813DF6B71DBECA9C00D2E0D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		813DF6BC1DBECA9C00D2E0D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -116,6 +128,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		086646FB1DC2E852009FA2DA /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				086646FC1DC2E873009FA2DA /* MAD_EE_Background.png */,
+				086646FD1DC2E873009FA2DA /* MAD_EE_ClearAllButton.png */,
+				086646FE1DC2E873009FA2DA /* MAD_EE_HelpButton.png */,
+				086646FF1DC2E873009FA2DA /* MAD_EE_NewEventButton.png */,
+				086647001DC2E873009FA2DA /* MAD_EE_PlayButton.png */,
+				086647011DC2E873009FA2DA /* MAD_EE_PlusButton.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		813DF6AB1DBECA9C00D2E0D9 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +164,7 @@
 		813DF6B61DBECA9C00D2E0D9 /* EasyEvents */ = {
 			isa = PBXGroup;
 			children = (
+				086646FB1DC2E852009FA2DA /* Images */,
 				81EA2DA61DC03B4B00C0FA1B /* HomeScreenViewController.swift */,
 				813DF6B71DBECA9C00D2E0D9 /* AppDelegate.swift */,
 				813DF6BB1DBECA9C00D2E0D9 /* Main.storyboard */,
@@ -295,6 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				086647061DC2E873009FA2DA /* MAD_EE_PlayButton.png in Resources */,
 				B58EA7D61DC264C500F4F7E0 /* photographer.png in Resources */,
 				B58EA7D31DC264C500F4F7E0 /* invite.png in Resources */,
 				B58EA7D11DC264C500F4F7E0 /* flowers.png in Resources */,
@@ -302,11 +329,15 @@
 				B58EA7BC1DC2644600F4F7E0 /* music.png in Resources */,
 				B58EA7D81DC264C500F4F7E0 /* resources.txt in Resources */,
 				B58EA7CE1DC264C500F4F7E0 /* catering.png in Resources */,
+				086647051DC2E873009FA2DA /* MAD_EE_NewEventButton.png in Resources */,
+				086647041DC2E873009FA2DA /* MAD_EE_HelpButton.png in Resources */,
 				B58EA7D41DC264C500F4F7E0 /* license.png in Resources */,
 				B58EA7D01DC264C500F4F7E0 /* favors.png in Resources */,
+				086647071DC2E873009FA2DA /* MAD_EE_PlusButton.png in Resources */,
 				B58EA7D51DC264C500F4F7E0 /* party.png in Resources */,
 				B58EA7D21DC264C500F4F7E0 /* guests.png in Resources */,
 				813DF6C51DBECA9C00D2E0D9 /* LaunchScreen.storyboard in Resources */,
+				086647021DC2E873009FA2DA /* MAD_EE_Background.png in Resources */,
 				B58EA7DC1DC264C500F4F7E0 /* wardrobe.png in Resources */,
 				B58EA7BA1DC25E6F00F4F7E0 /* date.png in Resources */,
 				B58EA7CF1DC264C500F4F7E0 /* details.png in Resources */,
@@ -315,6 +346,7 @@
 				B58EA7CD1DC264C500F4F7E0 /* budget.png in Resources */,
 				B58EA7D71DC264C500F4F7E0 /* registration.png in Resources */,
 				813DF6BD1DBECA9C00D2E0D9 /* Main.storyboard in Resources */,
+				086647031DC2E873009FA2DA /* MAD_EE_ClearAllButton.png in Resources */,
 				B58EA7D91DC264C500F4F7E0 /* theme.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
