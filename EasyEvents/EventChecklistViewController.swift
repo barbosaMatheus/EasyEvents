@@ -15,6 +15,9 @@ class EventChecklistViewController: UIViewController {
     
     @IBOutlet weak var curr_image: UIButton!
 
+    //button indicates wether a task is done
+    @IBOutlet weak var check_button: UIButton!
+    
     //step description label
     @IBOutlet weak var step_label: UILabel!
     
@@ -28,9 +31,11 @@ class EventChecklistViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor( patternImage: UIImage( named: "MAD_EE_Background.png" )! )
         self.navigationItem.title = "\(event) Checklist"
         // Do any additional setup after loading the view.
         
+        check_button.setImage( #imageLiteral(resourceName: "checkmark.png"), for: UIControlState.normal )
         pick_icons( event: "wedding" )
         display( )
     }
@@ -41,6 +46,15 @@ class EventChecklistViewController: UIViewController {
         }
         else {
             current_steps = all_steps
+        }
+    }
+    
+    @IBAction func toggle(_ sender: AnyObject) {
+        if check_button.currentImage == #imageLiteral(resourceName: "checkmark.png") {
+            check_button.setImage( #imageLiteral(resourceName: "red_x.png"), for: UIControlState.normal )
+        }
+        else {
+            check_button.setImage( #imageLiteral(resourceName: "checkmark.png"), for: UIControlState.normal )
         }
     }
     

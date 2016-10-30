@@ -22,6 +22,8 @@
 		813DF6DB1DBECA9C00D2E0D9 /* EasyEventsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DF6DA1DBECA9C00D2E0D9 /* EasyEventsUITests.swift */; };
 		81EA2DA71DC03B4B00C0FA1B /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EA2DA61DC03B4B00C0FA1B /* HomeScreenViewController.swift */; };
 		81EA2DA91DC045C400C0FA1B /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EA2DA81DC045C400C0FA1B /* SplashScreenViewController.swift */; };
+		B5391FE01DC56C6600E58D15 /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = B5391FDF1DC56C6600E58D15 /* checkmark.png */; };
+		B5391FE21DC56D4200E58D15 /* red_x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5391FE11DC56D4200E58D15 /* red_x.png */; };
 		B58EA7BA1DC25E6F00F4F7E0 /* date.png in Resources */ = {isa = PBXBuildFile; fileRef = B58EA7B91DC25E6F00F4F7E0 /* date.png */; };
 		B58EA7BC1DC2644600F4F7E0 /* music.png in Resources */ = {isa = PBXBuildFile; fileRef = B58EA7BB1DC2644600F4F7E0 /* music.png */; };
 		B58EA7CD1DC264C500F4F7E0 /* budget.png in Resources */ = {isa = PBXBuildFile; fileRef = B58EA7BD1DC264C500F4F7E0 /* budget.png */; };
@@ -82,6 +84,8 @@
 		813DF6DC1DBECA9C00D2E0D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81EA2DA61DC03B4B00C0FA1B /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		81EA2DA81DC045C400C0FA1B /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		B5391FDF1DC56C6600E58D15 /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
+		B5391FE11DC56D4200E58D15 /* red_x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_x.png; sourceTree = "<group>"; };
 		B58EA7B91DC25E6F00F4F7E0 /* date.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = date.png; sourceTree = "<group>"; };
 		B58EA7BB1DC2644600F4F7E0 /* music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = music.png; sourceTree = "<group>"; };
 		B58EA7BD1DC264C500F4F7E0 /* budget.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = budget.png; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 				813DF6BB1DBECA9C00D2E0D9 /* Main.storyboard */,
 				81EA2DA81DC045C400C0FA1B /* SplashScreenViewController.swift */,
 				B5C042D41DBECEAA00DEB06B /* EventChecklistViewController.swift */,
+				B5391FE11DC56D4200E58D15 /* red_x.png */,
 				B58EA7BD1DC264C500F4F7E0 /* budget.png */,
 				B58EA7BE1DC264C500F4F7E0 /* catering.png */,
 				B58EA7BF1DC264C500F4F7E0 /* details.png */,
@@ -180,6 +185,7 @@
 				B58EA7C41DC264C500F4F7E0 /* license.png */,
 				B58EA7C51DC264C500F4F7E0 /* party.png */,
 				B58EA7C61DC264C500F4F7E0 /* photographer.png */,
+				B5391FDF1DC56C6600E58D15 /* checkmark.png */,
 				B58EA7C71DC264C500F4F7E0 /* registration.png */,
 				B58EA7C81DC264C500F4F7E0 /* resources.txt */,
 				B58EA7C91DC264C500F4F7E0 /* theme.png */,
@@ -331,6 +337,7 @@
 				B58EA7CE1DC264C500F4F7E0 /* catering.png in Resources */,
 				086647051DC2E873009FA2DA /* MAD_EE_NewEventButton.png in Resources */,
 				086647041DC2E873009FA2DA /* MAD_EE_HelpButton.png in Resources */,
+				B5391FE21DC56D4200E58D15 /* red_x.png in Resources */,
 				B58EA7D41DC264C500F4F7E0 /* license.png in Resources */,
 				B58EA7D01DC264C500F4F7E0 /* favors.png in Resources */,
 				086647071DC2E873009FA2DA /* MAD_EE_PlusButton.png in Resources */,
@@ -346,6 +353,7 @@
 				B58EA7CD1DC264C500F4F7E0 /* budget.png in Resources */,
 				B58EA7D71DC264C500F4F7E0 /* registration.png in Resources */,
 				813DF6BD1DBECA9C00D2E0D9 /* Main.storyboard in Resources */,
+				B5391FE01DC56C6600E58D15 /* checkmark.png in Resources */,
 				086647031DC2E873009FA2DA /* MAD_EE_ClearAllButton.png in Resources */,
 				B58EA7D91DC264C500F4F7E0 /* theme.png in Resources */,
 			);
