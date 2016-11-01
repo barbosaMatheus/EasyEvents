@@ -24,7 +24,6 @@
 		81EA2DA91DC045C400C0FA1B /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EA2DA81DC045C400C0FA1B /* SplashScreenViewController.swift */; };
 		B5391FE01DC56C6600E58D15 /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = B5391FDF1DC56C6600E58D15 /* checkmark.png */; };
 		B5391FE21DC56D4200E58D15 /* red_x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5391FE11DC56D4200E58D15 /* red_x.png */; };
-		B56ED6C31DC8DF1900ECA471 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56ED6C21DC8DF1900ECA471 /* Event.swift */; };
 		B56ED6C51DC8E02300ECA471 /* Guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56ED6C41DC8E02300ECA471 /* Guest.swift */; };
 		B58EA7BA1DC25E6F00F4F7E0 /* date.png in Resources */ = {isa = PBXBuildFile; fileRef = B58EA7B91DC25E6F00F4F7E0 /* date.png */; };
 		B58EA7BC1DC2644600F4F7E0 /* music.png in Resources */ = {isa = PBXBuildFile; fileRef = B58EA7BB1DC2644600F4F7E0 /* music.png */; };
@@ -88,7 +87,6 @@
 		81EA2DA81DC045C400C0FA1B /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		B5391FDF1DC56C6600E58D15 /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
 		B5391FE11DC56D4200E58D15 /* red_x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_x.png; sourceTree = "<group>"; };
-		B56ED6C21DC8DF1900ECA471 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		B56ED6C41DC8E02300ECA471 /* Guest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
 		B58EA7B91DC25E6F00F4F7E0 /* date.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = date.png; sourceTree = "<group>"; };
 		B58EA7BB1DC2644600F4F7E0 /* music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = music.png; sourceTree = "<group>"; };
@@ -176,7 +174,6 @@
 				81EA2DA61DC03B4B00C0FA1B /* HomeScreenViewController.swift */,
 				813DF6B71DBECA9C00D2E0D9 /* AppDelegate.swift */,
 				B56ED6C41DC8E02300ECA471 /* Guest.swift */,
-				B56ED6C21DC8DF1900ECA471 /* Event.swift */,
 				813DF6BB1DBECA9C00D2E0D9 /* Main.storyboard */,
 				81EA2DA81DC045C400C0FA1B /* SplashScreenViewController.swift */,
 				B5C042D41DBECEAA00DEB06B /* EventChecklistViewController.swift */,
@@ -391,7 +388,6 @@
 				813DF6C01DBECA9C00D2E0D9 /* EasyEvents.xcdatamodeld in Sources */,
 				81EA2DA91DC045C400C0FA1B /* SplashScreenViewController.swift in Sources */,
 				813DF6B81DBECA9C00D2E0D9 /* AppDelegate.swift in Sources */,
-				B56ED6C31DC8DF1900ECA471 /* Event.swift in Sources */,
 				B56ED6C51DC8E02300ECA471 /* Guest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
