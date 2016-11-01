@@ -44,6 +44,7 @@
 		B58EA7DB1DC264C500F4F7E0 /* venue.png in Resources */ = {isa = PBXBuildFile; fileRef = B58EA7CB1DC264C500F4F7E0 /* venue.png */; };
 		B58EA7DC1DC264C500F4F7E0 /* wardrobe.png in Resources */ = {isa = PBXBuildFile; fileRef = B58EA7CC1DC264C500F4F7E0 /* wardrobe.png */; };
 		B5C042D51DBECEAA00DEB06B /* EventChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C042D41DBECEAA00DEB06B /* EventChecklistViewController.swift */; };
+		B5C677C01DC8E8BE0003EB7D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C677BF1DC8E8BE0003EB7D /* Event.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		B58EA7CB1DC264C500F4F7E0 /* venue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = venue.png; sourceTree = "<group>"; };
 		B58EA7CC1DC264C500F4F7E0 /* wardrobe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wardrobe.png; sourceTree = "<group>"; };
 		B5C042D41DBECEAA00DEB06B /* EventChecklistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventChecklistViewController.swift; sourceTree = "<group>"; };
+		B5C677BF1DC8E8BE0003EB7D /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				086646FB1DC2E852009FA2DA /* Images */,
 				81EA2DA61DC03B4B00C0FA1B /* HomeScreenViewController.swift */,
 				813DF6B71DBECA9C00D2E0D9 /* AppDelegate.swift */,
+				B5C677BF1DC8E8BE0003EB7D /* Event.swift */,
 				B56ED6C41DC8E02300ECA471 /* Guest.swift */,
 				813DF6BB1DBECA9C00D2E0D9 /* Main.storyboard */,
 				81EA2DA81DC045C400C0FA1B /* SplashScreenViewController.swift */,
@@ -388,6 +391,7 @@
 				813DF6C01DBECA9C00D2E0D9 /* EasyEvents.xcdatamodeld in Sources */,
 				81EA2DA91DC045C400C0FA1B /* SplashScreenViewController.swift in Sources */,
 				813DF6B81DBECA9C00D2E0D9 /* AppDelegate.swift in Sources */,
+				B5C677C01DC8E8BE0003EB7D /* Event.swift in Sources */,
 				B56ED6C51DC8E02300ECA471 /* Guest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
