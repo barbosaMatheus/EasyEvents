@@ -13,6 +13,7 @@ class EventChecklistViewController: UIViewController {
     //event name
     var event: String = ""
     
+    //button showing current icon
     @IBOutlet weak var curr_image: UIButton!
 
     //button indicates wether a task is done
@@ -23,8 +24,10 @@ class EventChecklistViewController: UIViewController {
     
     //array holding all steps for any event
     let all_steps: [(pic:UIImage,name:String)] = [(#imageLiteral(resourceName: "date.png"),"Event Date"),(#imageLiteral(resourceName: "budget.png"),"Budget"),(#imageLiteral(resourceName: "catering.png"),"Catering"),(#imageLiteral(resourceName: "details.png"),"Details & Decorations"),(#imageLiteral(resourceName: "favors.png"),"Party Favors"),(#imageLiteral(resourceName: "flowers.png"),"Flowers"),(#imageLiteral(resourceName: "guests.png"),"Guestlist"),(#imageLiteral(resourceName: "invite.png"),"Invitations"),(#imageLiteral(resourceName: "license.png"),"Marriage License & Officiant"),(#imageLiteral(resourceName: "music.png"),"Music/Entertainment"),(#imageLiteral(resourceName: "party.png"),"Reception/Party"),(#imageLiteral(resourceName: "photographer.png"),"Photographer"),(#imageLiteral(resourceName: "registration.png"),"Registration"),(#imageLiteral(resourceName: "theme.png"),"Theme"),(#imageLiteral(resourceName: "ty_cards.png"),"\'Thank You\' Cards"),(#imageLiteral(resourceName: "venue.png"),"Venue/Location"),(#imageLiteral(resourceName: "wardrobe.png"),"Wardrobe")]
+    
     //array holding the steps needed for the current type of event
     var current_steps: [(pic:UIImage,name:String)] = []
+    
     //aray index for the current step being displayed
     var step_index: Int = 0
     
