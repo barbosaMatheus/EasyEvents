@@ -16,7 +16,7 @@ class HomeScreenViewController: UIViewController, UITableViewDataSource, UITable
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.backgroundColor = UIColor( patternImage: UIImage( named: "MAD_EE_Background.png" )! )
         // Do any additional setup after loading the view.
     }
 
