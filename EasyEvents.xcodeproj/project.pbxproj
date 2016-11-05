@@ -22,6 +22,10 @@
 		089346D81DCD6E9B004C5995 /* Briefcase_Gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 089346D21DCD6E9B004C5995 /* Briefcase_Gray.png */; };
 		089346D91DCD6E9B004C5995 /* WeddingCake_Color.png in Resources */ = {isa = PBXBuildFile; fileRef = 089346D31DCD6E9B004C5995 /* WeddingCake_Color.png */; };
 		089346DA1DCD6E9B004C5995 /* WeddingCake_Gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 089346D41DCD6E9B004C5995 /* WeddingCake_Gray.png */; };
+		22CCFD7E1DCDA83800457569 /* GeneralCalendarColor.png in Resources */ = {isa = PBXBuildFile; fileRef = 22CCFD7D1DCDA83800457569 /* GeneralCalendarColor.png */; };
+		22CCFD801DCDA84800457569 /* GeneralCalendarGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 22CCFD7F1DCDA84800457569 /* GeneralCalendarGray.png */; };
+		22CCFD821DCDA85200457569 /* BabyShowerGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 22CCFD811DCDA85200457569 /* BabyShowerGray.png */; };
+		22CCFD841DCDA85E00457569 /* BabyShowerColor.png in Resources */ = {isa = PBXBuildFile; fileRef = 22CCFD831DCDA85E00457569 /* BabyShowerColor.png */; };
 		813DF6B81DBECA9C00D2E0D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DF6B71DBECA9C00D2E0D9 /* AppDelegate.swift */; };
 		813DF6BD1DBECA9C00D2E0D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 813DF6BB1DBECA9C00D2E0D9 /* Main.storyboard */; };
 		813DF6C01DBECA9C00D2E0D9 /* EasyEvents.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 813DF6BE1DBECA9C00D2E0D9 /* EasyEvents.xcdatamodeld */; };
@@ -89,6 +93,10 @@
 		089346D21DCD6E9B004C5995 /* Briefcase_Gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Briefcase_Gray.png; sourceTree = "<group>"; };
 		089346D31DCD6E9B004C5995 /* WeddingCake_Color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WeddingCake_Color.png; sourceTree = "<group>"; };
 		089346D41DCD6E9B004C5995 /* WeddingCake_Gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WeddingCake_Gray.png; sourceTree = "<group>"; };
+		22CCFD7D1DCDA83800457569 /* GeneralCalendarColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GeneralCalendarColor.png; sourceTree = "<group>"; };
+		22CCFD7F1DCDA84800457569 /* GeneralCalendarGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GeneralCalendarGray.png; sourceTree = "<group>"; };
+		22CCFD811DCDA85200457569 /* BabyShowerGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BabyShowerGray.png; sourceTree = "<group>"; };
+		22CCFD831DCDA85E00457569 /* BabyShowerColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BabyShowerColor.png; sourceTree = "<group>"; };
 		813DF6B41DBECA9C00D2E0D9 /* EasyEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		813DF6B71DBECA9C00D2E0D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		813DF6BC1DBECA9C00D2E0D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -157,6 +165,10 @@
 		086646FB1DC2E852009FA2DA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				22CCFD7F1DCDA84800457569 /* GeneralCalendarGray.png */,
+				22CCFD811DCDA85200457569 /* BabyShowerGray.png */,
+				22CCFD7D1DCDA83800457569 /* GeneralCalendarColor.png */,
+				22CCFD831DCDA85E00457569 /* BabyShowerColor.png */,
 				089346CF1DCD6E9B004C5995 /* BirthdayPresent_Color.png */,
 				089346D01DCD6E9B004C5995 /* BirthdayPresent_Gray.png */,
 				089346D11DCD6E9B004C5995 /* Briefcase_Color.png */,
@@ -362,6 +374,7 @@
 			files = (
 				086647061DC2E873009FA2DA /* MAD_EE_PlayButton.png in Resources */,
 				B58EA7D61DC264C500F4F7E0 /* photographer.png in Resources */,
+				22CCFD7E1DCDA83800457569 /* GeneralCalendarColor.png in Resources */,
 				089346D51DCD6E9B004C5995 /* BirthdayPresent_Color.png in Resources */,
 				B58EA7D31DC264C500F4F7E0 /* invite.png in Resources */,
 				089346D61DCD6E9B004C5995 /* BirthdayPresent_Gray.png in Resources */,
@@ -376,6 +389,7 @@
 				086647041DC2E873009FA2DA /* MAD_EE_HelpButton.png in Resources */,
 				B5391FE21DC56D4200E58D15 /* red_x.png in Resources */,
 				B58EA7D41DC264C500F4F7E0 /* license.png in Resources */,
+				22CCFD801DCDA84800457569 /* GeneralCalendarGray.png in Resources */,
 				089346D91DCD6E9B004C5995 /* WeddingCake_Color.png in Resources */,
 				B58EA7D01DC264C500F4F7E0 /* favors.png in Resources */,
 				086647071DC2E873009FA2DA /* MAD_EE_PlusButton.png in Resources */,
@@ -384,10 +398,12 @@
 				813DF6C51DBECA9C00D2E0D9 /* LaunchScreen.storyboard in Resources */,
 				086647021DC2E873009FA2DA /* MAD_EE_Background.png in Resources */,
 				B58EA7DC1DC264C500F4F7E0 /* wardrobe.png in Resources */,
+				22CCFD841DCDA85E00457569 /* BabyShowerColor.png in Resources */,
 				B58EA7BA1DC25E6F00F4F7E0 /* date.png in Resources */,
 				B58EA7CF1DC264C500F4F7E0 /* details.png in Resources */,
 				813DF6C21DBECA9C00D2E0D9 /* Assets.xcassets in Resources */,
 				B58EA7DA1DC264C500F4F7E0 /* ty_cards.png in Resources */,
+				22CCFD821DCDA85200457569 /* BabyShowerGray.png in Resources */,
 				089346DA1DCD6E9B004C5995 /* WeddingCake_Gray.png in Resources */,
 				B58EA7CD1DC264C500F4F7E0 /* budget.png in Resources */,
 				B58EA7D71DC264C500F4F7E0 /* registration.png in Resources */,
