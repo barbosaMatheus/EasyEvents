@@ -115,7 +115,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jh3-fo-J0A">
-                                <frame key="frameInset" minX="-1.5" height="44.5" maxX="0.5" maxY="0.5"/>
+                                <frame key="frameInset" minX="-2.5" height="44.5" maxX="1" maxY="2"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="eep-p0-zOV"/>
