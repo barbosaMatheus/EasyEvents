@@ -15,11 +15,11 @@ class BirthdayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Draws background on
-        let backGrect = CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height)
-        let background = UIView.init(frame: backGrect)
-        background.backgroundColor = UIColor(patternImage: UIImage(named:"MAD_EE_Background.png")!)
-        view.addSubview(background)
+//        //Draws background on
+//        let backGrect = CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height)
+//        let background = UIView.init(frame: backGrect)
+//        background.backgroundColor = UIColor(patternImage: UIImage(named:"MAD_EE_Background.png")!)
+//        view.addSubview(background)
         
         //Draws greyed out version of the birthday present, meaning no progress made yet
         let presentRect = CGRect(x: (self.view.bounds.size.width / 4), y: (self.view.bounds.size.height / 3), width: (bP?.size.width)!, height: (bP?.size.height)!)

@@ -15,11 +15,11 @@ class WeddingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Draws background on
-        let backGrect = CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height)
-        let background = UIView.init(frame: backGrect)
-        background.backgroundColor = UIColor(patternImage: UIImage(named:"MAD_EE_Background.png")!)
-        view.addSubview(background)
+//        //Draws background on
+//        let backGrect = CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height)
+//        let background = UIView.init(frame: backGrect)
+//        background.backgroundColor = UIColor(patternImage: UIImage(named:"MAD_EE_Background.png")!)
+//        view.addSubview(background)
         
         //Draws greyed out version of the wedding cake, meaning no progress made yet
         let cakeGreyRect = CGRect(x: (self.view.bounds.size.width / 16), y: (self.view.bounds.size.height / 4), width: (wC?.size.width)!, height: (wC?.size.height)!)
