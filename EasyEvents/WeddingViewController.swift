@@ -11,6 +11,16 @@ import UIKit
 class WeddingViewController: UIViewController {
     
     let wC = UIImage(named: "WeddingCake_Color.png")
+    let levels = 17
+    var levelCount = 0
+    var imageFractions = [UIView]()
+    
+    @IBAction func AddLevelButton(_ sender: UIButton) {
+        if(levelCount < levels){
+            view.addSubview(imageFractions[levelCount])
+            levelCount = levelCount + 1
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,11 +36,32 @@ class WeddingViewController: UIViewController {
         let cakeGrey = UIView.init(frame: cakeGreyRect)
         cakeGrey.backgroundColor = UIColor(patternImage: UIImage(named:"WeddingCake_Gray.png")!)
         view.addSubview(cakeGrey)
+        
+        splitImage()
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func splitImage(){
+        
+        let tempImage = wC?.cgImage
+        var fractionsCount = 0
+        
+        while(fractionsCount < 17){
+            
+            let f1 = tempImage!.cropping(to: CGRect(x: 0, y: 0, width: (wC?.size.width)!, height: ( ((wC?.size.height)! / CGFloat(levels)) + (CGFloat(fractionsCount) * (wC?.size.height)! / CGFloat(levels)) )))
+            let fractIm1 = UIImage(cgImage: f1!)
+            let cP1Rect = CGRect(x:(self.view.bounds.size.width / 16), y:(self.view.bounds.size.height / 4), width:(fractIm1.size.width), height: (fractIm1.size.height))
+            let cakePart = UIView.init(frame: cP1Rect)
+            cakePart.backgroundColor = UIColor(patternImage: fractIm1)
+            imageFractions.append(cakePart)
+            fractionsCount = fractionsCount + 1
+            
+        }
     }
     
     /*
