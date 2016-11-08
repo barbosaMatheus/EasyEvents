@@ -26,6 +26,7 @@
 		22CCFD801DCDA84800457569 /* GeneralCalendarGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 22CCFD7F1DCDA84800457569 /* GeneralCalendarGray.png */; };
 		22CCFD821DCDA85200457569 /* BabyShowerGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 22CCFD811DCDA85200457569 /* BabyShowerGray.png */; };
 		22CCFD841DCDA85E00457569 /* BabyShowerColor.png in Resources */ = {isa = PBXBuildFile; fileRef = 22CCFD831DCDA85E00457569 /* BabyShowerColor.png */; };
+		81040A8E1DD2474200C2D1B6 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81040A8D1DD2474200C2D1B6 /* AddEventViewController.swift */; };
 		813DF6B81DBECA9C00D2E0D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DF6B71DBECA9C00D2E0D9 /* AppDelegate.swift */; };
 		813DF6BD1DBECA9C00D2E0D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 813DF6BB1DBECA9C00D2E0D9 /* Main.storyboard */; };
 		813DF6C01DBECA9C00D2E0D9 /* EasyEvents.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 813DF6BE1DBECA9C00D2E0D9 /* EasyEvents.xcdatamodeld */; };
@@ -97,6 +98,7 @@
 		22CCFD7F1DCDA84800457569 /* GeneralCalendarGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GeneralCalendarGray.png; sourceTree = "<group>"; };
 		22CCFD811DCDA85200457569 /* BabyShowerGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BabyShowerGray.png; sourceTree = "<group>"; };
 		22CCFD831DCDA85E00457569 /* BabyShowerColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BabyShowerColor.png; sourceTree = "<group>"; };
+		81040A8D1DD2474200C2D1B6 /* AddEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		813DF6B41DBECA9C00D2E0D9 /* EasyEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		813DF6B71DBECA9C00D2E0D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		813DF6BC1DBECA9C00D2E0D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				B5C677BF1DC8E8BE0003EB7D /* Event.swift */,
 				B56ED6C41DC8E02300ECA471 /* Guest.swift */,
 				813DF6BB1DBECA9C00D2E0D9 /* Main.storyboard */,
+				81040A8D1DD2474200C2D1B6 /* AddEventViewController.swift */,
 				089346CD1DCD6D93004C5995 /* BusinessViewController.swift */,
 				089346CB1DCD6D7A004C5995 /* BirthdayViewController.swift */,
 				089346C91DCD6D3A004C5995 /* WeddingViewController.swift */,
@@ -442,6 +445,7 @@
 				813DF6B81DBECA9C00D2E0D9 /* AppDelegate.swift in Sources */,
 				089346CC1DCD6D7A004C5995 /* BirthdayViewController.swift in Sources */,
 				B5C677C01DC8E8BE0003EB7D /* Event.swift in Sources */,
+				81040A8E1DD2474200C2D1B6 /* AddEventViewController.swift in Sources */,
 				B56ED6C51DC8E02300ECA471 /* Guest.swift in Sources */,
 				089346CE1DCD6D93004C5995 /* BusinessViewController.swift in Sources */,
 				089346CA1DCD6D3A004C5995 /* WeddingViewController.swift in Sources */,
