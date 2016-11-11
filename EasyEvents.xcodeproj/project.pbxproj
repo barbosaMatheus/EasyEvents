@@ -22,6 +22,8 @@
 		089346D81DCD6E9B004C5995 /* Briefcase_Gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 089346D21DCD6E9B004C5995 /* Briefcase_Gray.png */; };
 		089346D91DCD6E9B004C5995 /* WeddingCake_Color.png in Resources */ = {isa = PBXBuildFile; fileRef = 089346D31DCD6E9B004C5995 /* WeddingCake_Color.png */; };
 		089346DA1DCD6E9B004C5995 /* WeddingCake_Gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 089346D41DCD6E9B004C5995 /* WeddingCake_Gray.png */; };
+		089A37351DD650DE009D06AF /* BabyShowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A37341DD650DE009D06AF /* BabyShowerViewController.swift */; };
+		089A37371DD65116009D06AF /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A37361DD65116009D06AF /* CustomViewController.swift */; };
 		22CCFD7E1DCDA83800457569 /* GeneralCalendarColor.png in Resources */ = {isa = PBXBuildFile; fileRef = 22CCFD7D1DCDA83800457569 /* GeneralCalendarColor.png */; };
 		22CCFD801DCDA84800457569 /* GeneralCalendarGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 22CCFD7F1DCDA84800457569 /* GeneralCalendarGray.png */; };
 		22CCFD821DCDA85200457569 /* BabyShowerGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 22CCFD811DCDA85200457569 /* BabyShowerGray.png */; };
@@ -94,6 +96,8 @@
 		089346D21DCD6E9B004C5995 /* Briefcase_Gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Briefcase_Gray.png; sourceTree = "<group>"; };
 		089346D31DCD6E9B004C5995 /* WeddingCake_Color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WeddingCake_Color.png; sourceTree = "<group>"; };
 		089346D41DCD6E9B004C5995 /* WeddingCake_Gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WeddingCake_Gray.png; sourceTree = "<group>"; };
+		089A37341DD650DE009D06AF /* BabyShowerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BabyShowerViewController.swift; sourceTree = "<group>"; };
+		089A37361DD65116009D06AF /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		22CCFD7D1DCDA83800457569 /* GeneralCalendarColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GeneralCalendarColor.png; sourceTree = "<group>"; };
 		22CCFD7F1DCDA84800457569 /* GeneralCalendarGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GeneralCalendarGray.png; sourceTree = "<group>"; };
 		22CCFD811DCDA85200457569 /* BabyShowerGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BabyShowerGray.png; sourceTree = "<group>"; };
@@ -217,6 +221,8 @@
 				B56ED6C41DC8E02300ECA471 /* Guest.swift */,
 				813DF6BB1DBECA9C00D2E0D9 /* Main.storyboard */,
 				81040A8D1DD2474200C2D1B6 /* AddEventViewController.swift */,
+				089A37361DD65116009D06AF /* CustomViewController.swift */,
+				089A37341DD650DE009D06AF /* BabyShowerViewController.swift */,
 				089346CD1DCD6D93004C5995 /* BusinessViewController.swift */,
 				089346CB1DCD6D7A004C5995 /* BirthdayViewController.swift */,
 				089346C91DCD6D3A004C5995 /* WeddingViewController.swift */,
@@ -444,10 +450,12 @@
 				81EA2DA91DC045C400C0FA1B /* SplashScreenViewController.swift in Sources */,
 				813DF6B81DBECA9C00D2E0D9 /* AppDelegate.swift in Sources */,
 				089346CC1DCD6D7A004C5995 /* BirthdayViewController.swift in Sources */,
+				089A37371DD65116009D06AF /* CustomViewController.swift in Sources */,
 				B5C677C01DC8E8BE0003EB7D /* Event.swift in Sources */,
 				81040A8E1DD2474200C2D1B6 /* AddEventViewController.swift in Sources */,
 				B56ED6C51DC8E02300ECA471 /* Guest.swift in Sources */,
 				089346CE1DCD6D93004C5995 /* BusinessViewController.swift in Sources */,
+				089A37351DD650DE009D06AF /* BabyShowerViewController.swift in Sources */,
 				089346CA1DCD6D3A004C5995 /* WeddingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
