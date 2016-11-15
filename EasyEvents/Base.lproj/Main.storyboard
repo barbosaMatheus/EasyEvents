@@ -38,7 +38,9 @@
                                 <frame key="frameInset" minX="305" minY="373" width="87" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="Guest"/>
+                                <state key="normal" title="Guest">
+                                    <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="mTG-Fb-RnF" kind="show" id="mT8-e3-8EZ"/>
                                 </connections>
@@ -47,7 +49,9 @@
                                 <frame key="frameInset" minX="23" minY="373" width="95" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="Login"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="login_pressed:" destination="xPE-ug-INM" eventType="touchUpInside" id="Tka-Cn-l1N"/>
                                 </connections>
