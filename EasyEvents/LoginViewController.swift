@@ -10,19 +10,88 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    //text labels
+    @IBOutlet weak var username_label: UITextField!
+    @IBOutlet weak var psswd_label: UITextField!
+    
+    //flags
+    var username_found = false
+    
+    //db information
+    var dbUsername: String = ""
+    var dbPassword: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        // Do any additional setup after loading the view
+        //to make keyboard go away
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer( target: self, action: #selector( self.close_kb ) )
+        view.addGestureRecognizer( tap )
+        
         
         self.view.backgroundColor = UIColor( patternImage: UIImage( named: "MAD_EE_Background.png" )! )
-        // Dispose of any resources that can be recreated.
     }
     
+    func close_kb( ) {
+        view.endEditing( true )
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    @IBAction func login_pressed(_ sender: AnyObject) {
+        self.dbUsername = username_label.text!
+        self.dbPassword = psswd_label.text!
+        
+        //JSON interfacing (using Dr. Mayfield's example code)
+        let url = URL( string:"https://cs.okstate.edu/~asaph/ee_service.php?u=\(self.dbUsername)&p=\(self.dbPassword)" )!
+        let config = URLSessionConfiguration.default
+        let session = URLSession( configuration: config )
+        
+        let task = session.dataTask( with: url ) { (data, response, error) in
+            guard error == nil else {
+                print("Error in session call: \(error)")
+                return
+            }
+            
+            guard let result = data else {
+                print( "No data\n" )
+                return
+            }
+            
+            do {
+                let json = try JSONSerialization.jsonObject( with: result, options: .allowFragments ) as? [[String: AnyObject]]
+                
+                //check if this user exists in the db
+                for item in json! {
+                    guard let user = item["username"] as? String else {
+                        print( "USERNAME NOT FOUND!" )
+                        return
+                    }
+                    
+                    if user == self.dbUsername {
+                          //print( "FOUND USERNAME" )
+                          self.username_found = true
+                    }
+                }
+                if self.username_found == false {
+                    print( "USERNAME NOT FOUND!" )
+                }
+                
+            } catch {
+                print( "Error serializing JSON Data: \(error)" )
+            }
+        }
+        
+        task.resume( )
+        
+        if self.username_found {
+            performSegue( withIdentifier: "login_segue", sender: self )
+        }
+    }
 
     /*
     // MARK: - Navigation

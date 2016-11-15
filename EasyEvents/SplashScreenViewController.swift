@@ -14,6 +14,7 @@ class SplashScreenViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor( patternImage: UIImage( named: "MAD_EE_Background.png" )! )
     }
 
     override func didReceiveMemoryWarning() {
