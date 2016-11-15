@@ -36,6 +36,7 @@
 		813DF6C51DBECA9C00D2E0D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 813DF6C31DBECA9C00D2E0D9 /* LaunchScreen.storyboard */; };
 		813DF6D01DBECA9C00D2E0D9 /* EasyEventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DF6CF1DBECA9C00D2E0D9 /* EasyEventsTests.swift */; };
 		813DF6DB1DBECA9C00D2E0D9 /* EasyEventsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DF6DA1DBECA9C00D2E0D9 /* EasyEventsUITests.swift */; };
+		81AFEF1D1DDB8DAB0007D671 /* GuestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81AFEF1C1DDB8DAB0007D671 /* GuestsViewController.swift */; };
 		81EA2DA71DC03B4B00C0FA1B /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EA2DA61DC03B4B00C0FA1B /* HomeScreenViewController.swift */; };
 		81EA2DA91DC045C400C0FA1B /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EA2DA81DC045C400C0FA1B /* SplashScreenViewController.swift */; };
 		B5391FE01DC56C6600E58D15 /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = B5391FDF1DC56C6600E58D15 /* checkmark.png */; };
@@ -117,6 +118,7 @@
 		813DF6D61DBECA9C00D2E0D9 /* EasyEventsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyEventsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		813DF6DA1DBECA9C00D2E0D9 /* EasyEventsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyEventsUITests.swift; sourceTree = "<group>"; };
 		813DF6DC1DBECA9C00D2E0D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81AFEF1C1DDB8DAB0007D671 /* GuestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestsViewController.swift; sourceTree = "<group>"; };
 		81EA2DA61DC03B4B00C0FA1B /* HomeScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		81EA2DA81DC045C400C0FA1B /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		B5391FDF1DC56C6600E58D15 /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 		086646FB1DC2E852009FA2DA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				81AFEF1C1DDB8DAB0007D671 /* GuestsViewController.swift */,
 				22CCFD7F1DCDA84800457569 /* GeneralCalendarGray.png */,
 				22CCFD811DCDA85200457569 /* BabyShowerGray.png */,
 				22CCFD7D1DCDA83800457569 /* GeneralCalendarColor.png */,
@@ -452,6 +455,7 @@
 				813DF6C01DBECA9C00D2E0D9 /* EasyEvents.xcdatamodeld in Sources */,
 				81EA2DA91DC045C400C0FA1B /* SplashScreenViewController.swift in Sources */,
 				813DF6B81DBECA9C00D2E0D9 /* AppDelegate.swift in Sources */,
+				81AFEF1D1DDB8DAB0007D671 /* GuestsViewController.swift in Sources */,
 				089346CC1DCD6D7A004C5995 /* BirthdayViewController.swift in Sources */,
 				089A37371DD65116009D06AF /* CustomViewController.swift in Sources */,
 				B5C677C01DC8E8BE0003EB7D /* Event.swift in Sources */,
