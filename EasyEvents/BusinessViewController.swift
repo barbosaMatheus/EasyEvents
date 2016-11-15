@@ -35,6 +35,7 @@ class BusinessViewController: UIViewController {
         let briefcaseRect = CGRect(x: (self.view.bounds.size.width / 4), y: (self.view.bounds.size.height / 3), width: (bC?.size.width)!, height: (bC?.size.height)!)
         let briefcase = UIView.init(frame: briefcaseRect)
         briefcase.backgroundColor = UIColor(patternImage: UIImage(named:"Briefcase_Gray.png")!)
+        briefcase.alpha = 0.4
         view.addSubview(briefcase)
         
         splitImage()

@@ -39,6 +39,7 @@ class WeddingViewController: UIViewController {
         let cakeGreyRect = CGRect(x: (self.view.bounds.size.width / 16), y: (self.view.bounds.size.height / 4), width: (wC?.size.width)!, height: (wC?.size.height)!)
         let cakeGrey = UIView.init(frame: cakeGreyRect)
         cakeGrey.backgroundColor = UIColor(patternImage: UIImage(named:"WeddingCake_Gray.png")!)
+        cakeGrey.alpha = 0.4
         view.addSubview(cakeGrey)
         
         splitImage()

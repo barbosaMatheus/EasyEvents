@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4cU-D1-9b1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4cU-D1-9b1">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -150,6 +150,26 @@
                                     <segue destination="8Er-oT-6Hv" kind="show" id="4g5-Ou-noB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cwj-aB-I4z">
+                                <frame key="frameInset" minX="86" minY="579" width="93" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Baby Shower">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="wLe-32-7uX" kind="show" id="hdC-iy-yom"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30k-qT-ZsH">
+                                <frame key="frameInset" minX="250" minY="579" width="93" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Custom">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="PkU-B4-wwV" kind="show" id="j5H-33-Geh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -157,12 +177,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JFi-pO-oNC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-322.39999999999998" y="32.833583208395808"/>
+            <point key="canvasLocation" x="-323.1884057971015" y="32.608695652173914"/>
         </scene>
         <!--Pending Events-->
         <scene sceneID="XGu-T2-V9a">
             <objects>
-                <viewController id="eEb-GL-bld" customClass="HomeScreenViewController" customModule="EasyEvents" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Pending Events" id="eEb-GL-bld" customClass="HomeScreenViewController" customModule="EasyEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4rn-7p-8MS"/>
                         <viewControllerLayoutGuide type="bottom" id="PN5-Tr-K8U"/>
@@ -172,13 +192,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jh3-fo-J0A">
-                                <frame key="frameInset" minX="-3" height="45" maxX="1" maxY="2"/>
+                                <frame key="frameInset" minX="-4" height="45" maxX="2" maxY="2.5"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="eep-p0-zOV"/>
                                     <barButtonItem title="Add Event" id="QKa-wQ-b2m">
                                         <connections>
                                             <action selector="AddEventButtonPressed:" destination="eEb-GL-bld" id="2z3-Or-Exb"/>
+                                            <segue destination="aNl-1h-1Gh" kind="show" identifier="AddEventSegue" id="qd6-3N-c8c"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -221,9 +242,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Pending Events" id="MrK-eA-g1e">
-                        <barButtonItem key="backBarButtonItem" title="Events" id="0zA-dd-l8x"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Pending Events" id="4ov-S5-2fa" userLabel="Pending Events"/>
                     <connections>
                         <segue destination="3HD-uG-ikd" kind="show" identifier="ChecklistSegue" id="zza-JW-IFW"/>
                     </connections>
@@ -300,7 +319,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VNN-s4-YWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1573.913043478261" y="780.97826086956525"/>
+            <point key="canvasLocation" x="1275" y="781"/>
         </scene>
         <!--Business View Controller-->
         <scene sceneID="UDF-17-KUr">
@@ -335,7 +354,142 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v8R-EJ-4ET" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2553.6231884057975" y="780.97826086956525"/>
+            <point key="canvasLocation" x="1990" y="781"/>
+        </scene>
+        <!--Baby Shower View Controller-->
+        <scene sceneID="jzj-GF-0yF">
+            <objects>
+                <viewController id="wLe-32-7uX" customClass="BabyShowerViewController" customModule="EasyEvents" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fM6-VU-5au"/>
+                        <viewControllerLayoutGuide type="bottom" id="dkQ-Qc-Z0P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="04B-xL-WuZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MAD_EE_Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="BBp-bj-MWJ">
+                                <frame key="frameInset" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWA-09-nS2">
+                                <frame key="frameInset" minX="145" minY="620" width="125" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Add Level">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="AddLevelButton:" destination="wLe-32-7uX" eventType="touchUpInside" id="foq-W3-JNk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1tI-qn-U2G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2705.7971014492755" y="780.97826086956525"/>
+        </scene>
+        <!--Custom View Controller-->
+        <scene sceneID="x5g-du-oct">
+            <objects>
+                <viewController id="PkU-B4-wwV" customClass="CustomViewController" customModule="EasyEvents" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mC1-gO-A1p"/>
+                        <viewControllerLayoutGuide type="bottom" id="72b-gM-paJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tr2-DK-7Mj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MAD_EE_Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="ftM-lV-VMG">
+                                <frame key="frameInset" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="er1-Cm-nRp">
+                                <frame key="frameInset" minX="145" minY="620" width="125" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Add Level">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="AddLevelButton:" destination="PkU-B4-wwV" eventType="touchUpInside" id="kAz-Tk-KUJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tr2-gu-URU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3416" y="781"/>
+        </scene>
+        <!--Add Event-->
+        <scene sceneID="mzJ-o3-XGg">
+            <objects>
+                <viewController id="aNl-1h-1Gh" customClass="AddEventViewController" customModule="EasyEvents" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xGi-pu-5rL"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kdf-2M-HdS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cMC-Ap-kVK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XfV-cz-zjh">
+                                <frame key="frameInset" minX="20" minY="125" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="8hr-Z7-PaM">
+                                <frame key="frameInset" minX="-0.5" minY="181" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="500320258.186041">
+                                    <!--2016-11-08 17:50:58 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="441784800">
+                                    <!--2015-01-01 06:00:00 +0000-->
+                                </date>
+                            </datePicker>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gm2-uK-7lY">
+                                <frame key="frameInset" minX="-0.5" minY="405" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8eW-nb-VOn">
+                                <frame key="frameInset" minX="-0.5" height="44.5" maxY="1"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Cancel" id="8tJ-6h-2Km">
+                                        <connections>
+                                            <segue destination="eEb-GL-bld" kind="show" identifier="CancelSegue" id="DIm-bq-L4P"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="967-a4-M8Z"/>
+                                    <barButtonItem title="Add" id="eir-TT-zci">
+                                        <connections>
+                                            <segue destination="eEb-GL-bld" kind="show" identifier="AddSegue" id="xbY-jI-pEX"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Event" id="XFY-6S-p88"/>
+                    <connections>
+                        <outlet property="EventPicker" destination="gm2-uK-7lY" id="6ZU-uu-usr"/>
+                        <outlet property="datePicker" destination="8hr-Z7-PaM" id="3J1-eG-BwI"/>
+                        <outlet property="eventPicker" destination="gm2-uK-7lY" id="cJh-hO-zns"/>
+                        <outlet property="titleTextField" destination="XfV-cz-zjh" id="WID-e2-AJM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LLh-zp-3pJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1573.913043478261" y="-735.32608695652175"/>
         </scene>
         <!--Event Checklist View Controller-->
         <scene sceneID="bda-6n-co8">
@@ -393,4 +547,7 @@
         <image name="checkmark.png" width="500" height="500"/>
         <image name="date.png" width="256" height="256"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="7N6-2n-l3a"/>
+    </inferredMetricsTieBreakers>
 </document>

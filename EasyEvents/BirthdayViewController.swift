@@ -35,6 +35,7 @@ class BirthdayViewController: UIViewController {
         let presentRect = CGRect(x: (self.view.bounds.size.width / 4), y: (self.view.bounds.size.height / 3), width: (bP?.size.width)!, height: (bP?.size.height)!)
         let present = UIView.init(frame: presentRect)
         present.backgroundColor = UIColor(patternImage: UIImage(named:"BirthdayPresent_Gray.png")!)
+        present.alpha = 0.4
         view.addSubview(present)
         
         splitImage()
