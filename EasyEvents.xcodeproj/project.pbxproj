@@ -38,6 +38,7 @@
 		B5391FE01DC56C6600E58D15 /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = B5391FDF1DC56C6600E58D15 /* checkmark.png */; };
 		B5391FE21DC56D4200E58D15 /* red_x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5391FE11DC56D4200E58D15 /* red_x.png */; };
 		B56ED6C51DC8E02300ECA471 /* Guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56ED6C41DC8E02300ECA471 /* Guest.swift */; };
+		B5807F3A1DDB6B6F0023F502 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5807F391DDB6B6F0023F502 /* LoginViewController.swift */; };
 		B58EA7BA1DC25E6F00F4F7E0 /* date.png in Resources */ = {isa = PBXBuildFile; fileRef = B58EA7B91DC25E6F00F4F7E0 /* date.png */; };
 		B58EA7BC1DC2644600F4F7E0 /* music.png in Resources */ = {isa = PBXBuildFile; fileRef = B58EA7BB1DC2644600F4F7E0 /* music.png */; };
 		B58EA7CD1DC264C500F4F7E0 /* budget.png in Resources */ = {isa = PBXBuildFile; fileRef = B58EA7BD1DC264C500F4F7E0 /* budget.png */; };
@@ -115,6 +116,7 @@
 		B5391FDF1DC56C6600E58D15 /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
 		B5391FE11DC56D4200E58D15 /* red_x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_x.png; sourceTree = "<group>"; };
 		B56ED6C41DC8E02300ECA471 /* Guest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
+		B5807F391DDB6B6F0023F502 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B58EA7B91DC25E6F00F4F7E0 /* date.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = date.png; sourceTree = "<group>"; };
 		B58EA7BB1DC2644600F4F7E0 /* music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = music.png; sourceTree = "<group>"; };
 		B58EA7BD1DC264C500F4F7E0 /* budget.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = budget.png; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				086646FB1DC2E852009FA2DA /* Images */,
 				81EA2DA61DC03B4B00C0FA1B /* HomeScreenViewController.swift */,
 				813DF6B71DBECA9C00D2E0D9 /* AppDelegate.swift */,
+				B5807F391DDB6B6F0023F502 /* LoginViewController.swift */,
 				B5C677BF1DC8E8BE0003EB7D /* Event.swift */,
 				B56ED6C41DC8E02300ECA471 /* Guest.swift */,
 				813DF6BB1DBECA9C00D2E0D9 /* Main.storyboard */,
@@ -445,6 +448,7 @@
 				B56ED6C51DC8E02300ECA471 /* Guest.swift in Sources */,
 				089346CE1DCD6D93004C5995 /* BusinessViewController.swift in Sources */,
 				089346CA1DCD6D3A004C5995 /* WeddingViewController.swift in Sources */,
+				B5807F3A1DDB6B6F0023F502 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

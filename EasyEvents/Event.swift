@@ -24,7 +24,7 @@ class Event {
         guest_list = []
         steps = []
         
-        if type == "Wedding" || type == "wedding" {
+        if type == "Wedding" {
             step_indexes = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
         }
         else {
