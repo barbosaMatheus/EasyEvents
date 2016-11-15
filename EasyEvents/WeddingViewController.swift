@@ -15,6 +15,10 @@ class WeddingViewController: UIViewController {
     var levelCount = 0
     var imageFractions = [UIView]()
     
+    //Matheus edit:
+    var completion : Double = 0.0
+    @IBOutlet weak var compl_label: UILabel!
+    
     @IBAction func AddLevelButton(_ sender: UIButton) {
         if(levelCount < levels){
             view.addSubview(imageFractions[levelCount])
@@ -38,6 +42,9 @@ class WeddingViewController: UIViewController {
         view.addSubview(cakeGrey)
         
         splitImage()
+        
+        //Matheus edit:
+        compl_label.text = "\(self.completion)%"
         
     }
     
