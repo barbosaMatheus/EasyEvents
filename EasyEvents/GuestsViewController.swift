@@ -9,15 +9,13 @@
 import UIKit
 
 class GuestsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
+    @IBOutlet weak var table: UITableView!
+    var guestList = [Guest]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.view.backgroundColor = UIColor( patternImage: UIImage( named: "MAD_EE_Background.png" )! )
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,7 +32,7 @@ class GuestsViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return guestList.count
     }
     
     
@@ -42,7 +40,10 @@ class GuestsViewController: UIViewController, UITableViewDataSource, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
         // Configure the cell...
-        cell.textLabel?.text = "test"
+        cell.textLabel?.text = guestList[indexPath[1]].name
+        cell.detailTextLabel?.text = guestList[indexPath[1]].phone_num
+        cell.backgroundColor = UIColor.clear
+        cell.selectionStyle = .none
         
         return cell
     }
@@ -50,8 +51,17 @@ class GuestsViewController: UIViewController, UITableViewDataSource, UITableView
     // MARK: - Actions
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //selectedEvent = eventList[indexPath[1]]
-        //performSegue(withIdentifier: "ChecklistSegue", sender: self)
+        let cell = tableView.cellForRow(at: indexPath)
+        
+        // Toggle background color between white and green.
+        if cell?.backgroundColor == UIColor.clear {
+            cell?.contentView.backgroundColor = UIColor(red: 0.467, green: 0.950, blue: 0.282, alpha: 1.0)
+            cell?.backgroundColor = UIColor(red: 0.467, green: 0.950, blue: 0.282, alpha: 1.0)
+        }
+        else {
+            cell?.contentView.backgroundColor = UIColor.clear
+            cell?.backgroundColor = UIColor.clear
+        }
     }
     
     
@@ -59,14 +69,47 @@ class GuestsViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
+            guestList.remove(at: indexPath[1])
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
     }
     @IBAction func addGuestButton(_ sender: AnyObject) {
         //Alert to add guest name and cell number
+        let alertController = UIAlertController(title: "Add Contact", message: "Enter your contact's name and number.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        {
+            result in
+            let firstTextField = alertController.textFields![0] as UITextField
+            let secondTextField = alertController.textFields![1] as UITextField
+            if let nameText = firstTextField.text {
+                if let numberText = secondTextField.text {
+                    
+                    if nameText != "" && numberText != "" {
+                        
+                        let newGuest: Guest = Guest.init(name: nameText)
+                        newGuest.phone_num = numberText
+                        self.guestList.append(newGuest)
+                    
+                        DispatchQueue.main.async{
+                            self.table.reloadData()
+                        }
+                    }
+                }
+            }
+            
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+        alertController.addTextField { (textField : UITextField!) -> Void in
+            textField.placeholder = "Name"
+        }
+        alertController.addTextField { (textField : UITextField!) -> Void in
+            textField.placeholder = "Phone Number"
+        }
         
+        alertController.addAction(cancelAction)
+        alertController.addAction(okAction)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
     
     

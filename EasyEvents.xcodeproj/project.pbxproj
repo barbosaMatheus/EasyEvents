@@ -175,7 +175,6 @@
 		086646FB1DC2E852009FA2DA /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				81AFEF1C1DDB8DAB0007D671 /* GuestsViewController.swift */,
 				22CCFD7F1DCDA84800457569 /* GeneralCalendarGray.png */,
 				22CCFD811DCDA85200457569 /* BabyShowerGray.png */,
 				22CCFD7D1DCDA83800457569 /* GeneralCalendarColor.png */,
@@ -222,6 +221,7 @@
 				086646FB1DC2E852009FA2DA /* Images */,
 				81EA2DA61DC03B4B00C0FA1B /* HomeScreenViewController.swift */,
 				813DF6B71DBECA9C00D2E0D9 /* AppDelegate.swift */,
+				81AFEF1C1DDB8DAB0007D671 /* GuestsViewController.swift */,
 				B5807F391DDB6B6F0023F502 /* LoginViewController.swift */,
 				B5C677BF1DC8E8BE0003EB7D /* Event.swift */,
 				B56ED6C41DC8E02300ECA471 /* Guest.swift */,
