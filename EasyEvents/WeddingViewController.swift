@@ -45,7 +45,7 @@ class WeddingViewController: UIViewController {
         splitImage()
         
         //Matheus edit:
-        compl_label.text = "\(self.completion)%"
+        //compl_label.text = "\(self.completion)%"
         
     }
     

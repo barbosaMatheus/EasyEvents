@@ -25,6 +25,9 @@ class AddEventViewController: UIViewController, UIPickerViewDataSource,UIPickerV
         eventPicker.delegate = self
         datePicker.datePickerMode = UIDatePickerMode.date
         
+        //background
+        self.view.backgroundColor = UIColor( patternImage: UIImage( named: "MAD_EE_Background.png" )! )
+        
     }
 
     override func didReceiveMemoryWarning() {

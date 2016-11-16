@@ -51,7 +51,7 @@ class LoginViewController: UIViewController {
         let config = URLSessionConfiguration.default
         let session = URLSession( configuration: config )
         
-        let task = session.dataTask( with: url ) { (data, response, error) in
+        let task = session.dataTask( with: url, completionHandler: { (data, response, error) in
             guard error == nil else {
                 print("Error in session call: \(error)")
                 return
@@ -68,31 +68,32 @@ class LoginViewController: UIViewController {
                 //check if this user exists in the db
                 for item in json! {
                     guard let user = item["username"] as? String else {
-                        print( "USERNAME NOT FOUND!" )
+                        //print( "USERNAME NOT FOUND!" )
                         return
                     }
                     
                     if user == self.dbUsername {
-                          //print( "FOUND USERNAME" )
-                          self.username_found = true
+                        //print( "FOUND USERNAME" )
+                        self.username_found = true
                     }
                 }
-                if self.username_found == false {
-                    print( "USERNAME NOT FOUND!" )
-                }
-                
             } catch {
                 print( "Error serializing JSON Data: \(error)" )
             }
-        }
+        } )
         
         task.resume( )
         
         if self.username_found {
             performSegue( withIdentifier: "login_segue", sender: self )
         }
+        else {
+            let alert = UIAlertController( title: "Cannot Login:", message: "Username \"\(self.dbUsername)\" not found.", preferredStyle: UIAlertControllerStyle.alert )
+            alert.addAction( UIAlertAction( title: "OK", style: UIAlertActionStyle.default, handler: nil ) )
+            self.present( alert, animated: true, completion: nil )
+        }
     }
-
+    
     /*
     // MARK: - Navigation
 
