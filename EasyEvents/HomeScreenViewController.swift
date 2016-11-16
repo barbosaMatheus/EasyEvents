@@ -39,6 +39,8 @@ class HomeScreenViewController: UIViewController, UITableViewDataSource, UITable
         
         cell.textLabel?.text = eventList[indexPath[1]].title
         cell.detailTextLabel?.text = eventList[indexPath[1]].date
+        cell.backgroundColor = UIColor.clear
+        
         return cell
     }
     

@@ -12,21 +12,18 @@ class Guest {
     
     var name: String //name of guest
     var phone_num: String //guest's phone number (123)456-7890
-    var email: String //guest's email address name@domain.whatever
     var confirmed: Bool //indicates whether the guest is coming or not
                         //this is false for guests who are yet to respond
     
     init( name: String ) {
         self.name = name
         self.phone_num = ""
-        self.email = ""
         self.confirmed = false
     }
     
     init( name: String, confirmed: Bool ) {
         self.name = name
         self.phone_num = ""
-        self.email = ""
         self.confirmed = confirmed
     }
 }
