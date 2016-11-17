@@ -20,6 +20,7 @@ class LoginViewController: UIViewController {
     //db information
     var dbUsername: String = ""
     var dbPassword: String = ""
+    var user_id: Int = 1 //id attribute for the current user in the database
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +48,7 @@ class LoginViewController: UIViewController {
         self.dbPassword = psswd_label.text!
         
         //JSON interfacing (using Dr. Mayfield's example code)
-        let url = URL( string:"https://cs.okstate.edu/~asaph/ee_service.php?u=\(self.dbUsername)&p=\(self.dbPassword)" )!
+        let url = URL( string:"https://cs.okstate.edu/~asaph/login.php?u=\(self.dbUsername)&p=\(self.dbPassword)" )!
         let config = URLSessionConfiguration.default
         let session = URLSession( configuration: config )
         
@@ -68,13 +69,16 @@ class LoginViewController: UIViewController {
                 //check if this user exists in the db
                 for item in json! {
                     guard let user = item["username"] as? String else {
-                        //print( "USERNAME NOT FOUND!" )
+                        print( "USERNAME NOT FOUND!" )
                         return
                     }
-                    
+                    //guard let id = item["id"] as? Int else {
+                    //    return
+                    //}
                     if user == self.dbUsername {
                         //print( "FOUND USERNAME" )
                         self.username_found = true
+                        //self.user_id = id
                     }
                 }
             } catch {
@@ -94,14 +98,19 @@ class LoginViewController: UIViewController {
         }
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        guard let vc = segue.destination as? SplashScreenViewController else {
+            return
+        }
+        vc.user_id = self.user_id
+        vc.dbUsername = self.dbUsername
+        vc.dbPassword = self.dbPassword
     }
-    */
-
 }

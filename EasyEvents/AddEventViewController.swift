@@ -28,8 +28,15 @@ class AddEventViewController: UIViewController, UIPickerViewDataSource,UIPickerV
         //background
         self.view.backgroundColor = UIColor( patternImage: UIImage( named: "MAD_EE_Background.png" )! )
         
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer( target: self, action: #selector( self.close_kb ) )
+        view.addGestureRecognizer( tap )
+        
     }
 
+    func close_kb( ) {
+        view.endEditing( true )
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

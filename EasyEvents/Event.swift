@@ -16,6 +16,8 @@ class Event {
     var guest_list: [Guest] //guest list
     var step_indexes: [Int] //indexes of steps associated with this event
     var steps:[(pic:UIImage,name:String,done:Bool)] //info about the steps for this event
+    //var data_base_id: Int
+    var type: String
     
     init( _title: String, _date: String, type: String ) {
         title = _title
@@ -23,6 +25,7 @@ class Event {
         completion = 0.0
         guest_list = []
         steps = []
+        self.type = type
         
         if type == "Weddings" {
             step_indexes = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]

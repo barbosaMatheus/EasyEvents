@@ -13,10 +13,65 @@ class HomeScreenViewController: UIViewController, UITableViewDataSource, UITable
     var eventList = [Event]()
     var selectedEvent: Event? = nil
 
+    //db information
+    var dbUsername: String = ""
+    var dbPassword: String = ""
+    var user_id: Int = 0 //id attribute for the current user in the database
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.setHidesBackButton(true, animated:true)
+        //self.navigationItem.setHidesBackButton(true, animated:true)
         self.view.backgroundColor = UIColor( patternImage: UIImage( named: "MAD_EE_Background.png" )! )
+        
+        
+        //grab stuff from the database
+        let url = URL( string:"https://cs.okstate.edu/~asaph/events.php?u=\(self.dbUsername)&p=\(self.dbPassword)&i=\(self.user_id)" )!
+        let config = URLSessionConfiguration.default
+        let session = URLSession( configuration: config )
+        
+        let task = session.dataTask( with: url, completionHandler: { (data, response, error) in
+            guard error == nil else {
+                print("Error in session call: \(error)")
+                return
+            }
+            
+            guard let result = data else {
+                print( "No data\n" )
+                return
+            }
+            
+            do {
+                let json = try JSONSerialization.jsonObject( with: result, options: .allowFragments ) as? [[String: AnyObject]]
+                
+                //check if this user exists in the db
+                for event in json! {
+                    //get event title
+                    guard let title = event["title"] as? String else {
+                        return
+                    }
+                    
+                    //get event date
+                    guard let date = event["event_date"] as? String else {
+                        return
+                    }
+                    
+                    //get event type
+                    guard let type = event["event_type"] as? String else {
+                        return
+                    }
+                    
+                    //get event completion percentage
+                    
+                    //create event object and append to list
+                    let ev = Event( _title: title, _date: date, type: type )
+                    self.eventList.append( ev )
+                }
+            } catch {
+                print( "Error serializing JSON Data: \(error)" )
+            }
+        } )
+        
+        task.resume( )
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,6 +118,8 @@ class HomeScreenViewController: UIViewController, UITableViewDataSource, UITable
         if segue.identifier == "ChecklistSegue" {
             let destinationVC = (segue.destination as! EventChecklistViewController)
             destinationVC.current_event = self.selectedEvent!
+            destinationVC.dbPassword = self.dbPassword
+            destinationVC.dbUsername = self.dbUsername
         }
         if segue.identifier == "AddEventSegue" {
             let destinationVC = (segue.destination as! AddEventViewController)
