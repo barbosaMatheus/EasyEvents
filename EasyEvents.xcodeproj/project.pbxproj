@@ -13,6 +13,11 @@
 		086647051DC2E873009FA2DA /* MAD_EE_NewEventButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 086646FF1DC2E873009FA2DA /* MAD_EE_NewEventButton.png */; };
 		086647061DC2E873009FA2DA /* MAD_EE_PlayButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 086647001DC2E873009FA2DA /* MAD_EE_PlayButton.png */; };
 		086647071DC2E873009FA2DA /* MAD_EE_PlusButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 086647011DC2E873009FA2DA /* MAD_EE_PlusButton.png */; };
+		087170C91DDD29FC00E2CFEC /* MAD_EE_EventsButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 087170C41DDD29FC00E2CFEC /* MAD_EE_EventsButton.png */; };
+		087170CA1DDD29FC00E2CFEC /* MAD_EE_GuestButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 087170C51DDD29FC00E2CFEC /* MAD_EE_GuestButton.png */; };
+		087170CB1DDD29FC00E2CFEC /* MAD_EE_GuestlistButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 087170C61DDD29FC00E2CFEC /* MAD_EE_GuestlistButton.png */; };
+		087170CC1DDD29FC00E2CFEC /* MAD_EE_LoginButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 087170C71DDD29FC00E2CFEC /* MAD_EE_LoginButton.png */; };
+		087170CD1DDD29FC00E2CFEC /* MAD_EE_StatusButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 087170C81DDD29FC00E2CFEC /* MAD_EE_StatusButton.png */; };
 		089346CA1DCD6D3A004C5995 /* WeddingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089346C91DCD6D3A004C5995 /* WeddingViewController.swift */; };
 		089346CC1DCD6D7A004C5995 /* BirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089346CB1DCD6D7A004C5995 /* BirthdayViewController.swift */; };
 		089346CE1DCD6D93004C5995 /* BusinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089346CD1DCD6D93004C5995 /* BusinessViewController.swift */; };
@@ -24,6 +29,16 @@
 		089346DA1DCD6E9B004C5995 /* WeddingCake_Gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 089346D41DCD6E9B004C5995 /* WeddingCake_Gray.png */; };
 		089A37351DD650DE009D06AF /* BabyShowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A37341DD650DE009D06AF /* BabyShowerViewController.swift */; };
 		089A37371DD65116009D06AF /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089A37361DD65116009D06AF /* CustomViewController.swift */; };
+		089C3E711DDD4182005595F9 /* AppLogo58.png in Resources */ = {isa = PBXBuildFile; fileRef = 089C3E691DDD4182005595F9 /* AppLogo58.png */; };
+		089C3E721DDD4182005595F9 /* AppLogo80.png in Resources */ = {isa = PBXBuildFile; fileRef = 089C3E6A1DDD4182005595F9 /* AppLogo80.png */; };
+		089C3E731DDD4182005595F9 /* AppLogo87.png in Resources */ = {isa = PBXBuildFile; fileRef = 089C3E6B1DDD4182005595F9 /* AppLogo87.png */; };
+		089C3E741DDD4182005595F9 /* AppLogo120.png in Resources */ = {isa = PBXBuildFile; fileRef = 089C3E6C1DDD4182005595F9 /* AppLogo120.png */; };
+		089C3E751DDD4182005595F9 /* AppLogo152.png in Resources */ = {isa = PBXBuildFile; fileRef = 089C3E6D1DDD4182005595F9 /* AppLogo152.png */; };
+		089C3E761DDD4182005595F9 /* AppLogo167.png in Resources */ = {isa = PBXBuildFile; fileRef = 089C3E6E1DDD4182005595F9 /* AppLogo167.png */; };
+		089C3E771DDD4182005595F9 /* AppLogo180.png in Resources */ = {isa = PBXBuildFile; fileRef = 089C3E6F1DDD4182005595F9 /* AppLogo180.png */; };
+		089C3E781DDD4182005595F9 /* AppLogo1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 089C3E701DDD4182005595F9 /* AppLogo1024.png */; };
+		089C3E7B1DDD43B6005595F9 /* AppLogo40.png in Resources */ = {isa = PBXBuildFile; fileRef = 089C3E791DDD43B6005595F9 /* AppLogo40.png */; };
+		089C3E7C1DDD43B6005595F9 /* AppLogo60.png in Resources */ = {isa = PBXBuildFile; fileRef = 089C3E7A1DDD43B6005595F9 /* AppLogo60.png */; };
 		22CCFD7E1DCDA83800457569 /* GeneralCalendarColor.png in Resources */ = {isa = PBXBuildFile; fileRef = 22CCFD7D1DCDA83800457569 /* GeneralCalendarColor.png */; };
 		22CCFD801DCDA84800457569 /* GeneralCalendarGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 22CCFD7F1DCDA84800457569 /* GeneralCalendarGray.png */; };
 		22CCFD821DCDA85200457569 /* BabyShowerGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 22CCFD811DCDA85200457569 /* BabyShowerGray.png */; };
@@ -91,6 +106,11 @@
 		086646FF1DC2E873009FA2DA /* MAD_EE_NewEventButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MAD_EE_NewEventButton.png; sourceTree = "<group>"; };
 		086647001DC2E873009FA2DA /* MAD_EE_PlayButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MAD_EE_PlayButton.png; sourceTree = "<group>"; };
 		086647011DC2E873009FA2DA /* MAD_EE_PlusButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MAD_EE_PlusButton.png; sourceTree = "<group>"; };
+		087170C41DDD29FC00E2CFEC /* MAD_EE_EventsButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MAD_EE_EventsButton.png; sourceTree = "<group>"; };
+		087170C51DDD29FC00E2CFEC /* MAD_EE_GuestButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MAD_EE_GuestButton.png; sourceTree = "<group>"; };
+		087170C61DDD29FC00E2CFEC /* MAD_EE_GuestlistButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MAD_EE_GuestlistButton.png; sourceTree = "<group>"; };
+		087170C71DDD29FC00E2CFEC /* MAD_EE_LoginButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MAD_EE_LoginButton.png; sourceTree = "<group>"; };
+		087170C81DDD29FC00E2CFEC /* MAD_EE_StatusButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MAD_EE_StatusButton.png; sourceTree = "<group>"; };
 		089346C91DCD6D3A004C5995 /* WeddingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeddingViewController.swift; sourceTree = "<group>"; };
 		089346CB1DCD6D7A004C5995 /* BirthdayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirthdayViewController.swift; sourceTree = "<group>"; };
 		089346CD1DCD6D93004C5995 /* BusinessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +122,16 @@
 		089346D41DCD6E9B004C5995 /* WeddingCake_Gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WeddingCake_Gray.png; sourceTree = "<group>"; };
 		089A37341DD650DE009D06AF /* BabyShowerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BabyShowerViewController.swift; sourceTree = "<group>"; };
 		089A37361DD65116009D06AF /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		089C3E691DDD4182005595F9 /* AppLogo58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppLogo58.png; sourceTree = "<group>"; };
+		089C3E6A1DDD4182005595F9 /* AppLogo80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppLogo80.png; sourceTree = "<group>"; };
+		089C3E6B1DDD4182005595F9 /* AppLogo87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppLogo87.png; sourceTree = "<group>"; };
+		089C3E6C1DDD4182005595F9 /* AppLogo120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppLogo120.png; sourceTree = "<group>"; };
+		089C3E6D1DDD4182005595F9 /* AppLogo152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppLogo152.png; sourceTree = "<group>"; };
+		089C3E6E1DDD4182005595F9 /* AppLogo167.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppLogo167.png; sourceTree = "<group>"; };
+		089C3E6F1DDD4182005595F9 /* AppLogo180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppLogo180.png; sourceTree = "<group>"; };
+		089C3E701DDD4182005595F9 /* AppLogo1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppLogo1024.png; sourceTree = "<group>"; };
+		089C3E791DDD43B6005595F9 /* AppLogo40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppLogo40.png; sourceTree = "<group>"; };
+		089C3E7A1DDD43B6005595F9 /* AppLogo60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppLogo60.png; sourceTree = "<group>"; };
 		22CCFD7D1DCDA83800457569 /* GeneralCalendarColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GeneralCalendarColor.png; sourceTree = "<group>"; };
 		22CCFD7F1DCDA84800457569 /* GeneralCalendarGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GeneralCalendarGray.png; sourceTree = "<group>"; };
 		22CCFD811DCDA85200457569 /* BabyShowerGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BabyShowerGray.png; sourceTree = "<group>"; };
@@ -179,6 +209,7 @@
 		086646FB1DC2E852009FA2DA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				089C3E681DDD4164005595F9 /* AppIcons */,
 				22CCFD7F1DCDA84800457569 /* GeneralCalendarGray.png */,
 				22CCFD811DCDA85200457569 /* BabyShowerGray.png */,
 				22CCFD7D1DCDA83800457569 /* GeneralCalendarColor.png */,
@@ -189,6 +220,11 @@
 				089346D21DCD6E9B004C5995 /* Briefcase_Gray.png */,
 				089346D31DCD6E9B004C5995 /* WeddingCake_Color.png */,
 				089346D41DCD6E9B004C5995 /* WeddingCake_Gray.png */,
+				087170C41DDD29FC00E2CFEC /* MAD_EE_EventsButton.png */,
+				087170C51DDD29FC00E2CFEC /* MAD_EE_GuestButton.png */,
+				087170C61DDD29FC00E2CFEC /* MAD_EE_GuestlistButton.png */,
+				087170C71DDD29FC00E2CFEC /* MAD_EE_LoginButton.png */,
+				087170C81DDD29FC00E2CFEC /* MAD_EE_StatusButton.png */,
 				086646FC1DC2E873009FA2DA /* MAD_EE_Background.png */,
 				086646FD1DC2E873009FA2DA /* MAD_EE_ClearAllButton.png */,
 				086646FE1DC2E873009FA2DA /* MAD_EE_HelpButton.png */,
@@ -197,6 +233,23 @@
 				086647011DC2E873009FA2DA /* MAD_EE_PlusButton.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		089C3E681DDD4164005595F9 /* AppIcons */ = {
+			isa = PBXGroup;
+			children = (
+				089C3E791DDD43B6005595F9 /* AppLogo40.png */,
+				089C3E7A1DDD43B6005595F9 /* AppLogo60.png */,
+				089C3E691DDD4182005595F9 /* AppLogo58.png */,
+				089C3E6A1DDD4182005595F9 /* AppLogo80.png */,
+				089C3E6B1DDD4182005595F9 /* AppLogo87.png */,
+				089C3E6C1DDD4182005595F9 /* AppLogo120.png */,
+				089C3E6D1DDD4182005595F9 /* AppLogo152.png */,
+				089C3E6E1DDD4182005595F9 /* AppLogo167.png */,
+				089C3E6F1DDD4182005595F9 /* AppLogo180.png */,
+				089C3E701DDD4182005595F9 /* AppLogo1024.png */,
+			);
+			name = AppIcons;
 			sourceTree = "<group>";
 		};
 		813DF6AB1DBECA9C00D2E0D9 = {
@@ -399,36 +452,51 @@
 				089346D51DCD6E9B004C5995 /* BirthdayPresent_Color.png in Resources */,
 				B58EA7D31DC264C500F4F7E0 /* invite.png in Resources */,
 				089346D61DCD6E9B004C5995 /* BirthdayPresent_Gray.png in Resources */,
+				087170CD1DDD29FC00E2CFEC /* MAD_EE_StatusButton.png in Resources */,
 				B58EA7D11DC264C500F4F7E0 /* flowers.png in Resources */,
 				B58EA7DB1DC264C500F4F7E0 /* venue.png in Resources */,
 				B58EA7BC1DC2644600F4F7E0 /* music.png in Resources */,
 				089346D71DCD6E9B004C5995 /* Briefcase_Color.png in Resources */,
 				B58EA7D81DC264C500F4F7E0 /* resources.txt in Resources */,
+				087170CB1DDD29FC00E2CFEC /* MAD_EE_GuestlistButton.png in Resources */,
 				B58EA7CE1DC264C500F4F7E0 /* catering.png in Resources */,
+				089C3E771DDD4182005595F9 /* AppLogo180.png in Resources */,
 				089346D81DCD6E9B004C5995 /* Briefcase_Gray.png in Resources */,
 				086647051DC2E873009FA2DA /* MAD_EE_NewEventButton.png in Resources */,
 				086647041DC2E873009FA2DA /* MAD_EE_HelpButton.png in Resources */,
 				B5391FE21DC56D4200E58D15 /* red_x.png in Resources */,
+				089C3E7B1DDD43B6005595F9 /* AppLogo40.png in Resources */,
 				B58EA7D41DC264C500F4F7E0 /* license.png in Resources */,
 				22CCFD801DCDA84800457569 /* GeneralCalendarGray.png in Resources */,
 				089346D91DCD6E9B004C5995 /* WeddingCake_Color.png in Resources */,
 				B58EA7D01DC264C500F4F7E0 /* favors.png in Resources */,
+				089C3E7C1DDD43B6005595F9 /* AppLogo60.png in Resources */,
+				089C3E781DDD4182005595F9 /* AppLogo1024.png in Resources */,
 				086647071DC2E873009FA2DA /* MAD_EE_PlusButton.png in Resources */,
 				B58EA7D51DC264C500F4F7E0 /* party.png in Resources */,
 				B58D78431DDCBE0300D86997 /* party_favor.png in Resources */,
+				089C3E761DDD4182005595F9 /* AppLogo167.png in Resources */,
+				087170CC1DDD29FC00E2CFEC /* MAD_EE_LoginButton.png in Resources */,
+				089C3E721DDD4182005595F9 /* AppLogo80.png in Resources */,
+				089C3E731DDD4182005595F9 /* AppLogo87.png in Resources */,
+				087170CA1DDD29FC00E2CFEC /* MAD_EE_GuestButton.png in Resources */,
 				B58EA7D21DC264C500F4F7E0 /* guests.png in Resources */,
 				813DF6C51DBECA9C00D2E0D9 /* LaunchScreen.storyboard in Resources */,
 				086647021DC2E873009FA2DA /* MAD_EE_Background.png in Resources */,
 				B58EA7DC1DC264C500F4F7E0 /* wardrobe.png in Resources */,
+				089C3E711DDD4182005595F9 /* AppLogo58.png in Resources */,
 				22CCFD841DCDA85E00457569 /* BabyShowerColor.png in Resources */,
 				B58EA7BA1DC25E6F00F4F7E0 /* date.png in Resources */,
 				B58EA7CF1DC264C500F4F7E0 /* details.png in Resources */,
+				089C3E751DDD4182005595F9 /* AppLogo152.png in Resources */,
 				813DF6C21DBECA9C00D2E0D9 /* Assets.xcassets in Resources */,
 				B58EA7DA1DC264C500F4F7E0 /* ty_cards.png in Resources */,
 				22CCFD821DCDA85200457569 /* BabyShowerGray.png in Resources */,
+				087170C91DDD29FC00E2CFEC /* MAD_EE_EventsButton.png in Resources */,
 				089346DA1DCD6E9B004C5995 /* WeddingCake_Gray.png in Resources */,
 				B58EA7CD1DC264C500F4F7E0 /* budget.png in Resources */,
 				B58EA7D71DC264C500F4F7E0 /* registration.png in Resources */,
+				089C3E741DDD4182005595F9 /* AppLogo120.png in Resources */,
 				813DF6BD1DBECA9C00D2E0D9 /* Main.storyboard in Resources */,
 				B58D78471DDCDB2A00D86997 /* pineapple2.png in Resources */,
 				B5391FE01DC56C6600E58D15 /* checkmark.png in Resources */,
