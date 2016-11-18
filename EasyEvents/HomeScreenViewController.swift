@@ -10,6 +10,7 @@ import UIKit
 
 class HomeScreenViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
+    @IBOutlet weak var homeScreenTable: UITableView!
     var eventList = [Event]()
     var selectedEvent: Event? = nil
 
@@ -95,18 +96,27 @@ class HomeScreenViewController: UIViewController, UITableViewDataSource, UITable
         cell.textLabel?.text = eventList[indexPath[1]].title
         cell.detailTextLabel?.text = eventList[indexPath[1]].date
         cell.backgroundColor = UIColor.clear
+        cell.textLabel?.textColor = UIColor.black
         
         return cell
     }
     
     // MARK: - Actions
     
+    // Select row
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {        
         selectedEvent = eventList[indexPath[1]]
         performSegue(withIdentifier: "ChecklistSegue", sender: self)
     }
     
-    
+    // Delete row
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            eventList.remove(at: indexPath[1])
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
     
    
 

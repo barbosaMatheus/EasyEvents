@@ -42,8 +42,21 @@ class GuestsViewController: UIViewController, UITableViewDataSource, UITableView
         // Configure the cell...
         cell.textLabel?.text = guestList[indexPath[1]].name
         cell.detailTextLabel?.text = guestList[indexPath[1]].phone_num
-        cell.backgroundColor = UIColor.clear
+        
+        // Set cell color
+        if guestList[indexPath[1]].confirmed == true {
+            cell.contentView.backgroundColor = UIColor(red: 0.467, green: 0.950, blue: 0.282, alpha: 1.0)
+            cell.backgroundColor = UIColor(red: 0.467, green: 0.950, blue: 0.282, alpha: 1.0)
+        }
+        else {
+            cell.contentView.backgroundColor = UIColor.clear
+            cell.backgroundColor = UIColor.clear
+        }
+        
+        cell.textLabel?.textColor = UIColor.black
+        // Prevent cell from turning gray when selected
         cell.selectionStyle = .none
+        
         
         return cell
     }
@@ -54,14 +67,19 @@ class GuestsViewController: UIViewController, UITableViewDataSource, UITableView
         let cell = tableView.cellForRow(at: indexPath)
         
         // Toggle background color between white and green.
-        if cell?.backgroundColor == UIColor.clear {
+        // Code for confirmation
+        if guestList[indexPath[1]].confirmed == false {
+            guestList[indexPath[1]].confirmed = true
             cell?.contentView.backgroundColor = UIColor(red: 0.467, green: 0.950, blue: 0.282, alpha: 1.0)
             cell?.backgroundColor = UIColor(red: 0.467, green: 0.950, blue: 0.282, alpha: 1.0)
         }
+        // Toggle guest back to not confirmed
         else {
+            guestList[indexPath[1]].confirmed = false
             cell?.contentView.backgroundColor = UIColor.clear
             cell?.backgroundColor = UIColor.clear
         }
+        print(guestList[indexPath[1]].confirmed)
     }
     
     
@@ -73,6 +91,7 @@ class GuestsViewController: UIViewController, UITableViewDataSource, UITableView
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
+    
     @IBAction func addGuestButton(_ sender: AnyObject) {
         //Alert to add guest name and cell number
         let alertController = UIAlertController(title: "Add Contact", message: "Enter your contact's name and number.", preferredStyle: .alert)
@@ -88,6 +107,7 @@ class GuestsViewController: UIViewController, UITableViewDataSource, UITableView
                         
                         let newGuest: Guest = Guest.init(name: nameText)
                         newGuest.phone_num = numberText
+                        newGuest.confirmed = false
                         self.guestList.append(newGuest)
                     
                         DispatchQueue.main.async{
