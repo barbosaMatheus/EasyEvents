@@ -88,8 +88,6 @@ class LoginViewController: UIViewController {
         } )
         
         task.resume( )
-        
-        
     }
     
     // MARK: - Navigation
