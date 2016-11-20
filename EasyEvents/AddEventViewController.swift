@@ -55,7 +55,7 @@ class AddEventViewController: UIViewController, UIPickerViewDataSource,UIPickerV
             dateFormatter.dateFormat = "yyyy-MM-dd"
             let selectedDate = dateFormatter.string(from: datePicker.date)
             
-            let newEvent = Event.init(_title: titleTextField.text!, _date: selectedDate, type: selectedEvent)
+            let newEvent = Event.init( _id: 0, _title: titleTextField.text!, _date: selectedDate, type: selectedEvent)
             currentEventList.append(newEvent)
             
             destinationVC.eventList = currentEventList

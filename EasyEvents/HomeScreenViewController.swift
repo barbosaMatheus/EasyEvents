@@ -46,6 +46,12 @@ class HomeScreenViewController: UIViewController, UITableViewDataSource, UITable
                 
                 //check if this user exists in the db
                 for event in json! {
+                    //get event id
+                    guard let id = event["id"] as? String else {
+                        return
+                    }
+                    let _id = Int( id )
+                    
                     //get event title
                     guard let title = event["title"] as? String else {
                         return
@@ -64,9 +70,14 @@ class HomeScreenViewController: UIViewController, UITableViewDataSource, UITable
                     //get event completion percentage
                     
                     //create event object and append to list
-                    let ev = Event( _title: title, _date: date, type: type )
+                    let ev = Event( _id: _id!, _title: title, _date: date, type: type )
                     self.eventList.append( ev )
                 }
+                
+                DispatchQueue.main.async {
+                    self.homeScreenTable.reloadData( )
+                }
+                
             } catch {
                 print( "Error serializing JSON Data: \(error)" )
             }
@@ -127,9 +138,11 @@ class HomeScreenViewController: UIViewController, UITableViewDataSource, UITable
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ChecklistSegue" {
             let destinationVC = (segue.destination as! EventChecklistViewController)
-            destinationVC.current_event = self.selectedEvent!
+            //destinationVC.current_event = self.selectedEvent!
             destinationVC.dbPassword = self.dbPassword
             destinationVC.dbUsername = self.dbUsername
+            destinationVC.event_id = (self.selectedEvent?.data_base_id)!
+            destinationVC.event = (self.selectedEvent?.title)!
         }
         if segue.identifier == "AddEventSegue" {
             let destinationVC = (segue.destination as! AddEventViewController)

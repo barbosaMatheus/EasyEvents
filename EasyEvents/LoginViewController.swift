@@ -15,12 +15,12 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var psswd_label: UITextField!
     
     //flags
-    var username_found = false
+    //var username_found = false
     
     //db information
     var dbUsername: String = ""
     var dbPassword: String = ""
-    var user_id: Int = 1 //id attribute for the current user in the database
+    var user_id: Int = 0 //id attribute for the current user in the database
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,19 +68,33 @@ class LoginViewController: UIViewController {
                 
                 //check if this user exists in the db
                 for item in json! {
-                    guard let user = item["username"] as? String else {
-                        print( "USERNAME NOT FOUND!" )
+                    guard ( item["username"] as? String ) != nil else {
+                        //print( "USERNAME NOT FOUND!" )
+                        let alert = UIAlertController( title: "Cannot Login:", message: "Username \"\(self.dbUsername)\" not found.", preferredStyle: UIAlertControllerStyle.alert )
+                        alert.addAction( UIAlertAction( title: "OK", style: UIAlertActionStyle.default, handler: nil ) )
+                        self.present( alert, animated: true, completion: nil )
                         return
                     }
-                    //guard let id = item["id"] as? Int else {
-                    //    return
-                    //}
-                    if user == self.dbUsername {
+                    guard let id = item["id"] as? String else {
+                        let alert = UIAlertController( title: "Database Error:", message: "Please try again", preferredStyle: UIAlertControllerStyle.alert )
+                        alert.addAction( UIAlertAction( title: "OK", style: UIAlertActionStyle.default, handler: nil ) )
+                        self.present( alert, animated: true, completion: nil )
+                        return
+                    }
+                    
+                    self.user_id = Int( id )!
+                    
+                    /*if user == self.dbUsername {
                         //print( "FOUND USERNAME" )
                         self.username_found = true
-                        //self.user_id = id
-                    }
+                        self.user_id = Int( id )!
+                    }*/
                 }
+                
+                DispatchQueue.main.async {
+                    self.performSegue( withIdentifier: "login_segue", sender: self )
+                }
+                
             } catch {
                 print( "Error serializing JSON Data: \(error)" )
             }
@@ -88,16 +102,8 @@ class LoginViewController: UIViewController {
         
         task.resume( )
         
-        if self.username_found {
-            performSegue( withIdentifier: "login_segue", sender: self )
-        }
-        else {
-            let alert = UIAlertController( title: "Cannot Login:", message: "Username \"\(self.dbUsername)\" not found.", preferredStyle: UIAlertControllerStyle.alert )
-            alert.addAction( UIAlertAction( title: "OK", style: UIAlertActionStyle.default, handler: nil ) )
-            self.present( alert, animated: true, completion: nil )
-        }
+        
     }
-    
     
     // MARK: - Navigation
 
