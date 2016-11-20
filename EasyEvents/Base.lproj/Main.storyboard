@@ -638,6 +638,7 @@
                         <outlet property="check_button" destination="UbD-2o-Tq6" id="zVV-9h-jZk"/>
                         <outlet property="curr_image" destination="uye-4t-usM" id="OPI-3K-n7Q"/>
                         <outlet property="step_label" destination="5PY-85-nrK" id="1A1-Nr-z2f"/>
+                        <segue destination="8Er-oT-6Hv" kind="show" identifier="wedding" id="k0u-aU-FDx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RnC-BR-gZM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -658,5 +659,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="UZv-sh-nq5"/>
         <segue reference="xbY-jI-pEX"/>
+        <segue reference="k0u-aU-FDx"/>
     </inferredMetricsTieBreakers>
 </document>
