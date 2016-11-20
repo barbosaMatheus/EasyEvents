@@ -78,9 +78,9 @@ class HomeScreenViewController: UIViewController, UITableViewDataSource, UITable
                     let _completion = Double( completion )
                     
                     //create event object and append to list
-                    let ev = Event( _id: _id!, _title: title, _date: date, type: type )
-                    ev.completion = _completion!
-                    self.eventList.append( ev )
+                    let temp_event = Event( _id: _id!, _title: title, _date: date, type: type )
+                    temp_event.completion = _completion!
+                    self.eventList.append( temp_event )
                 }
                 
                 DispatchQueue.main.async {
@@ -134,6 +134,9 @@ class HomeScreenViewController: UIViewController, UITableViewDataSource, UITable
     // Delete row
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            //delete from db first
+            
+            
             // Delete the row from the data source
             eventList.remove(at: indexPath[1])
             tableView.deleteRows(at: [indexPath], with: .fade)

@@ -29,7 +29,7 @@ class LoginViewController: UIViewController {
         view.addGestureRecognizer( tap )
         
         
-        self.view.backgroundColor = UIColor( patternImage: UIImage( named: "MAD_EE_Background.png" )! )
+        self.view.backgroundColor = UIColor( patternImage: UIImage( named: "events_image1.jpg" )! )
     }
     
     func close_kb( ) {
