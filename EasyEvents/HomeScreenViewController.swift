@@ -146,7 +146,10 @@ class HomeScreenViewController: UIViewController, UITableViewDataSource, UITable
         }
         if segue.identifier == "AddEventSegue" {
             let destinationVC = (segue.destination as! AddEventViewController)
-            destinationVC.currentEventList = self.eventList
+            //destinationVC.currentEventList = self.eventList
+            destinationVC.dbPassword = self.dbPassword
+            destinationVC.dbUsername = self.dbUsername
+            destinationVC.user_id = self.user_id
         }
     }
     

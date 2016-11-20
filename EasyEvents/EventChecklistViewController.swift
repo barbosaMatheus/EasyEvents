@@ -90,7 +90,6 @@ class EventChecklistViewController: UIViewController {
                 }
                 
                 DispatchQueue.main.async {
-                    //self.pick_icons( )
                     self.display( )
                 }
                 
@@ -102,23 +101,14 @@ class EventChecklistViewController: UIViewController {
         task.resume( )
     }
     
-    func pick_icons( ) {
-        /*let end = current_event.step_indexes.count
-        for i in 0...end-1 {
-            let index = current_event.step_indexes[i]
-            current_event.steps.append( all_steps[index] )
-            //current_steps.append( all_steps[index] )
-        }*/
-    }
-    
     @IBAction func toggle(_ sender: AnyObject) {
         if check_button.currentImage == #imageLiteral(resourceName: "red_x.png") { //if red x
             check_button.setImage( #imageLiteral(resourceName: "checkmark.png"), for: UIControlState.normal ) //toggle image
-            //current_event.steps[step_index].done = true //toggle flag in event obj
+            current_steps[step_index].done = true //toggle flag in event obj
         }
         else {//if checkmark
             check_button.setImage( #imageLiteral(resourceName: "red_x.png"), for: UIControlState.normal )
-            //current_event.steps[step_index].done = false
+            current_steps[step_index].done = false
         }
     }
     

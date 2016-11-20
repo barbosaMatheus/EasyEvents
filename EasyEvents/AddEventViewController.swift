@@ -15,8 +15,12 @@ class AddEventViewController: UIViewController, UIPickerViewDataSource,UIPickerV
     @IBOutlet weak var eventPicker: UIPickerView!
     let pickerData = ["Weddings", "Birthdays", "Business"]
     var selectedEvent: String = "Weddings"
-    var currentEventList = [Event]()
+    var newEvent = Event.init( _id: 0, _title: "", _date: "", type: "" )
     
+    //db information
+    var dbUsername: String = ""
+    var dbPassword: String = ""
+    var user_id: Int = 1
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,25 +52,61 @@ class AddEventViewController: UIViewController, UIPickerViewDataSource,UIPickerV
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AddSegue" {
-            let destinationVC = (segue.destination as! HomeScreenViewController)
-            
             // Configure Date
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
             let selectedDate = dateFormatter.string(from: datePicker.date)
             
-            let newEvent = Event.init( _id: 0, _title: titleTextField.text!, _date: selectedDate, type: selectedEvent)
-            currentEventList.append(newEvent)
+            newEvent = Event.init( _id: 0, _title: titleTextField.text!, _date: selectedDate, type: selectedEvent )
+
+            update_event_table( )
             
-            destinationVC.eventList = currentEventList
+            guard let vc = segue.destination as? HomeScreenViewController else {
+                return
+            }
+            vc.user_id = self.user_id
+            vc.dbUsername = self.dbUsername
+            vc.dbPassword = self.dbPassword
         }
-        if segue.identifier == "CancelSegue" {
+        /*if segue.identifier == "CancelSegue" {
             let destinationVC = (segue.destination as! HomeScreenViewController)
-            destinationVC.eventList = self.currentEventList
-        }
+            //destinationVC.eventList = self.currentEventList
+        }*/
     }
  
-
+    func update_event_table( ) {
+        //get info
+        let title = newEvent.title
+        let type = newEvent.type
+        let selectedDate = newEvent.date
+        
+        //write to the db
+        let url = URL( string:"https://cs.okstate.edu/~asaph/event_insert.php?u=\(self.dbUsername)&p=\(self.dbPassword)&i=\(self.user_id)&t=\(title)&d=\(selectedDate)&y=\(type)" )!
+        let config = URLSessionConfiguration.default
+        let session = URLSession( configuration: config )
+        
+        let task = session.dataTask( with: url, completionHandler: { (data, response, error) in
+            guard error == nil else {
+                print("Error in session call: \(error)")
+                return
+            }
+            
+            /*guard data != nil else {
+                print( "No data\n" )
+                return
+            }*/
+   
+            /*DispatchQueue.main.async {
+                self.update_steps_table( type: type )
+            }*/
+        } )
+        
+        task.resume( )
+    }
+    
+    func update_steps_table( type: String ) {
+        
+    }
     
     // MARK: - Picker data sources
     
