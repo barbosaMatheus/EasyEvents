@@ -20,7 +20,7 @@ class SplashScreenViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor( patternImage: UIImage( named: "MAD_EE_Background.png" )! )
-        self.navigationItem.setHidesBackButton(true, animated:true)
+        self.navigationItem.setHidesBackButton( true, animated:true )
     }
 
     override func didReceiveMemoryWarning() {

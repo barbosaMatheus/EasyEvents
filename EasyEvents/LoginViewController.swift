@@ -14,9 +14,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var username_label: UITextField!
     @IBOutlet weak var psswd_label: UITextField!
     
-    //flags
-    //var username_found = false
-    
     //db information
     var dbUsername: String = ""
     var dbPassword: String = ""
@@ -69,10 +66,6 @@ class LoginViewController: UIViewController {
                 //check if this user exists in the db
                 for item in json! {
                     guard ( item["username"] as? String ) != nil else {
-                        //print( "USERNAME NOT FOUND!" )
-                        let alert = UIAlertController( title: "Cannot Login:", message: "Username \"\(self.dbUsername)\" not found.", preferredStyle: UIAlertControllerStyle.alert )
-                        alert.addAction( UIAlertAction( title: "OK", style: UIAlertActionStyle.default, handler: nil ) )
-                        self.present( alert, animated: true, completion: nil )
                         return
                     }
                     guard let id = item["id"] as? String else {
@@ -83,12 +76,6 @@ class LoginViewController: UIViewController {
                     }
                     
                     self.user_id = Int( id )!
-                    
-                    /*if user == self.dbUsername {
-                        //print( "FOUND USERNAME" )
-                        self.username_found = true
-                        self.user_id = Int( id )!
-                    }*/
                 }
                 
                 DispatchQueue.main.async {

@@ -28,8 +28,20 @@ class Event {
         self.type = type
         data_base_id = _id
         
-        if type == "Weddings" {
+        if type == "Wedding" {
             step_indexes = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+        }
+        else if type == "Birthday" {
+            step_indexes = [0,14,5,6,12,1,8,3,2,13]
+        }
+        else if type == "Baby" {
+            step_indexes = [0,14,5,6,11,12,1,8,2,13]
+        }
+        else if type == "Business" {
+            step_indexes = [0,14,5,6,1,8,2,13]
+        }
+        else if type == "Custom" {
+            step_indexes = [0,14,5,6,12,8,2,13]
         }
         else {
             step_indexes = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]

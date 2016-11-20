@@ -23,6 +23,7 @@ class HomeScreenViewController: UIViewController, UITableViewDataSource, UITable
         super.viewDidLoad()
         //self.navigationItem.setHidesBackButton(true, animated:true)
         self.view.backgroundColor = UIColor( patternImage: UIImage( named: "MAD_EE_Background.png" )! )
+        self.navigationItem.setHidesBackButton( true, animated:true )
         
         
         //grab stuff from the database
@@ -44,8 +45,11 @@ class HomeScreenViewController: UIViewController, UITableViewDataSource, UITable
             do {
                 let json = try JSONSerialization.jsonObject( with: result, options: .allowFragments ) as? [[String: AnyObject]]
                 
-                //check if this user exists in the db
                 for event in json! {
+                    if json == nil {
+                        return
+                    }
+                    
                     //get event id
                     guard let id = event["id"] as? String else {
                         return
@@ -68,9 +72,14 @@ class HomeScreenViewController: UIViewController, UITableViewDataSource, UITable
                     }
                     
                     //get event completion percentage
+                    guard let completion = event["completion"] as? String else {
+                        return
+                    }
+                    let _completion = Double( completion )
                     
                     //create event object and append to list
                     let ev = Event( _id: _id!, _title: title, _date: date, type: type )
+                    ev.completion = _completion!
                     self.eventList.append( ev )
                 }
                 
@@ -129,9 +138,6 @@ class HomeScreenViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
-   
-
-
     
     // MARK: - Navigation
 
@@ -144,6 +150,7 @@ class HomeScreenViewController: UIViewController, UITableViewDataSource, UITable
             destinationVC.event_id = (self.selectedEvent?.data_base_id)!
             destinationVC.event = (self.selectedEvent?.title)!
             destinationVC.user_id = self.user_id
+            destinationVC.completion_percentage = (self.selectedEvent?.completion)!
         }
         if segue.identifier == "AddEventSegue" {
             let destinationVC = (segue.destination as! AddEventViewController)

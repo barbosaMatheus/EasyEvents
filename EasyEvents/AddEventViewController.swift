@@ -13,8 +13,8 @@ class AddEventViewController: UIViewController, UIPickerViewDataSource,UIPickerV
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var eventPicker: UIPickerView!
-    let pickerData = ["Weddings", "Birthdays", "Business"]
-    var selectedEvent: String = "Weddings"
+    let pickerData = ["Wedding", "Birthday", "Business", "Baby", "Custom"]
+    var selectedEvent: String = ""
     var newEvent = Event.init( _id: 0, _title: "", _date: "", type: "" )
     var new_event_id: Int = 0
     
@@ -33,6 +33,7 @@ class AddEventViewController: UIViewController, UIPickerViewDataSource,UIPickerV
         //background
         self.view.backgroundColor = UIColor( patternImage: UIImage( named: "MAD_EE_Background.png" )! )
         
+        //closes keyboard
         let tap: UITapGestureRecognizer = UITapGestureRecognizer( target: self, action: #selector( self.close_kb ) )
         view.addGestureRecognizer( tap )
         

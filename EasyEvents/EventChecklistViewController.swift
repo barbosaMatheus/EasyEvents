@@ -23,6 +23,9 @@ class EventChecklistViewController: UIViewController {
     //step description label
     @IBOutlet weak var step_label: UILabel!
     
+    var percent_change_per_step: Double = 0.0
+    var completion_percentage: Double = 0.0
+    
     //db information
     var dbUsername: String = ""
     var dbPassword: String = ""
@@ -33,7 +36,6 @@ class EventChecklistViewController: UIViewController {
     let all_steps: [(pic:UIImage,name:String,done:Bool)] = [(#imageLiteral(resourceName: "budget.png"),"Budget",false),(#imageLiteral(resourceName: "catering.png"),"Catering",false),(#imageLiteral(resourceName: "details.png"),"Details & Decorations",false),(#imageLiteral(resourceName: "party_favor.png"),"Party Favors",false),(#imageLiteral(resourceName: "flowers.png"),"Flowers",false),(#imageLiteral(resourceName: "guests.png"),"Guestlist",false),(#imageLiteral(resourceName: "invite.png"),"Invitations",false),(#imageLiteral(resourceName: "license.png"),"Marriage License & Officiant",false),(#imageLiteral(resourceName: "music.png"),"Music/Entertainment",false),(#imageLiteral(resourceName: "party.png"),"Reception/Party",false),(#imageLiteral(resourceName: "photographer.png"),"Photographer",false),(#imageLiteral(resourceName: "registration.png"),"Registration",false),(#imageLiteral(resourceName: "theme.png"),"Theme",false),(#imageLiteral(resourceName: "ty_cards.png"),"\'Thank You\' Cards",false),(#imageLiteral(resourceName: "venue.png"),"Venue/Location",false),(#imageLiteral(resourceName: "wardrobe.png"),"Wardrobe",false)]
     
     //current event object loaded
-    //var current_event: Event = Event.init( _title: "", _date: "", type: "" )
 
     //array holding the steps needed for the current type of event
     var current_steps: [(pic:UIImage,name:String,done:Bool)] = []
@@ -46,11 +48,11 @@ class EventChecklistViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor( patternImage: UIImage( named: "MAD_EE_Background.png" )! )
         self.navigationItem.title = "\(event) Checklist"
-        //self.event_type = "Wedding"
+        self.navigationItem.setHidesBackButton( true, animated:true )
+
         // Do any additional setup after loading the view.
         
         check_button.setImage( #imageLiteral(resourceName: "checkmark.png"), for: UIControlState.normal )
-        //current_event = Event.init( _title: event, _date: "00/00/00", type: "Wedding" ) //TODO: this is temp and hardcoded*/
         
         //grab stuff from the database
         let url = URL( string:"https://cs.okstate.edu/~asaph/steps.php?u=\(self.dbUsername)&p=\(self.dbPassword)&i=\(self.event_id)" )!
@@ -70,6 +72,10 @@ class EventChecklistViewController: UIViewController {
             
             do {
                 let json = try JSONSerialization.jsonObject( with: result, options: .allowFragments ) as? [[String: AnyObject]]
+                
+                if json == nil {
+                    return
+                }
                 
                 //loop through steps
                 for step in json! {
@@ -92,6 +98,7 @@ class EventChecklistViewController: UIViewController {
                 
                 DispatchQueue.main.async {
                     self.display( )
+                    self.percent_change_per_step = 100.0 / Double( self.current_steps.count )
                 }
                 
             } catch {
@@ -106,10 +113,12 @@ class EventChecklistViewController: UIViewController {
         if check_button.currentImage == #imageLiteral(resourceName: "red_x.png") { //if red x
             check_button.setImage( #imageLiteral(resourceName: "checkmark.png"), for: UIControlState.normal ) //toggle image
             current_steps[step_index].done = true //toggle flag in event obj
+            completion_percentage += percent_change_per_step //update completion %
         }
         else {//if checkmark
             check_button.setImage( #imageLiteral(resourceName: "red_x.png"), for: UIControlState.normal )
             current_steps[step_index].done = false
+            completion_percentage -= percent_change_per_step
         }
     }
     
@@ -149,13 +158,28 @@ class EventChecklistViewController: UIViewController {
         guard let vc = segue.destination as? HomeScreenViewController else {
             return
         }
+
         vc.user_id = self.user_id
         vc.dbUsername = self.dbUsername
         vc.dbPassword = self.dbPassword
         vc.user_id = self.user_id
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+        write_back_to_db( )
     }
     
-
+    func write_back_to_db( ) {
+        //write new info to the db before we go out
+        let url = URL( string:"https://cs.okstate.edu/~asaph/update.php?u=\(self.dbUsername)&p=\(self.dbPassword)&t=events&c=completion&i=\(self.event_id)&v=\(self.completion_percentage)" )!
+        let config = URLSessionConfiguration.default
+        let session = URLSession( configuration: config )
+        
+        let task = session.dataTask( with: url, completionHandler: { (data, response, error) in
+            guard error == nil else {
+                print("Error in session call: \(error)")
+                return
+            }
+        } )
+        
+        task.resume( )
+    }
 }
