@@ -143,6 +143,7 @@ class HomeScreenViewController: UIViewController, UITableViewDataSource, UITable
             destinationVC.dbUsername = self.dbUsername
             destinationVC.event_id = (self.selectedEvent?.data_base_id)!
             destinationVC.event = (self.selectedEvent?.title)!
+            destinationVC.user_id = self.user_id
         }
         if segue.identifier == "AddEventSegue" {
             let destinationVC = (segue.destination as! AddEventViewController)

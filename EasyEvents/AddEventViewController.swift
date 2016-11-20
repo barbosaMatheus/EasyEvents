@@ -16,6 +16,7 @@ class AddEventViewController: UIViewController, UIPickerViewDataSource,UIPickerV
     let pickerData = ["Weddings", "Birthdays", "Business"]
     var selectedEvent: String = "Weddings"
     var newEvent = Event.init( _id: 0, _title: "", _date: "", type: "" )
+    var new_event_id: Int = 0
     
     //db information
     var dbUsername: String = ""
@@ -68,10 +69,14 @@ class AddEventViewController: UIViewController, UIPickerViewDataSource,UIPickerV
             vc.dbUsername = self.dbUsername
             vc.dbPassword = self.dbPassword
         }
-        /*if segue.identifier == "CancelSegue" {
-            let destinationVC = (segue.destination as! HomeScreenViewController)
-            //destinationVC.eventList = self.currentEventList
-        }*/
+        if segue.identifier == "CancelSegue" {
+            guard let vc = segue.destination as? HomeScreenViewController else {
+                return
+            }
+            vc.user_id = self.user_id
+            vc.dbUsername = self.dbUsername
+            vc.dbPassword = self.dbPassword
+        }
     }
  
     func update_event_table( ) {
@@ -90,22 +95,49 @@ class AddEventViewController: UIViewController, UIPickerViewDataSource,UIPickerV
                 print("Error in session call: \(error)")
                 return
             }
-            
-            /*guard data != nil else {
+   
+            guard let result = data else {
                 print( "No data\n" )
                 return
-            }*/
-   
-            /*DispatchQueue.main.async {
-                self.update_steps_table( type: type )
-            }*/
+            }
+            
+            do {
+                let json = try JSONSerialization.jsonObject( with: result, options: .allowFragments ) as? [[String: AnyObject]]
+            
+                for event in json! {
+                    guard let id = event["id"] as? String else {
+                        return
+                    }
+                    self.new_event_id = Int( id )!
+                }
+                
+                DispatchQueue.main.async {
+                    self.update_steps_table( type: type )
+                }
+            } catch {
+                print( "Error serializing JSON Data: \(error)" )
+            }
         } )
         
         task.resume( )
     }
     
     func update_steps_table( type: String ) {
-        
+        for index in self.newEvent.step_indexes {
+            //write to the db
+            let url = URL( string:"https://cs.okstate.edu/~asaph/step_insert.php?u=\(self.dbUsername)&p=\(self.dbPassword)&n=\(index)&i=\(self.new_event_id)" )!
+            let config = URLSessionConfiguration.default
+            let session = URLSession( configuration: config )
+            
+            let task = session.dataTask( with: url, completionHandler: { (data, response, error) in
+                guard error == nil else {
+                    print("Error in session call: \(error)")
+                    return
+                }
+            } )
+            
+            task.resume( )
+        }
     }
     
     // MARK: - Picker data sources
