@@ -113,10 +113,12 @@ class HomeScreenViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeScreenCell", for: indexPath)
         
-        cell.textLabel?.text = eventList[indexPath[1]].title
-        cell.detailTextLabel?.text = eventList[indexPath[1]].date
+        cell.textLabel?.text = "Title: \(eventList[indexPath[1]].title)  Type: \(eventList[indexPath[1]].type)"
+        cell.detailTextLabel?.text = "\(eventList[indexPath[1]].date)  \(eventList[indexPath[1]].completion)% completed"
         cell.backgroundColor = UIColor.clear
         cell.textLabel?.textColor = UIColor.black
+        cell.textLabel?.font = UIFont.init( name: "Zapfino", size: 16 )
+        cell.detailTextLabel?.font = UIFont.init( name: "Zapfino", size: 11 )
         
         return cell
     }

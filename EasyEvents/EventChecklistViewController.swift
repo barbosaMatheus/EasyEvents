@@ -31,6 +31,8 @@ class EventChecklistViewController: UIViewController {
     var dbPassword: String = ""
     var event_id: Int = 1 //database id attribute for the current event
     var user_id: Int = 1
+    var steps_changed: [Bool] = []
+    var step_db_ids: [Int] = []
     
     //array holding all steps for any event
     let all_steps: [(pic:UIImage,name:String,done:Bool)] = [(#imageLiteral(resourceName: "budget.png"),"Budget",false),(#imageLiteral(resourceName: "catering.png"),"Catering",false),(#imageLiteral(resourceName: "details.png"),"Details & Decorations",false),(#imageLiteral(resourceName: "party_favor.png"),"Party Favors",false),(#imageLiteral(resourceName: "flowers.png"),"Flowers",false),(#imageLiteral(resourceName: "guests.png"),"Guestlist",false),(#imageLiteral(resourceName: "invite.png"),"Invitations",false),(#imageLiteral(resourceName: "license.png"),"Marriage License & Officiant",false),(#imageLiteral(resourceName: "music.png"),"Music/Entertainment",false),(#imageLiteral(resourceName: "party.png"),"Reception/Party",false),(#imageLiteral(resourceName: "photographer.png"),"Photographer",false),(#imageLiteral(resourceName: "registration.png"),"Registration",false),(#imageLiteral(resourceName: "theme.png"),"Theme",false),(#imageLiteral(resourceName: "ty_cards.png"),"\'Thank You\' Cards",false),(#imageLiteral(resourceName: "venue.png"),"Venue/Location",false),(#imageLiteral(resourceName: "wardrobe.png"),"Wardrobe",false)]
@@ -80,6 +82,11 @@ class EventChecklistViewController: UIViewController {
                 //loop through steps
                 for step in json! {
                     //get attributes from json
+                    guard let id = step["id"] as? String else {
+                        return
+                    }
+                    let step_id = Int( id );
+                    
                     guard let i = step["step_index"] as? String else {
                         return
                     }
@@ -94,6 +101,8 @@ class EventChecklistViewController: UIViewController {
                     var this_step: (pic:UIImage,name:String,done:Bool) = self.all_steps[index!]
                     this_step.done = completed
                     self.current_steps.append( this_step )
+                    self.steps_changed.append( false )
+                    self.step_db_ids.append( step_id! )
                 }
                 
                 DispatchQueue.main.async {
@@ -110,6 +119,11 @@ class EventChecklistViewController: UIViewController {
     }
     
     @IBAction func toggle(_ sender: AnyObject) {
+        
+        //first we toggle the changed bit 
+        //for this particular step
+        steps_changed[step_index] = !steps_changed[step_index]
+        
         if check_button.currentImage == #imageLiteral(resourceName: "red_x.png") { //if red x
             check_button.setImage( #imageLiteral(resourceName: "checkmark.png"), for: UIControlState.normal ) //toggle image
             current_steps[step_index].done = true //toggle flag in event obj
@@ -149,7 +163,6 @@ class EventChecklistViewController: UIViewController {
         }
         display( )
     }
-
     
     // MARK: - Navigation
 
@@ -164,12 +177,12 @@ class EventChecklistViewController: UIViewController {
         vc.dbPassword = self.dbPassword
         vc.user_id = self.user_id
     
-        write_back_to_db( )
+        update_event( )
     }
     
-    func write_back_to_db( ) {
-        //write new info to the db before we go out
-        let url = URL( string:"https://cs.okstate.edu/~asaph/update.php?u=\(self.dbUsername)&p=\(self.dbPassword)&t=events&c=completion&i=\(self.event_id)&v=\(self.completion_percentage)" )!
+    func update_event( ) {
+        //write new info to events table
+        let url = URL( string:"https://cs.okstate.edu/~asaph/update_event.php?u=\(self.dbUsername)&p=\(self.dbPassword)&i=\(self.event_id)&v=\(self.completion_percentage)" )!
         let config = URLSessionConfiguration.default
         let session = URLSession( configuration: config )
         
@@ -178,8 +191,37 @@ class EventChecklistViewController: UIViewController {
                 print("Error in session call: \(error)")
                 return
             }
+            
+            DispatchQueue.main.async {
+                self.update_steps( )
+            }
         } )
         
         task.resume( )
+    }
+    
+    func update_steps( ) {
+        //write new info to steps table
+        //only for the steps that change
+        let max = steps_changed.count-1
+        for i in 0...max {
+            //if the info for this step 
+            //was changed by the user
+            if steps_changed[i] {
+                let val = current_steps[i].done
+                let url = URL( string:"https://cs.okstate.edu/~asaph/update_step.php?u=\(self.dbUsername)&p=\(self.dbPassword)&i=\(self.step_db_ids[i])&v=\(val)" )!
+                let config = URLSessionConfiguration.default
+                let session = URLSession( configuration: config )
+                
+                let task = session.dataTask( with: url, completionHandler: { (data, response, error) in
+                    guard error == nil else {
+                        print("Error in session call: \(error)")
+                        return
+                    }
+                } )
+                
+                task.resume( )
+            }
+        }
     }
 }
