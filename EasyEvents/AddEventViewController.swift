@@ -31,7 +31,7 @@ class AddEventViewController: UIViewController, UIPickerViewDataSource,UIPickerV
         datePicker.datePickerMode = UIDatePickerMode.date
         
         //background
-        self.view.backgroundColor = UIColor( patternImage: UIImage( named: "MAD_EE_Background.png" )! )
+        self.view.backgroundColor = UIColor( patternImage: UIImage( named: "events_image3.jpg" )! )
         
         //closes keyboard
         let tap: UITapGestureRecognizer = UITapGestureRecognizer( target: self, action: #selector( self.close_kb ) )
@@ -58,8 +58,21 @@ class AddEventViewController: UIViewController, UIPickerViewDataSource,UIPickerV
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
             let selectedDate = dateFormatter.string(from: datePicker.date)
+            let title = titleTextField.text!
             
-            newEvent = Event.init( _id: 0, _title: titleTextField.text!, _date: selectedDate, type: selectedEvent )
+            //make sure there are no whitespaces (messes up the url)
+            let whitespace = NSCharacterSet.whitespaces
+            let range = title.rangeOfCharacter( from: whitespace )
+            
+            // range will be nil if no whitespace is found
+            if range != nil {
+                let alert = UIAlertController( title: "Cannot Add:", message: "Title may not contain spaces, consider changing to underscore", preferredStyle: UIAlertControllerStyle.alert )
+                alert.addAction( UIAlertAction( title: "OK", style: UIAlertActionStyle.default, handler: nil ) )
+                self.present( alert, animated: true, completion: nil )
+                return
+            }
+            
+            newEvent = Event.init( _id: 0, _title: title, _date: selectedDate, type: selectedEvent )
 
             update_event_table( )
             

@@ -56,7 +56,10 @@
 		81EA2DA91DC045C400C0FA1B /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EA2DA81DC045C400C0FA1B /* SplashScreenViewController.swift */; };
 		B5391FE01DC56C6600E58D15 /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = B5391FDF1DC56C6600E58D15 /* checkmark.png */; };
 		B5391FE21DC56D4200E58D15 /* red_x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5391FE11DC56D4200E58D15 /* red_x.png */; };
-		B55A3C111DE26D47000241A8 /* events_image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B55A3C101DE26D47000241A8 /* events_image1.jpg */; };
+		B55A3C1B1DE27848000241A8 /* table.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B55A3C1A1DE27848000241A8 /* table.jpeg */; };
+		B55A3C1F1DE27A0E000241A8 /* events_image3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B55A3C1E1DE27A0E000241A8 /* events_image3.jpg */; };
+		B55A3C251DE27BB7000241A8 /* events_image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B55A3C241DE27BB7000241A8 /* events_image1.jpg */; };
+		B55A3C271DE27C0A000241A8 /* events_image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B55A3C261DE27C0A000241A8 /* events_image2.jpg */; };
 		B56ED6C51DC8E02300ECA471 /* Guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56ED6C41DC8E02300ECA471 /* Guest.swift */; };
 		B5807F3A1DDB6B6F0023F502 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5807F391DDB6B6F0023F502 /* LoginViewController.swift */; };
 		B58D78431DDCBE0300D86997 /* party_favor.png in Resources */ = {isa = PBXBuildFile; fileRef = B58D78421DDCBE0300D86997 /* party_favor.png */; };
@@ -156,7 +159,10 @@
 		81EA2DA81DC045C400C0FA1B /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		B5391FDF1DC56C6600E58D15 /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
 		B5391FE11DC56D4200E58D15 /* red_x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_x.png; sourceTree = "<group>"; };
-		B55A3C101DE26D47000241A8 /* events_image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = events_image1.jpg; sourceTree = "<group>"; };
+		B55A3C1A1DE27848000241A8 /* table.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = table.jpeg; sourceTree = "<group>"; };
+		B55A3C1E1DE27A0E000241A8 /* events_image3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = events_image3.jpg; sourceTree = "<group>"; };
+		B55A3C241DE27BB7000241A8 /* events_image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = events_image1.jpg; sourceTree = "<group>"; };
+		B55A3C261DE27C0A000241A8 /* events_image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = events_image2.jpg; sourceTree = "<group>"; };
 		B56ED6C41DC8E02300ECA471 /* Guest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
 		B5807F391DDB6B6F0023F502 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B58D78421DDCBE0300D86997 /* party_favor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = party_favor.png; sourceTree = "<group>"; };
@@ -283,13 +289,16 @@
 				81AFEF1C1DDB8DAB0007D671 /* GuestsViewController.swift */,
 				B5807F391DDB6B6F0023F502 /* LoginViewController.swift */,
 				B56ED6C41DC8E02300ECA471 /* Guest.swift */,
+				B55A3C261DE27C0A000241A8 /* events_image2.jpg */,
+				B55A3C1A1DE27848000241A8 /* table.jpeg */,
+				B55A3C241DE27BB7000241A8 /* events_image1.jpg */,
 				B5C677BF1DC8E8BE0003EB7D /* Event.swift */,
 				813DF6BB1DBECA9C00D2E0D9 /* Main.storyboard */,
 				81040A8D1DD2474200C2D1B6 /* AddEventViewController.swift */,
-				B55A3C101DE26D47000241A8 /* events_image1.jpg */,
 				089346CB1DCD6D7A004C5995 /* BirthdayViewController.swift */,
 				089A37361DD65116009D06AF /* CustomViewController.swift */,
 				089346CD1DCD6D93004C5995 /* BusinessViewController.swift */,
+				B55A3C1E1DE27A0E000241A8 /* events_image3.jpg */,
 				089A37341DD650DE009D06AF /* BabyShowerViewController.swift */,
 				089346C91DCD6D3A004C5995 /* WeddingViewController.swift */,
 				81EA2DA81DC045C400C0FA1B /* SplashScreenViewController.swift */,
@@ -454,6 +463,7 @@
 				22CCFD7E1DCDA83800457569 /* GeneralCalendarColor.png in Resources */,
 				089346D51DCD6E9B004C5995 /* BirthdayPresent_Color.png in Resources */,
 				B58EA7D31DC264C500F4F7E0 /* invite.png in Resources */,
+				B55A3C1F1DE27A0E000241A8 /* events_image3.jpg in Resources */,
 				089346D61DCD6E9B004C5995 /* BirthdayPresent_Gray.png in Resources */,
 				087170CD1DDD29FC00E2CFEC /* MAD_EE_StatusButton.png in Resources */,
 				B58EA7D11DC264C500F4F7E0 /* flowers.png in Resources */,
@@ -467,6 +477,7 @@
 				089346D81DCD6E9B004C5995 /* Briefcase_Gray.png in Resources */,
 				086647051DC2E873009FA2DA /* MAD_EE_NewEventButton.png in Resources */,
 				086647041DC2E873009FA2DA /* MAD_EE_HelpButton.png in Resources */,
+				B55A3C271DE27C0A000241A8 /* events_image2.jpg in Resources */,
 				B5391FE21DC56D4200E58D15 /* red_x.png in Resources */,
 				089C3E7B1DDD43B6005595F9 /* AppLogo40.png in Resources */,
 				B58EA7D41DC264C500F4F7E0 /* license.png in Resources */,
@@ -474,8 +485,8 @@
 				089346D91DCD6E9B004C5995 /* WeddingCake_Color.png in Resources */,
 				B58EA7D01DC264C500F4F7E0 /* favors.png in Resources */,
 				089C3E7C1DDD43B6005595F9 /* AppLogo60.png in Resources */,
+				B55A3C251DE27BB7000241A8 /* events_image1.jpg in Resources */,
 				089C3E781DDD4182005595F9 /* AppLogo1024.png in Resources */,
-				B55A3C111DE26D47000241A8 /* events_image1.jpg in Resources */,
 				086647071DC2E873009FA2DA /* MAD_EE_PlusButton.png in Resources */,
 				B58EA7D51DC264C500F4F7E0 /* party.png in Resources */,
 				B58D78431DDCBE0300D86997 /* party_favor.png in Resources */,
@@ -504,6 +515,7 @@
 				813DF6BD1DBECA9C00D2E0D9 /* Main.storyboard in Resources */,
 				B58D78471DDCDB2A00D86997 /* pineapple2.png in Resources */,
 				B5391FE01DC56C6600E58D15 /* checkmark.png in Resources */,
+				B55A3C1B1DE27848000241A8 /* table.jpeg in Resources */,
 				086647031DC2E873009FA2DA /* MAD_EE_ClearAllButton.png in Resources */,
 				B58EA7D91DC264C500F4F7E0 /* theme.png in Resources */,
 			);

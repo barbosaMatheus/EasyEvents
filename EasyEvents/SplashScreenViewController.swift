@@ -19,7 +19,7 @@ class SplashScreenViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor( patternImage: UIImage( named: "MAD_EE_Background.png" )! )
+        self.view.backgroundColor = UIColor( patternImage: UIImage( named: "events_image2.jpg" )! )
         self.navigationItem.setHidesBackButton( true, animated:true )
     }
 
