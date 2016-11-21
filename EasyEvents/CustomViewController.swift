@@ -19,6 +19,11 @@ class CustomViewController: UIViewController {
     var levelCount = 0
     var imageFractions = [UIView]()
     
+    @IBOutlet weak var DateLabel: UILabel!
+    @IBOutlet weak var PercentLabel: UILabel!
+    var date = Date()
+    var completion : Double = 0.0
+    
     @IBAction func AddLevelButton(_ sender: UIButton) {
         if(levelCount < choice){
             view.addSubview(imageFractions[levelCount])
@@ -30,11 +35,13 @@ class CustomViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ////Draws background on
-        //let backGrect = CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height)
-        //let background = UIView.init(frame: backGrect)
-        //background.backgroundColor = UIColor(patternImage: UIImage(named:"MAD_EE_Background.png")!)
-        //view.addSubview(background)
+        //EDIT THIS TO CHANGE THE PERCENT AND DATE LABELS WHEN SEGUEING IN
+        completion = 27.0
+        PercentLabel.text = "\(completion)%"
+        let format = DateFormatter()
+        format.dateFormat = "MM/dd/yyyy"
+        let thisDate = format.string(from: date)
+        DateLabel.text = thisDate
         
         //Draws greyed out version of the briefcase, meaning no progress made yet
         let genCalRect = CGRect(x: (self.view.bounds.size.width / 5), y: (self.view.bounds.size.height / 3), width: (gC?.size.width)!, height: (gC?.size.height)!)
