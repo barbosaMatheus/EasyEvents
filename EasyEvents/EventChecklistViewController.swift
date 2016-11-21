@@ -25,6 +25,7 @@ class EventChecklistViewController: UIViewController {
     
     var percent_change_per_step: Double = 0.0
     var completion_percentage: Double = 0.0
+    var date: String = ""
     
     //db information
     var dbUsername: String = ""
@@ -142,6 +143,10 @@ class EventChecklistViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func status_clicked(_ sender: AnyObject) {
+        self.performSegue( withIdentifier: self.event_type, sender: self )
+    }
+    
     //display the current step status to the screen
     func display( ) {
         //change center image accordingly
@@ -169,15 +174,33 @@ class EventChecklistViewController: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let vc = segue.destination as? HomeScreenViewController else {
-            return
+        if segue.identifier == "back" {
+            guard let vc = segue.destination as? HomeScreenViewController else {
+                return
+            }
+            
+            vc.user_id = self.user_id
+            vc.dbUsername = self.dbUsername
+            vc.dbPassword = self.dbPassword
+            vc.user_id = self.user_id
         }
-
-        vc.user_id = self.user_id
-        vc.dbUsername = self.dbUsername
-        vc.dbPassword = self.dbPassword
-        vc.user_id = self.user_id
-    
+        else if segue.identifier == "Wedding" {
+            guard let vc = segue.destination as? WeddingViewController else {
+                return
+            }
+            
+            vc.completion = self.completion_percentage
+            vc.date = self.date
+        }
+        else if segue.identifier == "Birthday" {
+            guard let vc = segue.destination as? BirthdayViewController else {
+                return
+            }
+            
+            vc.completion = self.completion_percentage
+            vc.date = self.date
+        }
+        else {}
         update_event( )
     }
     

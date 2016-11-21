@@ -165,8 +165,10 @@ class HomeScreenViewController: UIViewController, UITableViewDataSource, UITable
             destinationVC.dbUsername = self.dbUsername
             destinationVC.event_id = (self.selectedEvent?.data_base_id)!
             destinationVC.event = (self.selectedEvent?.title)!
+            destinationVC.event_type = (self.selectedEvent?.type)!
             destinationVC.user_id = self.user_id
             destinationVC.completion_percentage = (self.selectedEvent?.completion)!
+            destinationVC.date = (self.selectedEvent?.date)!
         }
         if segue.identifier == "AddEventSegue" {
             let destinationVC = (segue.destination as! AddEventViewController)

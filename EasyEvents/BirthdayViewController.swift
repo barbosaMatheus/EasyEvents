@@ -11,41 +11,32 @@ import UIKit
 class BirthdayViewController: UIViewController {
 
     let bP = UIImage(named: "BirthdayPresent_Color.png")
-    let levels = 12
+    let levels = 11
     var levelCount = 0
     var imageFractions = [UIView]()
     
     @IBOutlet weak var DateLabel: UILabel!
     @IBOutlet weak var PercentLabel: UILabel!
-    var date = Date()
+    var date: String = ""
     var completion : Double = 0.0
-    
-    @IBAction func AddLevelButton(_ sender: UIButton) {
-        if(levelCount < levels){
-            view.addSubview(imageFractions[levelCount])
-            levelCount = levelCount + 1
-        }
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor( patternImage: UIImage( named: "celebration.jpeg" )! )
         
-        //EDIT THIS TO CHANGE THE PERCENT AND DATE LABELS WHEN SEGUEING IN
-        completion = 27.0
-        PercentLabel.text = "\(completion)%"
-        let format = DateFormatter()
-        format.dateFormat = "MM/dd/yyyy"
-        let thisDate = format.string(from: date)
-        DateLabel.text = thisDate
+        PercentLabel.text = "\(completion)% completed"
+        DateLabel.text = date
+        levelCount = Int( ( completion/100.0 )*Double( levels ) ) - 1
         
         //Draws greyed out version of the birthday present, meaning no progress made yet
-        let presentRect = CGRect(x: (self.view.bounds.size.width / 4), y: (self.view.bounds.size.height / 3), width: (bP?.size.width)!, height: (bP?.size.height)!)
+        let presentRect = CGRect(x: (self.view.bounds.size.width / 4), y: (self.view.bounds.size.height / 5), width: (bP?.size.width)!, height: (bP?.size.height)!)
         let present = UIView.init(frame: presentRect)
         present.backgroundColor = UIColor(patternImage: UIImage(named:"BirthdayPresent_Gray.png")!)
         present.alpha = 0.4
         view.addSubview(present)
         
         splitImage()
+        view.addSubview( imageFractions[levelCount] )
         
     }
     
@@ -59,11 +50,11 @@ class BirthdayViewController: UIViewController {
         let tempImage = bP?.cgImage
         var fractionsCount = 0
         
-        while(fractionsCount < 12){
+        while(fractionsCount < levels){
             
             let f1 = tempImage!.cropping(to: CGRect(x: 0, y: 0, width: (bP?.size.width)!, height: ( ((bP?.size.height)! / CGFloat(levels)) + (CGFloat(fractionsCount) * (bP?.size.height)! / CGFloat(levels)) )))
             let fractIm1 = UIImage(cgImage: f1!)
-            let pP1Rect = CGRect(x:(self.view.bounds.size.width / 4), y:(self.view.bounds.size.height / 3), width:(fractIm1.size.width), height: (fractIm1.size.height))
+            let pP1Rect = CGRect(x:(self.view.bounds.size.width / 4), y:(self.view.bounds.size.height / 5), width:(fractIm1.size.width), height: (fractIm1.size.height))
             let presentPart = UIView.init(frame: pP1Rect)
             presentPart.backgroundColor = UIColor(patternImage: fractIm1)
             imageFractions.append(presentPart)

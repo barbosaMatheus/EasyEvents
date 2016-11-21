@@ -208,26 +208,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gq-bj-PNj">
-                                <frame key="frameInset" minX="166" minY="558" width="75" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Birthday">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="JYL-WT-uqs" kind="show" id="9ET-dM-dRI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfk-bf-xj6">
-                                <frame key="frameInset" minX="255" minY="558" width="75" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Business">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="G4R-Na-ast" kind="show" id="qoO-Mg-JYy"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Easy Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2A-HS-sSc">
                                 <frame key="frameInset" minX="76" minY="131" width="254" height="119"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -235,36 +215,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAG-KH-XmQ">
-                                <frame key="frameInset" minX="76" minY="558" width="75" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Wedding">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="8Er-oT-6Hv" kind="show" id="4g5-Ou-noB"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cwj-aB-I4z">
-                                <frame key="frameInset" minX="76" minY="609" width="93" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Baby Shower">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="wLe-32-7uX" kind="show" id="hdC-iy-yom"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30k-qT-ZsH">
-                                <frame key="frameInset" minX="246" minY="609" width="93" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Custom">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="PkU-B4-wwV" kind="show" id="j5H-33-Geh"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVg-BH-ykM">
                                 <frame key="frameInset" minX="128" minY="344" width="150" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -307,7 +257,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jh3-fo-J0A">
-                                <frame key="frameInset" height="45.5" maxX="-2" maxY="0.5"/>
+                                <frame key="frameInset" height="45" maxX="-2" maxY="1"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="eep-p0-zOV"/>
@@ -381,47 +331,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MAD_EE_Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="40x-1m-xNT">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="736" id="FP5-nt-WCC"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsE-NJ-9hk">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="125" id="Y5d-t8-FGO"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Add Level">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="AddLevelButton:" destination="8Er-oT-6Hv" eventType="touchUpInside" id="ul9-1c-uut"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Percent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ef6-IF-SWG">
-                                <frame key="frameInset" minX="157" minY="72" width="100" height="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Percent Completion:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ef6-IF-SWG">
+                                <frame key="frameInset" minX="20" minY="641" width="374" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfr-Nw-Jcn">
-                                <frame key="frameInset" minX="157" minY="125" width="100" height="25"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfr-Nw-Jcn">
+                                <frame key="frameInset" minX="20" minY="562" width="374" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="40x-1m-xNT" firstAttribute="centerX" secondItem="gsE-NJ-9hk" secondAttribute="centerX" id="H51-cq-ZJU"/>
-                            <constraint firstItem="gsE-NJ-9hk" firstAttribute="top" secondItem="4OI-7x-i4I" secondAttribute="bottom" constant="556" id="J6N-xL-9aV"/>
-                            <constraint firstItem="40x-1m-xNT" firstAttribute="bottom" secondItem="2Z8-OV-WsI" secondAttribute="top" id="YcR-GN-E1R"/>
-                            <constraint firstItem="40x-1m-xNT" firstAttribute="leading" secondItem="T2D-ji-k39" secondAttribute="leading" id="a5T-qa-Hnj"/>
-                            <constraint firstItem="2Z8-OV-WsI" firstAttribute="top" secondItem="gsE-NJ-9hk" secondAttribute="bottom" constant="76" id="apw-Tj-WFi"/>
-                            <constraint firstAttribute="trailing" secondItem="40x-1m-xNT" secondAttribute="trailing" id="eZN-PO-RY5"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="DateLabel" destination="lfr-Nw-Jcn" id="N4F-o5-F0y"/>
@@ -444,47 +369,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MAD_EE_Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="imU-do-2fM">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="736" id="ooL-uH-z7Y"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53C-I5-igT">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="125" id="dvZ-2g-OTU"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Add Level">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="AddLevelButton:" destination="JYL-WT-uqs" eventType="touchUpInside" id="xYL-9B-rCn"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Percent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egN-DF-dm1">
-                                <frame key="frameInset" minX="157" minY="72" width="100" height="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Percent Completed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egN-DF-dm1">
+                                <frame key="frameInset" minX="20" minY="641" width="374" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQV-aQ-YVk">
-                                <frame key="frameInset" minX="157" minY="125" width="100" height="25"/>
+                                <frame key="frameInset" minX="20" minY="558" width="374" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="imU-do-2fM" secondAttribute="trailing" id="8uf-U5-bRa"/>
-                            <constraint firstItem="imU-do-2fM" firstAttribute="centerX" secondItem="53C-I5-igT" secondAttribute="centerX" id="X8a-EI-aVE"/>
-                            <constraint firstItem="qTI-8l-brS" firstAttribute="top" secondItem="53C-I5-igT" secondAttribute="bottom" constant="76" id="gjT-hK-CBd"/>
-                            <constraint firstItem="53C-I5-igT" firstAttribute="top" secondItem="DQT-nM-JBR" secondAttribute="bottom" constant="556" id="ijj-Nm-hdE"/>
-                            <constraint firstItem="imU-do-2fM" firstAttribute="bottom" secondItem="qTI-8l-brS" secondAttribute="top" id="o7h-ac-pXi"/>
-                            <constraint firstItem="imU-do-2fM" firstAttribute="leading" secondItem="lDy-Kz-hPW" secondAttribute="leading" id="wej-0L-VB5"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="DateLabel" destination="uQV-aQ-YVk" id="8cN-Px-aQC"/>
@@ -493,7 +393,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VNN-s4-YWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1275" y="781"/>
+            <point key="canvasLocation" x="1273.913043478261" y="780.97826086956525"/>
         </scene>
         <!--Business View Controller-->
         <scene sceneID="UDF-17-KUr">
@@ -507,15 +407,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MAD_EE_Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="LcI-6d-t8Q">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="736" id="0fW-JI-9YM"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKg-rd-wmo">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="125" id="9EB-ln-22e"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKg-rd-wmo">
+                                <frame key="frameInset" minX="145" minY="576" width="125" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Add Level">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -540,14 +434,6 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="pKg-rd-wmo" firstAttribute="top" secondItem="CpT-ij-TNI" secondAttribute="bottom" constant="556" id="6ei-zf-J4l"/>
-                            <constraint firstItem="LcI-6d-t8Q" firstAttribute="leading" secondItem="Nbw-OR-fFk" secondAttribute="leading" id="9xs-gi-WB4"/>
-                            <constraint firstItem="7bF-FA-BvO" firstAttribute="top" secondItem="pKg-rd-wmo" secondAttribute="bottom" constant="76" id="NJw-2I-vXM"/>
-                            <constraint firstItem="LcI-6d-t8Q" firstAttribute="centerX" secondItem="pKg-rd-wmo" secondAttribute="centerX" id="Pq5-dT-A7d"/>
-                            <constraint firstItem="LcI-6d-t8Q" firstAttribute="bottom" secondItem="7bF-FA-BvO" secondAttribute="top" id="YlA-uD-mpo"/>
-                            <constraint firstAttribute="trailing" secondItem="LcI-6d-t8Q" secondAttribute="trailing" id="ibK-E4-pAm"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="DateLabel" destination="7Hd-dx-m72" id="oQr-iS-l8D"/>
@@ -570,15 +456,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MAD_EE_Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="BBp-bj-MWJ">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="736" id="bak-ZP-EQk"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWA-09-nS2">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="125" id="ZMS-ZP-lPg"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWA-09-nS2">
+                                <frame key="frameInset" minX="145" minY="576" width="125" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Add Level">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -603,14 +483,6 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="BBp-bj-MWJ" firstAttribute="bottom" secondItem="dkQ-Qc-Z0P" secondAttribute="top" id="Bp1-Q0-aiE"/>
-                            <constraint firstItem="BBp-bj-MWJ" firstAttribute="centerX" secondItem="iWA-09-nS2" secondAttribute="centerX" id="D0a-lC-O4S"/>
-                            <constraint firstItem="BBp-bj-MWJ" firstAttribute="leading" secondItem="04B-xL-WuZ" secondAttribute="leading" id="DJV-2y-NQC"/>
-                            <constraint firstItem="dkQ-Qc-Z0P" firstAttribute="top" secondItem="iWA-09-nS2" secondAttribute="bottom" constant="76" id="fHl-tB-Srm"/>
-                            <constraint firstAttribute="trailing" secondItem="BBp-bj-MWJ" secondAttribute="trailing" id="hn2-8e-OT4"/>
-                            <constraint firstItem="iWA-09-nS2" firstAttribute="top" secondItem="fM6-VU-5au" secondAttribute="bottom" constant="556" id="kNO-Sr-Ax7"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="DateLabel" destination="mc6-dC-m65" id="gYH-js-j4N"/>
@@ -633,15 +505,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MAD_EE_Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="ftM-lV-VMG">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="736" id="Emh-QZ-i3w"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="er1-Cm-nRp">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="125" id="lHy-eW-41H"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="er1-Cm-nRp">
+                                <frame key="frameInset" minX="145" minY="576" width="125" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Add Level">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -666,14 +532,6 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="ftM-lV-VMG" secondAttribute="trailing" id="7Pg-gI-8vl"/>
-                            <constraint firstItem="er1-Cm-nRp" firstAttribute="top" secondItem="mC1-gO-A1p" secondAttribute="bottom" constant="556" id="HhZ-QR-wNb"/>
-                            <constraint firstItem="ftM-lV-VMG" firstAttribute="leading" secondItem="tr2-DK-7Mj" secondAttribute="leading" id="Ix6-JT-U2R"/>
-                            <constraint firstItem="72b-gM-paJ" firstAttribute="top" secondItem="er1-Cm-nRp" secondAttribute="bottom" constant="76" id="eCB-Cl-bod"/>
-                            <constraint firstItem="ftM-lV-VMG" firstAttribute="bottom" secondItem="72b-gM-paJ" secondAttribute="top" id="laN-XW-ZJH"/>
-                            <constraint firstItem="ftM-lV-VMG" firstAttribute="centerX" secondItem="er1-Cm-nRp" secondAttribute="centerX" id="rJn-EJ-Pvs"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="DateLabel" destination="D8C-SQ-Wqn" id="mid-4j-LtX"/>
@@ -788,6 +646,9 @@
                                 <frame key="frameInset" minX="20" minY="589" width="139" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="MAD_EE_StatusButton.png"/>
+                                <connections>
+                                    <action selector="status_clicked:" destination="3HD-uG-ikd" eventType="touchUpInside" id="ydl-bT-jEz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K89-Vu-p3L">
                                 <frame key="frameInset" minX="252" minY="589" width="142" height="46"/>
@@ -802,7 +663,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="MAD_EE_BackButton.png"/>
                                 <connections>
-                                    <segue destination="eEb-GL-bld" kind="show" id="jxX-KB-534"/>
+                                    <segue destination="eEb-GL-bld" kind="show" identifier="back" id="jxX-KB-534"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -812,7 +673,11 @@
                         <outlet property="check_button" destination="UbD-2o-Tq6" id="zVV-9h-jZk"/>
                         <outlet property="curr_image" destination="uye-4t-usM" id="OPI-3K-n7Q"/>
                         <outlet property="step_label" destination="5PY-85-nrK" id="1A1-Nr-z2f"/>
-                        <segue destination="8Er-oT-6Hv" kind="show" identifier="wedding" id="k0u-aU-FDx"/>
+                        <segue destination="8Er-oT-6Hv" kind="show" identifier="Wedding" id="k0u-aU-FDx"/>
+                        <segue destination="JYL-WT-uqs" kind="show" identifier="Birthday" id="dDq-px-9Pq"/>
+                        <segue destination="G4R-Na-ast" kind="show" identifier="Businesss" id="qwh-v7-1vZ"/>
+                        <segue destination="wLe-32-7uX" kind="show" identifier="Baby" id="b6L-D4-W9t"/>
+                        <segue destination="PkU-B4-wwV" kind="show" identifier="Custom" id="8Gz-R1-ltK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RnC-BR-gZM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -822,7 +687,6 @@
     </scenes>
     <resources>
         <image name="MAD_EE_BackButton.png" width="232" height="77"/>
-        <image name="MAD_EE_Background.png" width="469" height="834"/>
         <image name="MAD_EE_EventsButton.png" width="232" height="77"/>
         <image name="MAD_EE_GuestlistButton.png" width="232" height="77"/>
         <image name="MAD_EE_HelpButton.png" width="232" height="77"/>
@@ -833,6 +697,5 @@
     <inferredMetricsTieBreakers>
         <segue reference="UZv-sh-nq5"/>
         <segue reference="jxX-KB-534"/>
-        <segue reference="k0u-aU-FDx"/>
     </inferredMetricsTieBreakers>
 </document>

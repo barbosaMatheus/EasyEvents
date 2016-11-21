@@ -11,48 +11,33 @@ import UIKit
 class WeddingViewController: UIViewController {
     
     let wC = UIImage(named: "WeddingCake_Color.png")
-    let levels = 17
+    let levels = 16
     var levelCount = 0
     var imageFractions = [UIView]()
     
     @IBOutlet weak var DateLabel: UILabel!
     @IBOutlet weak var PercentLabel: UILabel!
-    var date = Date()
+    var date: String = ""
     
     //Matheus edit:
     var completion : Double = 0.0
-    @IBOutlet weak var compl_label: UILabel!
-    
-    @IBAction func AddLevelButton(_ sender: UIButton) {
-        if(levelCount < levels){
-            view.addSubview(imageFractions[levelCount])
-            levelCount = levelCount + 1
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor( patternImage: UIImage( named: "celebration.jpeg" )! )
         
-        //EDIT THIS TO CHANGE THE PERCENT AND DATE LABELS WHEN SEGUEING IN
-        completion = 27.0
-        PercentLabel.text = "\(completion)%"
-        let format = DateFormatter()
-        format.dateFormat = "MM/dd/yyyy"
-        let thisDate = format.string(from: date)
-        DateLabel.text = thisDate
+        PercentLabel.text = "\(completion)% completed"
+        DateLabel.text = date
+        levelCount = Int( ( completion/100.0 )*Double( levels ) ) - 1
         
         //Draws greyed out version of the wedding cake, meaning no progress made yet
-        let cakeGreyRect = CGRect(x: (self.view.bounds.size.width / 16), y: (self.view.bounds.size.height / 4), width: (wC?.size.width)!, height: (wC?.size.height)!)
+        let cakeGreyRect = CGRect(x: (self.view.bounds.size.width / 16), y: (self.view.bounds.size.height / 10), width: (wC?.size.width)!, height: (wC?.size.height)!)
         let cakeGrey = UIView.init(frame: cakeGreyRect)
         cakeGrey.backgroundColor = UIColor(patternImage: UIImage(named:"WeddingCake_Gray.png")!)
         cakeGrey.alpha = 0.4
         view.addSubview(cakeGrey)
-        
         splitImage()
-        
-        //Matheus edit:
-        //compl_label.text = "\(self.completion)%"
-        
+        view.addSubview( imageFractions[levelCount] )
     }
     
     override func didReceiveMemoryWarning() {
@@ -65,11 +50,11 @@ class WeddingViewController: UIViewController {
         let tempImage = wC?.cgImage
         var fractionsCount = 0
         
-        while(fractionsCount < 17){
+        while(fractionsCount < levels){
             
             let f1 = tempImage!.cropping(to: CGRect(x: 0, y: 0, width: (wC?.size.width)!, height: ( ((wC?.size.height)! / CGFloat(levels)) + (CGFloat(fractionsCount) * (wC?.size.height)! / CGFloat(levels)) )))
             let fractIm1 = UIImage(cgImage: f1!)
-            let cP1Rect = CGRect(x:(self.view.bounds.size.width / 16), y:(self.view.bounds.size.height / 4), width:(fractIm1.size.width), height: (fractIm1.size.height))
+            let cP1Rect = CGRect(x:(self.view.bounds.size.width / 16), y:(self.view.bounds.size.height / 10), width:(fractIm1.size.width), height: (fractIm1.size.height))
             let cakePart = UIView.init(frame: cP1Rect)
             cakePart.backgroundColor = UIColor(patternImage: fractIm1)
             imageFractions.append(cakePart)

@@ -14,7 +14,7 @@ class AddEventViewController: UIViewController, UIPickerViewDataSource,UIPickerV
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var eventPicker: UIPickerView!
     let pickerData = ["Wedding", "Birthday", "Business", "Baby", "Custom"]
-    var selectedEvent: String = ""
+    var selectedEvent: String = "Wedding"
     var newEvent = Event.init( _id: 0, _title: "", _date: "", type: "" )
     var new_event_id: Int = 0
     

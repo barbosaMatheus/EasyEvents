@@ -34,6 +34,7 @@ class CustomViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor( patternImage: UIImage( named: "celebration.jpeg" )! )
         
         //EDIT THIS TO CHANGE THE PERCENT AND DATE LABELS WHEN SEGUEING IN
         completion = 27.0
