@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4cU-D1-9b1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4cU-D1-9b1">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -209,34 +208,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MAD_EE_Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="9aW-LK-vnn">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="736" id="nTX-HO-tlI"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVg-BH-ykM">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="09e-B2-MGH"/>
-                                    <constraint firstAttribute="width" constant="150" id="1GE-xC-sj9"/>
-                                </constraints>
-                                <state key="normal" image="MAD_EE_EventsButton.png">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="eEb-GL-bld" kind="show" id="7N6-2n-l3a"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSf-f9-E26">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="3ZC-4H-ePe"/>
-                                </constraints>
-                                <state key="normal" image="MAD_EE_HelpButton.png">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="7dp-lD-PCS" kind="show" id="ENJ-W6-nTb"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gq-bj-PNj">
                                 <frame key="frameInset" minX="166" minY="558" width="75" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -257,7 +228,9 @@
                                     <segue destination="G4R-Na-ast" kind="show" id="qoO-Mg-JYy"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2A-HS-sSc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Easy Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2A-HS-sSc">
+                                <frame key="frameInset" minX="76" minY="131" width="254" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="35"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -292,29 +265,28 @@
                                     <segue destination="PkU-B4-wwV" kind="show" id="j5H-33-Geh"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo180.png" translatesAutoresizingMaskIntoConstraints="NO" id="MYW-sc-uKc">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="PRD-qT-4bz"/>
-                                    <constraint firstAttribute="height" constant="120" id="qMZ-1f-OwZ"/>
-                                </constraints>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVg-BH-ykM">
+                                <frame key="frameInset" minX="128" minY="344" width="150" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="MAD_EE_EventsButton.png">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="eEb-GL-bld" kind="show" id="7N6-2n-l3a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSf-f9-E26">
+                                <frame key="frameInset" minX="128" minY="422" width="150" height="50.000000000000114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="MAD_EE_HelpButton.png">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7dp-lD-PCS" kind="show" id="ENJ-W6-nTb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="9aW-LK-vnn" firstAttribute="top" secondItem="Q2A-HS-sSc" secondAttribute="bottom" constant="-189" id="3rP-P2-Rpa"/>
-                            <constraint firstItem="eSf-f9-E26" firstAttribute="trailing" secondItem="eVg-BH-ykM" secondAttribute="trailing" id="5SI-xm-vvo"/>
-                            <constraint firstItem="MYW-sc-uKc" firstAttribute="centerX" secondItem="Q2A-HS-sSc" secondAttribute="centerX" id="E0j-O4-Tc2"/>
-                            <constraint firstItem="Q2A-HS-sSc" firstAttribute="leading" secondItem="6qZ-AE-GBO" secondAttribute="leadingMargin" constant="56" id="Qxg-3v-WSX"/>
-                            <constraint firstItem="Q2A-HS-sSc" firstAttribute="top" secondItem="MzI-bN-oDN" secondAttribute="bottom" constant="35" id="S0X-cf-Msv"/>
-                            <constraint firstItem="MYW-sc-uKc" firstAttribute="top" secondItem="Q2A-HS-sSc" secondAttribute="bottom" constant="24" id="Y7r-XD-X9D"/>
-                            <constraint firstItem="eVg-BH-ykM" firstAttribute="centerX" secondItem="MYW-sc-uKc" secondAttribute="centerX" id="Zz1-8F-PUB"/>
-                            <constraint firstItem="eVg-BH-ykM" firstAttribute="top" secondItem="MYW-sc-uKc" secondAttribute="bottom" constant="57" id="b9a-kz-Kfh"/>
-                            <constraint firstItem="eSf-f9-E26" firstAttribute="leading" secondItem="eVg-BH-ykM" secondAttribute="leading" id="d1d-Km-mh6"/>
-                            <constraint firstItem="9aW-LK-vnn" firstAttribute="bottom" secondItem="cVy-df-Viv" secondAttribute="top" id="dr6-oY-cEJ"/>
-                            <constraint firstItem="9aW-LK-vnn" firstAttribute="leading" secondItem="6qZ-AE-GBO" secondAttribute="leading" id="hWf-fN-efY"/>
-                            <constraint firstAttribute="trailing" secondItem="9aW-LK-vnn" secondAttribute="trailing" id="o8q-tO-ijt"/>
-                            <constraint firstItem="eSf-f9-E26" firstAttribute="top" secondItem="eVg-BH-ykM" secondAttribute="bottom" constant="28" id="xtB-D3-rgm"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Easy Events" id="iVt-ce-Xwh"/>
                 </viewController>
@@ -790,9 +762,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uye-4t-usM">
-                                <frame key="frameInset" minX="80" minY="176" width="256" height="256"/>
+                                <frame key="frameInset" minX="107" minY="194" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="date.png"/>
+                                <state key="normal" image="mail.png"/>
                                 <connections>
                                     <action selector="increment:" destination="3HD-uG-ikd" eventType="touchUpInside" id="te4-3b-5U5"/>
                                 </connections>
@@ -801,7 +773,7 @@
                                 <frame key="frameInset" minX="20" minY="76" width="374" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbD-2o-Tq6">
@@ -813,19 +785,24 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKB-Ii-F15">
-                                <frame key="frameInset" minX="113" minY="557" width="190" height="63"/>
+                                <frame key="frameInset" minX="20" minY="589" width="139" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="MAD_EE_StatusButton.png"/>
-                                <connections>
-                                    <segue destination="eEb-GL-bld" kind="show" id="Y2I-a7-iAv"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K89-Vu-p3L">
-                                <frame key="frameInset" minX="115" minY="628" width="185" height="61"/>
+                                <frame key="frameInset" minX="252" minY="589" width="142" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="MAD_EE_GuestlistButton.png"/>
                                 <connections>
                                     <segue destination="Ihe-Vl-6Ja" kind="show" id="kut-Mg-CX9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0H-Xz-RpM">
+                                <frame key="frameInset" minX="136" minY="658" width="142" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="MAD_EE_BackButton.png"/>
+                                <connections>
+                                    <segue destination="eEb-GL-bld" kind="show" id="jxX-KB-534"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -840,22 +817,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RnC-BR-gZM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1583" y="33"/>
+            <point key="canvasLocation" x="1582.608695652174" y="32.608695652173914"/>
         </scene>
     </scenes>
     <resources>
-        <image name="AppLogo180.png" width="180" height="180"/>
+        <image name="MAD_EE_BackButton.png" width="232" height="77"/>
         <image name="MAD_EE_Background.png" width="469" height="834"/>
         <image name="MAD_EE_EventsButton.png" width="232" height="77"/>
         <image name="MAD_EE_GuestlistButton.png" width="232" height="77"/>
         <image name="MAD_EE_HelpButton.png" width="232" height="77"/>
         <image name="MAD_EE_StatusButton.png" width="232" height="77"/>
         <image name="checkmark.png" width="500" height="500"/>
-        <image name="date.png" width="256" height="256"/>
+        <image name="mail.png" width="720" height="720"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="UZv-sh-nq5"/>
-        <segue reference="4g5-Ou-noB"/>
-        <segue reference="xbY-jI-pEX"/>
+        <segue reference="jxX-KB-534"/>
+        <segue reference="k0u-aU-FDx"/>
     </inferredMetricsTieBreakers>
 </document>

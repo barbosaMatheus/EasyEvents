@@ -135,7 +135,18 @@ class HomeScreenViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             //delete from db first
+            let url = URL( string:"https://cs.okstate.edu/~asaph/remove.php?u=\(self.dbUsername)&p=\(self.dbPassword)&i=\(self.eventList[indexPath[1]].data_base_id)" )!
+            let config = URLSessionConfiguration.default
+            let session = URLSession( configuration: config )
             
+            let task = session.dataTask( with: url, completionHandler: { (data, response, error) in
+                guard error == nil else {
+                    print("Error in session call: \(error)")
+                    return
+                }
+            } )
+            
+            task.resume( )
             
             // Delete the row from the data source
             eventList.remove(at: indexPath[1])

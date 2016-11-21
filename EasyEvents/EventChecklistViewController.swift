@@ -35,7 +35,7 @@ class EventChecklistViewController: UIViewController {
     var step_db_ids: [Int] = []
     
     //array holding all steps for any event
-    let all_steps: [(pic:UIImage,name:String,done:Bool)] = [(#imageLiteral(resourceName: "budget.png"),"Budget",false),(#imageLiteral(resourceName: "catering.png"),"Catering",false),(#imageLiteral(resourceName: "details.png"),"Details & Decorations",false),(#imageLiteral(resourceName: "party_favor.png"),"Party Favors",false),(#imageLiteral(resourceName: "flowers.png"),"Flowers",false),(#imageLiteral(resourceName: "guests.png"),"Guestlist",false),(#imageLiteral(resourceName: "invite.png"),"Invitations",false),(#imageLiteral(resourceName: "license.png"),"Marriage License & Officiant",false),(#imageLiteral(resourceName: "music.png"),"Music/Entertainment",false),(#imageLiteral(resourceName: "party.png"),"Reception/Party",false),(#imageLiteral(resourceName: "photographer.png"),"Photographer",false),(#imageLiteral(resourceName: "registration.png"),"Registration",false),(#imageLiteral(resourceName: "theme.png"),"Theme",false),(#imageLiteral(resourceName: "ty_cards.png"),"\'Thank You\' Cards",false),(#imageLiteral(resourceName: "venue.png"),"Venue/Location",false),(#imageLiteral(resourceName: "wardrobe.png"),"Wardrobe",false)]
+    let all_steps: [(pic:UIImage,name:String,done:Bool)] = [(#imageLiteral(resourceName: "money.png"),"Budget",false),(#imageLiteral(resourceName: "catering.png"),"Catering",false),(#imageLiteral(resourceName: "details.png"),"Details & Decorations",false),(#imageLiteral(resourceName: "party_favor.png"),"Party Favors",false),(#imageLiteral(resourceName: "flowers.png"),"Flowers",false),(#imageLiteral(resourceName: "list.png"),"Guestlist",false),(#imageLiteral(resourceName: "mail.png"),"Invitations",false),(#imageLiteral(resourceName: "license.png"),"License & Officiant",false),(#imageLiteral(resourceName: "music.png"),"Music/Entertainment",false),(#imageLiteral(resourceName: "party.png"),"Reception/Party",false),(#imageLiteral(resourceName: "photographer.png"),"Photographer",false),(#imageLiteral(resourceName: "registration.png"),"Registration",false),(#imageLiteral(resourceName: "theme.png"),"Theme",false),(#imageLiteral(resourceName: "ty_cards.png"),"\'Thank You\' Cards",false),(#imageLiteral(resourceName: "venue.png"),"Venue/Location",false),(#imageLiteral(resourceName: "wardrobe.png"),"Wardrobe",false)]
     
     //current event object loaded
 
@@ -48,9 +48,10 @@ class EventChecklistViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor( patternImage: UIImage( named: "MAD_EE_Background.png" )! )
+        self.view.backgroundColor = UIColor( patternImage: UIImage( named: "events_image4.jpg" )! )
         self.navigationItem.title = "\(event) Checklist"
         self.navigationItem.setHidesBackButton( true, animated:true )
+        step_index = 0
 
         // Do any additional setup after loading the view.
         
