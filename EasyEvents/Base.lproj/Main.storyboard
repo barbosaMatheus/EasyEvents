@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4cU-D1-9b1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4cU-D1-9b1">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -98,6 +99,33 @@
             </objects>
             <point key="canvasLocation" x="-1191.304347826087" y="767.93478260869574"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="ejF-d4-ksK">
+            <objects>
+                <viewController id="7dp-lD-PCS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ClX-Mr-OE7"/>
+                        <viewControllerLayoutGuide type="bottom" id="dBv-Ug-tRr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3U9-uv-XN9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Help View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgk-wq-gBi">
+                                <frame key="frameInset" minX="107" minY="166" width="200" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sqs-Wv-j4t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-323" y="781"/>
+        </scene>
         <!--Guests-->
         <scene sceneID="TqL-2j-Fi6">
             <objects>
@@ -181,9 +209,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVg-BH-ykM">
-                                <frame key="frameInset" minX="132" minY="308" width="150" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MAD_EE_Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="9aW-LK-vnn">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="736" id="nTX-HO-tlI"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVg-BH-ykM">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="09e-B2-MGH"/>
+                                    <constraint firstAttribute="width" constant="150" id="1GE-xC-sj9"/>
+                                </constraints>
                                 <state key="normal" image="MAD_EE_EventsButton.png">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -191,15 +226,19 @@
                                     <segue destination="eEb-GL-bld" kind="show" id="7N6-2n-l3a"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSf-f9-E26">
-                                <frame key="frameInset" minX="132" minY="385" width="150" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSf-f9-E26">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3ZC-4H-ePe"/>
+                                </constraints>
                                 <state key="normal" image="MAD_EE_HelpButton.png">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="7dp-lD-PCS" kind="show" id="ENJ-W6-nTb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gq-bj-PNj">
-                                <frame key="frameInset" minX="170" minY="523" width="75" height="30"/>
+                                <frame key="frameInset" minX="166" minY="558" width="75" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Birthday">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -209,7 +248,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfk-bf-xj6">
-                                <frame key="frameInset" minX="259" minY="523" width="75" height="30"/>
+                                <frame key="frameInset" minX="255" minY="558" width="75" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Business">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -218,15 +257,13 @@
                                     <segue destination="G4R-Na-ast" kind="show" id="qoO-Mg-JYy"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Easy Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2A-HS-sSc">
-                                <frame key="frameInset" minX="80" minY="159" width="254" height="104"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2A-HS-sSc">
                                 <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="35"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAG-KH-XmQ">
-                                <frame key="frameInset" minX="80" minY="523" width="75" height="30"/>
+                                <frame key="frameInset" minX="76" minY="558" width="75" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Wedding">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -236,7 +273,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cwj-aB-I4z">
-                                <frame key="frameInset" minX="86" minY="579" width="93" height="30"/>
+                                <frame key="frameInset" minX="76" minY="609" width="93" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Baby Shower">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -246,7 +283,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30k-qT-ZsH">
-                                <frame key="frameInset" minX="250" minY="579" width="93" height="30"/>
+                                <frame key="frameInset" minX="246" minY="609" width="93" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Custom">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -255,8 +292,29 @@
                                     <segue destination="PkU-B4-wwV" kind="show" id="j5H-33-Geh"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo180.png" translatesAutoresizingMaskIntoConstraints="NO" id="MYW-sc-uKc">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="PRD-qT-4bz"/>
+                                    <constraint firstAttribute="height" constant="120" id="qMZ-1f-OwZ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9aW-LK-vnn" firstAttribute="top" secondItem="Q2A-HS-sSc" secondAttribute="bottom" constant="-189" id="3rP-P2-Rpa"/>
+                            <constraint firstItem="eSf-f9-E26" firstAttribute="trailing" secondItem="eVg-BH-ykM" secondAttribute="trailing" id="5SI-xm-vvo"/>
+                            <constraint firstItem="MYW-sc-uKc" firstAttribute="centerX" secondItem="Q2A-HS-sSc" secondAttribute="centerX" id="E0j-O4-Tc2"/>
+                            <constraint firstItem="Q2A-HS-sSc" firstAttribute="leading" secondItem="6qZ-AE-GBO" secondAttribute="leadingMargin" constant="56" id="Qxg-3v-WSX"/>
+                            <constraint firstItem="Q2A-HS-sSc" firstAttribute="top" secondItem="MzI-bN-oDN" secondAttribute="bottom" constant="35" id="S0X-cf-Msv"/>
+                            <constraint firstItem="MYW-sc-uKc" firstAttribute="top" secondItem="Q2A-HS-sSc" secondAttribute="bottom" constant="24" id="Y7r-XD-X9D"/>
+                            <constraint firstItem="eVg-BH-ykM" firstAttribute="centerX" secondItem="MYW-sc-uKc" secondAttribute="centerX" id="Zz1-8F-PUB"/>
+                            <constraint firstItem="eVg-BH-ykM" firstAttribute="top" secondItem="MYW-sc-uKc" secondAttribute="bottom" constant="57" id="b9a-kz-Kfh"/>
+                            <constraint firstItem="eSf-f9-E26" firstAttribute="leading" secondItem="eVg-BH-ykM" secondAttribute="leading" id="d1d-Km-mh6"/>
+                            <constraint firstItem="9aW-LK-vnn" firstAttribute="bottom" secondItem="cVy-df-Viv" secondAttribute="top" id="dr6-oY-cEJ"/>
+                            <constraint firstItem="9aW-LK-vnn" firstAttribute="leading" secondItem="6qZ-AE-GBO" secondAttribute="leading" id="hWf-fN-efY"/>
+                            <constraint firstAttribute="trailing" secondItem="9aW-LK-vnn" secondAttribute="trailing" id="o8q-tO-ijt"/>
+                            <constraint firstItem="eSf-f9-E26" firstAttribute="top" secondItem="eVg-BH-ykM" secondAttribute="bottom" constant="28" id="xtB-D3-rgm"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Easy Events" id="iVt-ce-Xwh"/>
                 </viewController>
@@ -351,13 +409,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MAD_EE_Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="40x-1m-xNT">
-                                <frame key="frameInset" width="414" height="736"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MAD_EE_Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="40x-1m-xNT">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="736" id="FP5-nt-WCC"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsE-NJ-9hk">
-                                <frame key="frameInset" minX="145" minY="620" width="125" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsE-NJ-9hk">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="Y5d-t8-FGO"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Add Level">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -366,9 +426,35 @@
                                     <action selector="AddLevelButton:" destination="8Er-oT-6Hv" eventType="touchUpInside" id="ul9-1c-uut"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Percent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ef6-IF-SWG">
+                                <frame key="frameInset" minX="157" minY="72" width="100" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfr-Nw-Jcn">
+                                <frame key="frameInset" minX="157" minY="125" width="100" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="40x-1m-xNT" firstAttribute="centerX" secondItem="gsE-NJ-9hk" secondAttribute="centerX" id="H51-cq-ZJU"/>
+                            <constraint firstItem="gsE-NJ-9hk" firstAttribute="top" secondItem="4OI-7x-i4I" secondAttribute="bottom" constant="556" id="J6N-xL-9aV"/>
+                            <constraint firstItem="40x-1m-xNT" firstAttribute="bottom" secondItem="2Z8-OV-WsI" secondAttribute="top" id="YcR-GN-E1R"/>
+                            <constraint firstItem="40x-1m-xNT" firstAttribute="leading" secondItem="T2D-ji-k39" secondAttribute="leading" id="a5T-qa-Hnj"/>
+                            <constraint firstItem="2Z8-OV-WsI" firstAttribute="top" secondItem="gsE-NJ-9hk" secondAttribute="bottom" constant="76" id="apw-Tj-WFi"/>
+                            <constraint firstAttribute="trailing" secondItem="40x-1m-xNT" secondAttribute="trailing" id="eZN-PO-RY5"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="DateLabel" destination="lfr-Nw-Jcn" id="N4F-o5-F0y"/>
+                        <outlet property="PercentLabel" destination="Ef6-IF-SWG" id="EJG-OO-eYL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ms-CQ-yLJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -386,13 +472,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MAD_EE_Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="imU-do-2fM">
-                                <frame key="frameInset" width="414" height="736"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MAD_EE_Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="imU-do-2fM">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="736" id="ooL-uH-z7Y"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53C-I5-igT">
-                                <frame key="frameInset" minX="145" minY="620" width="125" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53C-I5-igT">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="dvZ-2g-OTU"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Add Level">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -401,9 +489,35 @@
                                     <action selector="AddLevelButton:" destination="JYL-WT-uqs" eventType="touchUpInside" id="xYL-9B-rCn"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Percent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egN-DF-dm1">
+                                <frame key="frameInset" minX="157" minY="72" width="100" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQV-aQ-YVk">
+                                <frame key="frameInset" minX="157" minY="125" width="100" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="imU-do-2fM" secondAttribute="trailing" id="8uf-U5-bRa"/>
+                            <constraint firstItem="imU-do-2fM" firstAttribute="centerX" secondItem="53C-I5-igT" secondAttribute="centerX" id="X8a-EI-aVE"/>
+                            <constraint firstItem="qTI-8l-brS" firstAttribute="top" secondItem="53C-I5-igT" secondAttribute="bottom" constant="76" id="gjT-hK-CBd"/>
+                            <constraint firstItem="53C-I5-igT" firstAttribute="top" secondItem="DQT-nM-JBR" secondAttribute="bottom" constant="556" id="ijj-Nm-hdE"/>
+                            <constraint firstItem="imU-do-2fM" firstAttribute="bottom" secondItem="qTI-8l-brS" secondAttribute="top" id="o7h-ac-pXi"/>
+                            <constraint firstItem="imU-do-2fM" firstAttribute="leading" secondItem="lDy-Kz-hPW" secondAttribute="leading" id="wej-0L-VB5"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="DateLabel" destination="uQV-aQ-YVk" id="8cN-Px-aQC"/>
+                        <outlet property="PercentLabel" destination="egN-DF-dm1" id="aEK-tZ-2la"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VNN-s4-YWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -421,13 +535,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MAD_EE_Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="LcI-6d-t8Q">
-                                <frame key="frameInset" width="414" height="736"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MAD_EE_Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="LcI-6d-t8Q">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="736" id="0fW-JI-9YM"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKg-rd-wmo">
-                                <frame key="frameInset" minX="145" minY="620" width="125" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKg-rd-wmo">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="9EB-ln-22e"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Add Level">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -436,9 +552,35 @@
                                     <action selector="AddLevelButton:" destination="G4R-Na-ast" eventType="touchUpInside" id="9GE-at-9bM"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Percent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6P-6Z-dae">
+                                <frame key="frameInset" minX="157" minY="72" width="100" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Hd-dx-m72">
+                                <frame key="frameInset" minX="157" minY="125" width="100" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pKg-rd-wmo" firstAttribute="top" secondItem="CpT-ij-TNI" secondAttribute="bottom" constant="556" id="6ei-zf-J4l"/>
+                            <constraint firstItem="LcI-6d-t8Q" firstAttribute="leading" secondItem="Nbw-OR-fFk" secondAttribute="leading" id="9xs-gi-WB4"/>
+                            <constraint firstItem="7bF-FA-BvO" firstAttribute="top" secondItem="pKg-rd-wmo" secondAttribute="bottom" constant="76" id="NJw-2I-vXM"/>
+                            <constraint firstItem="LcI-6d-t8Q" firstAttribute="centerX" secondItem="pKg-rd-wmo" secondAttribute="centerX" id="Pq5-dT-A7d"/>
+                            <constraint firstItem="LcI-6d-t8Q" firstAttribute="bottom" secondItem="7bF-FA-BvO" secondAttribute="top" id="YlA-uD-mpo"/>
+                            <constraint firstAttribute="trailing" secondItem="LcI-6d-t8Q" secondAttribute="trailing" id="ibK-E4-pAm"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="DateLabel" destination="7Hd-dx-m72" id="oQr-iS-l8D"/>
+                        <outlet property="PercentLabel" destination="W6P-6Z-dae" id="Adp-AA-gzb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v8R-EJ-4ET" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -456,13 +598,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MAD_EE_Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="BBp-bj-MWJ">
-                                <frame key="frameInset" width="414" height="736"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MAD_EE_Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="BBp-bj-MWJ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="736" id="bak-ZP-EQk"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWA-09-nS2">
-                                <frame key="frameInset" minX="145" minY="620" width="125" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWA-09-nS2">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="ZMS-ZP-lPg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Add Level">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -471,9 +615,35 @@
                                     <action selector="AddLevelButton:" destination="wLe-32-7uX" eventType="touchUpInside" id="foq-W3-JNk"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Percent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COO-N3-faw">
+                                <frame key="frameInset" minX="157" minY="72" width="100" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mc6-dC-m65">
+                                <frame key="frameInset" minX="157" minY="125" width="100" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BBp-bj-MWJ" firstAttribute="bottom" secondItem="dkQ-Qc-Z0P" secondAttribute="top" id="Bp1-Q0-aiE"/>
+                            <constraint firstItem="BBp-bj-MWJ" firstAttribute="centerX" secondItem="iWA-09-nS2" secondAttribute="centerX" id="D0a-lC-O4S"/>
+                            <constraint firstItem="BBp-bj-MWJ" firstAttribute="leading" secondItem="04B-xL-WuZ" secondAttribute="leading" id="DJV-2y-NQC"/>
+                            <constraint firstItem="dkQ-Qc-Z0P" firstAttribute="top" secondItem="iWA-09-nS2" secondAttribute="bottom" constant="76" id="fHl-tB-Srm"/>
+                            <constraint firstAttribute="trailing" secondItem="BBp-bj-MWJ" secondAttribute="trailing" id="hn2-8e-OT4"/>
+                            <constraint firstItem="iWA-09-nS2" firstAttribute="top" secondItem="fM6-VU-5au" secondAttribute="bottom" constant="556" id="kNO-Sr-Ax7"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="DateLabel" destination="mc6-dC-m65" id="gYH-js-j4N"/>
+                        <outlet property="PercentLabel" destination="COO-N3-faw" id="FlZ-96-UY2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1tI-qn-U2G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -491,13 +661,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MAD_EE_Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="ftM-lV-VMG">
-                                <frame key="frameInset" width="414" height="736"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MAD_EE_Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="ftM-lV-VMG">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="736" id="Emh-QZ-i3w"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="er1-Cm-nRp">
-                                <frame key="frameInset" minX="145" minY="620" width="125" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="er1-Cm-nRp">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="lHy-eW-41H"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Add Level">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -506,9 +678,35 @@
                                     <action selector="AddLevelButton:" destination="PkU-B4-wwV" eventType="touchUpInside" id="kAz-Tk-KUJ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Percent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5Y-fr-smU">
+                                <frame key="frameInset" minX="157" minY="72" width="100" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8C-SQ-Wqn">
+                                <frame key="frameInset" minX="157" minY="125" width="100" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ftM-lV-VMG" secondAttribute="trailing" id="7Pg-gI-8vl"/>
+                            <constraint firstItem="er1-Cm-nRp" firstAttribute="top" secondItem="mC1-gO-A1p" secondAttribute="bottom" constant="556" id="HhZ-QR-wNb"/>
+                            <constraint firstItem="ftM-lV-VMG" firstAttribute="leading" secondItem="tr2-DK-7Mj" secondAttribute="leading" id="Ix6-JT-U2R"/>
+                            <constraint firstItem="72b-gM-paJ" firstAttribute="top" secondItem="er1-Cm-nRp" secondAttribute="bottom" constant="76" id="eCB-Cl-bod"/>
+                            <constraint firstItem="ftM-lV-VMG" firstAttribute="bottom" secondItem="72b-gM-paJ" secondAttribute="top" id="laN-XW-ZJH"/>
+                            <constraint firstItem="ftM-lV-VMG" firstAttribute="centerX" secondItem="er1-Cm-nRp" secondAttribute="centerX" id="rJn-EJ-Pvs"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="DateLabel" destination="D8C-SQ-Wqn" id="mid-4j-LtX"/>
+                        <outlet property="PercentLabel" destination="Z5Y-fr-smU" id="72s-3h-QFP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tr2-gu-URU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -646,6 +844,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AppLogo180.png" width="180" height="180"/>
         <image name="MAD_EE_Background.png" width="469" height="834"/>
         <image name="MAD_EE_EventsButton.png" width="232" height="77"/>
         <image name="MAD_EE_GuestlistButton.png" width="232" height="77"/>
