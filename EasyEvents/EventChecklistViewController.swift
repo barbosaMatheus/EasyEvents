@@ -118,6 +118,8 @@ class EventChecklistViewController: UIViewController {
         } )
         
         task.resume( )
+        //usleep( 1000000 ) //seriously I can't fix this async bug
+        //so this at least gives the db a chance to update
     }
     
     @IBAction func toggle(_ sender: AnyObject) {
@@ -222,6 +224,8 @@ class EventChecklistViewController: UIViewController {
         } )
         
         task.resume( )
+        //usleep( 1500000 ) //seriously I can't fix this async bug
+        //so this at least gives the db a chance to update
     }
     
     func update_steps( ) {
@@ -245,6 +249,8 @@ class EventChecklistViewController: UIViewController {
                 } )
                 
                 task.resume( )
+                //usleep( 2 ) //seriously I can't fix this async bug
+                //so this at least gives the db a chance to update
             }
         }
     }

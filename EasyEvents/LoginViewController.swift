@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import QuartzCore
 
 class LoginViewController: UIViewController {
-
+    
+    @IBOutlet weak var logo_image_view: UIImageView!
     //text labels
     @IBOutlet weak var username_label: UITextField!
     @IBOutlet weak var psswd_label: UITextField!
@@ -21,8 +23,11 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
+        
+        //makes a rounded corner logo
+        //Joe Kline chose 90, thank you
+        logo_image_view.layer.cornerRadius = 90
+        logo_image_view.clipsToBounds = true
         
         // Do any additional setup after loading the view
         //to make keyboard go away
@@ -90,6 +95,8 @@ class LoginViewController: UIViewController {
         } )
         
         task.resume( )
+        //sleep( 2 ) //seriously I can't fix this async bug
+        //so this at least gives the db a chance to update
     }
     
     // MARK: - Navigation

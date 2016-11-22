@@ -134,6 +134,8 @@ class AddEventViewController: UIViewController, UIPickerViewDataSource,UIPickerV
         } )
         
         task.resume( )
+        //usleep( 1000000 ) //seriously I can't fix this async bug
+        //so this at least gives the db a chance to update
     }
     
     func update_steps_table( type: String ) {
@@ -151,6 +153,8 @@ class AddEventViewController: UIViewController, UIPickerViewDataSource,UIPickerV
             } )
             
             task.resume( )
+            //usleep( 1000000 ) //seriously I can't fix this async bug
+            //so this at least gives the db a chance to update
         }
     }
     

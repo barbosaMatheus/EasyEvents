@@ -93,6 +93,8 @@ class HomeScreenViewController: UIViewController, UITableViewDataSource, UITable
         } )
         
         task.resume( )
+        usleep( 700000 ) //seriously I can't fix this async bug
+                   //so this at least gives the db a chance to update
     }
 
     override func didReceiveMemoryWarning() {

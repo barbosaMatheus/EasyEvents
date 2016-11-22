@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 class SplashScreenViewController: UIViewController {
 
@@ -15,9 +16,14 @@ class SplashScreenViewController: UIViewController {
     var dbPassword: String = ""
     var user_id: Int = 0 //id attribute for the current user in the database
     
+    @IBOutlet weak var logo_image_view: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        logo_image_view.layer.cornerRadius = 90
+        logo_image_view.clipsToBounds = true
+        
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor( patternImage: UIImage( named: "events_image2.jpg" )! )
         self.navigationItem.setHidesBackButton( true, animated:true )
