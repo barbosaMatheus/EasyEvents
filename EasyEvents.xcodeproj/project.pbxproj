@@ -39,6 +39,16 @@
 		089C3E781DDD4182005595F9 /* AppLogo1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 089C3E701DDD4182005595F9 /* AppLogo1024.png */; };
 		089C3E7B1DDD43B6005595F9 /* AppLogo40.png in Resources */ = {isa = PBXBuildFile; fileRef = 089C3E791DDD43B6005595F9 /* AppLogo40.png */; };
 		089C3E7C1DDD43B6005595F9 /* AppLogo60.png in Resources */ = {isa = PBXBuildFile; fileRef = 089C3E7A1DDD43B6005595F9 /* AppLogo60.png */; };
+		08A1772B1DE4BAC0000F8C58 /* image1.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A177211DE4BAC0000F8C58 /* image1.png */; };
+		08A1772C1DE4BAC0000F8C58 /* image2.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A177221DE4BAC0000F8C58 /* image2.png */; };
+		08A1772D1DE4BAC0000F8C58 /* image3.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A177231DE4BAC0000F8C58 /* image3.png */; };
+		08A1772E1DE4BAC0000F8C58 /* image4.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A177241DE4BAC0000F8C58 /* image4.png */; };
+		08A1772F1DE4BAC0000F8C58 /* image5.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A177251DE4BAC0000F8C58 /* image5.png */; };
+		08A177301DE4BAC0000F8C58 /* image6.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A177261DE4BAC0000F8C58 /* image6.png */; };
+		08A177311DE4BAC0000F8C58 /* image7.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A177271DE4BAC0000F8C58 /* image7.png */; };
+		08A177321DE4BAC0000F8C58 /* image8.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A177281DE4BAC0000F8C58 /* image8.png */; };
+		08A177331DE4BAC0000F8C58 /* image9.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A177291DE4BAC0000F8C58 /* image9.png */; };
+		08A177341DE4BAC0000F8C58 /* image10.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A1772A1DE4BAC0000F8C58 /* image10.png */; };
 		22CCFD7E1DCDA83800457569 /* GeneralCalendarColor.png in Resources */ = {isa = PBXBuildFile; fileRef = 22CCFD7D1DCDA83800457569 /* GeneralCalendarColor.png */; };
 		22CCFD801DCDA84800457569 /* GeneralCalendarGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 22CCFD7F1DCDA84800457569 /* GeneralCalendarGray.png */; };
 		22CCFD821DCDA85200457569 /* BabyShowerGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 22CCFD811DCDA85200457569 /* BabyShowerGray.png */; };
@@ -140,6 +150,16 @@
 		089C3E701DDD4182005595F9 /* AppLogo1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppLogo1024.png; sourceTree = "<group>"; };
 		089C3E791DDD43B6005595F9 /* AppLogo40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppLogo40.png; sourceTree = "<group>"; };
 		089C3E7A1DDD43B6005595F9 /* AppLogo60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppLogo60.png; sourceTree = "<group>"; };
+		08A177211DE4BAC0000F8C58 /* image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image1.png; sourceTree = "<group>"; };
+		08A177221DE4BAC0000F8C58 /* image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image2.png; sourceTree = "<group>"; };
+		08A177231DE4BAC0000F8C58 /* image3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image3.png; sourceTree = "<group>"; };
+		08A177241DE4BAC0000F8C58 /* image4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image4.png; sourceTree = "<group>"; };
+		08A177251DE4BAC0000F8C58 /* image5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image5.png; sourceTree = "<group>"; };
+		08A177261DE4BAC0000F8C58 /* image6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image6.png; sourceTree = "<group>"; };
+		08A177271DE4BAC0000F8C58 /* image7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image7.png; sourceTree = "<group>"; };
+		08A177281DE4BAC0000F8C58 /* image8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image8.png; sourceTree = "<group>"; };
+		08A177291DE4BAC0000F8C58 /* image9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image9.png; sourceTree = "<group>"; };
+		08A1772A1DE4BAC0000F8C58 /* image10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image10.png; sourceTree = "<group>"; };
 		22CCFD7D1DCDA83800457569 /* GeneralCalendarColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GeneralCalendarColor.png; sourceTree = "<group>"; };
 		22CCFD7F1DCDA84800457569 /* GeneralCalendarGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GeneralCalendarGray.png; sourceTree = "<group>"; };
 		22CCFD811DCDA85200457569 /* BabyShowerGray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BabyShowerGray.png; sourceTree = "<group>"; };
@@ -225,6 +245,7 @@
 		086646FB1DC2E852009FA2DA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				08A177201DE4BAA4000F8C58 /* HelpImages */,
 				089C3E681DDD4164005595F9 /* AppIcons */,
 				22CCFD7F1DCDA84800457569 /* GeneralCalendarGray.png */,
 				22CCFD811DCDA85200457569 /* BabyShowerGray.png */,
@@ -239,9 +260,9 @@
 				087170C41DDD29FC00E2CFEC /* MAD_EE_EventsButton.png */,
 				087170C51DDD29FC00E2CFEC /* MAD_EE_GuestButton.png */,
 				087170C61DDD29FC00E2CFEC /* MAD_EE_GuestlistButton.png */,
+				086646FC1DC2E873009FA2DA /* MAD_EE_Background.png */,
 				087170C71DDD29FC00E2CFEC /* MAD_EE_LoginButton.png */,
 				087170C81DDD29FC00E2CFEC /* MAD_EE_StatusButton.png */,
-				086646FC1DC2E873009FA2DA /* MAD_EE_Background.png */,
 				086646FD1DC2E873009FA2DA /* MAD_EE_ClearAllButton.png */,
 				086646FE1DC2E873009FA2DA /* MAD_EE_HelpButton.png */,
 				086646FF1DC2E873009FA2DA /* MAD_EE_NewEventButton.png */,
@@ -266,6 +287,23 @@
 				089C3E701DDD4182005595F9 /* AppLogo1024.png */,
 			);
 			name = AppIcons;
+			sourceTree = "<group>";
+		};
+		08A177201DE4BAA4000F8C58 /* HelpImages */ = {
+			isa = PBXGroup;
+			children = (
+				08A177211DE4BAC0000F8C58 /* image1.png */,
+				08A177221DE4BAC0000F8C58 /* image2.png */,
+				08A177231DE4BAC0000F8C58 /* image3.png */,
+				08A177241DE4BAC0000F8C58 /* image4.png */,
+				08A177251DE4BAC0000F8C58 /* image5.png */,
+				08A177261DE4BAC0000F8C58 /* image6.png */,
+				08A177271DE4BAC0000F8C58 /* image7.png */,
+				08A177281DE4BAC0000F8C58 /* image8.png */,
+				08A177291DE4BAC0000F8C58 /* image9.png */,
+				08A1772A1DE4BAC0000F8C58 /* image10.png */,
+			);
+			name = HelpImages;
 			sourceTree = "<group>";
 		};
 		813DF6AB1DBECA9C00D2E0D9 = {
@@ -484,7 +522,9 @@
 				089346D71DCD6E9B004C5995 /* Briefcase_Color.png in Resources */,
 				B58EA7D81DC264C500F4F7E0 /* resources.txt in Resources */,
 				087170CB1DDD29FC00E2CFEC /* MAD_EE_GuestlistButton.png in Resources */,
+				08A1772F1DE4BAC0000F8C58 /* image5.png in Resources */,
 				B58EA7CE1DC264C500F4F7E0 /* catering.png in Resources */,
+				08A177301DE4BAC0000F8C58 /* image6.png in Resources */,
 				089C3E771DDD4182005595F9 /* AppLogo180.png in Resources */,
 				089346D81DCD6E9B004C5995 /* Briefcase_Gray.png in Resources */,
 				086647051DC2E873009FA2DA /* MAD_EE_NewEventButton.png in Resources */,
@@ -514,6 +554,8 @@
 				086647021DC2E873009FA2DA /* MAD_EE_Background.png in Resources */,
 				B58EA7DC1DC264C500F4F7E0 /* wardrobe.png in Resources */,
 				089C3E711DDD4182005595F9 /* AppLogo58.png in Resources */,
+				08A177341DE4BAC0000F8C58 /* image10.png in Resources */,
+				08A1772C1DE4BAC0000F8C58 /* image2.png in Resources */,
 				B55A3C331DE281AE000241A8 /* list.png in Resources */,
 				22CCFD841DCDA85E00457569 /* BabyShowerColor.png in Resources */,
 				B58EA7BA1DC25E6F00F4F7E0 /* date.png in Resources */,
@@ -521,7 +563,10 @@
 				089C3E751DDD4182005595F9 /* AppLogo152.png in Resources */,
 				813DF6C21DBECA9C00D2E0D9 /* Assets.xcassets in Resources */,
 				B58EA7DA1DC264C500F4F7E0 /* ty_cards.png in Resources */,
+				08A177331DE4BAC0000F8C58 /* image9.png in Resources */,
+				08A1772E1DE4BAC0000F8C58 /* image4.png in Resources */,
 				22CCFD821DCDA85200457569 /* BabyShowerGray.png in Resources */,
+				08A177321DE4BAC0000F8C58 /* image8.png in Resources */,
 				087170C91DDD29FC00E2CFEC /* MAD_EE_EventsButton.png in Resources */,
 				089346DA1DCD6E9B004C5995 /* WeddingCake_Gray.png in Resources */,
 				B58EA7D71DC264C500F4F7E0 /* registration.png in Resources */,
@@ -531,8 +576,11 @@
 				B5391FE01DC56C6600E58D15 /* checkmark.png in Resources */,
 				B55A3C1B1DE27848000241A8 /* table.jpeg in Resources */,
 				B55A3C2D1DE27F3E000241A8 /* events_image4.jpg in Resources */,
+				08A1772B1DE4BAC0000F8C58 /* image1.png in Resources */,
 				086647031DC2E873009FA2DA /* MAD_EE_ClearAllButton.png in Resources */,
+				08A177311DE4BAC0000F8C58 /* image7.png in Resources */,
 				B58EA7D91DC264C500F4F7E0 /* theme.png in Resources */,
+				08A1772D1DE4BAC0000F8C58 /* image3.png in Resources */,
 				B55A3C371DE2835A000241A8 /* MAD_EE_BackButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
