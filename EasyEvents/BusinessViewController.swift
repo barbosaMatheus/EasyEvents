@@ -11,7 +11,7 @@ import UIKit
 class BusinessViewController: UIViewController {
 
     let bC = UIImage(named: "Briefcase_Color.png")
-    let levels = 9
+    let levels = 8
     var levelCount = 0
     var imageFractions = [UIView]()
     
@@ -60,7 +60,7 @@ class BusinessViewController: UIViewController {
         let tempImage = bC?.cgImage
         var fractionsCount = 0
         
-        while(fractionsCount < 9){
+        while(fractionsCount < levels){
             
             let f1 = tempImage!.cropping(to: CGRect(x: 0, y: 0, width: (bC?.size.width)!, height: ( ((bC?.size.height)! / CGFloat(levels)) + (CGFloat(fractionsCount) * (bC?.size.height)! / CGFloat(levels)) )))
             let fractIm1 = UIImage(cgImage: f1!)
