@@ -389,28 +389,28 @@ When you first start the application, you will be greeted with the login screen,
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EQK-pd-6WK">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="124" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EQK-pd-6WK">
                                 <frame key="frameInset" minX="20" minY="28" width="374" height="664"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="hbq-vG-UiU" detailTextLabel="rtG-l3-eDD" style="IBUITableViewCellStyleSubtitle" id="rJI-au-Crw">
-                                        <rect key="frame" x="0.0" y="92" width="374" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="hbq-vG-UiU" detailTextLabel="rtG-l3-eDD" rowHeight="124" style="IBUITableViewCellStyleSubtitle" id="rJI-au-Crw">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="124"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rJI-au-Crw" id="LAu-5t-Sy8">
-                                            <frame key="frameInset" width="374" height="43"/>
+                                            <frame key="frameInset" width="374" height="123"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hbq-vG-UiU">
-                                                    <frame key="frameInset" minX="15" minY="4" width="34" height="21"/>
+                                                    <frame key="frameInset" minX="15" minY="44" width="34" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rtG-l3-eDD">
-                                                    <frame key="frameInset" minX="15" minY="25" width="44" height="15"/>
+                                                    <frame key="frameInset" minX="15" minY="65" width="44" height="15"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -446,7 +446,7 @@ When you first start the application, you will be greeted with the login screen,
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="268-go-5sL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2543" y="33"/>
+            <point key="canvasLocation" x="2542.0289855072465" y="32.608695652173914"/>
         </scene>
         <!--Easy Events-->
         <scene sceneID="9em-dG-q5a">
@@ -881,7 +881,7 @@ When you first start the application, you will be greeted with the login screen,
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="MAD_EE_GuestlistButton.png"/>
                                 <connections>
-                                    <segue destination="Ihe-Vl-6Ja" kind="show" id="kut-Mg-CX9"/>
+                                    <segue destination="Ihe-Vl-6Ja" kind="show" identifier="guest" id="kut-Mg-CX9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0H-Xz-RpM">
@@ -933,6 +933,6 @@ When you first start the application, you will be greeted with the login screen,
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="UZv-sh-nq5"/>
-        <segue reference="7N6-2n-l3a"/>
+        <segue reference="jxX-KB-534"/>
     </inferredMetricsTieBreakers>
 </document>

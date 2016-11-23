@@ -12,10 +12,82 @@ class GuestsViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBOutlet weak var table: UITableView!
     var guestList = [Guest]()
+    var dbUsername: String = ""
+    var dbPassword: String = ""
+    var event_id: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor( patternImage: UIImage( named: "MAD_EE_Background.png" )! )
+        self.view.backgroundColor = UIColor( patternImage: UIImage( named: "beach.jpg" )! )
+        refresh( )
+    }
+    
+    func refresh( ) {
+        self.guestList.removeAll( )
+        //grab stuff from the database
+        let url = URL( string:"https://cs.okstate.edu/~asaph/guests.php?u=\(self.dbUsername)&p=\(self.dbPassword)&i=\(self.event_id)" )!
+        let config = URLSessionConfiguration.default
+        let session = URLSession( configuration: config )
+        
+        let task = session.dataTask( with: url, completionHandler: { (data, response, error) in
+            guard error == nil else {
+                print("Error in session call: \(error)")
+                return
+            }
+            
+            guard let result = data else {
+                print( "No data\n" )
+                return
+            }
+            
+            do {
+                let json = try JSONSerialization.jsonObject( with: result, options: .allowFragments ) as? [[String: AnyObject]]
+                
+                if json == nil {
+                    return
+                }
+                
+                for guest in json! {
+                    //get id
+                    guard let id = guest["id"] as? String else {
+                        return
+                    }
+                    
+                    //get name
+                    guard let name = guest["name"] as? String else {
+                        return
+                    }
+                    
+                    //get number
+                    guard let phone_number = guest["phone"] as? String else {
+                        return
+                    }
+                    
+                    //get rsvp
+                    guard let rsvp = guest["rsvp"] as? String else {
+                        return
+                    }
+                    
+                    let _guest = Guest( name: name, phone: phone_number, confirmed: false, id: Int( id )! )
+                    if rsvp == "1" {
+                        _guest.confirmed = true
+                    }
+                    self.guestList.append( _guest )
+                }
+                
+                DispatchQueue.main.async {
+                    self.table.reloadData( )
+                }
+                
+            } catch {
+                print( "Error serializing JSON Data: \(error)" )
+            }
+        } )
+        
+        task.resume( )
+        usleep( 900000 ) //seriously I can't fix this async bug
+        //so this at least gives the db a chance to update
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,8 +112,8 @@ class GuestsViewController: UIViewController, UITableViewDataSource, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
         // Configure the cell...
-        cell.textLabel?.text = guestList[indexPath[1]].name
-        cell.detailTextLabel?.text = guestList[indexPath[1]].phone_num
+        cell.textLabel?.text = "Name: \(guestList[indexPath[1]].name)"
+        cell.detailTextLabel?.text = "Phone: \(guestList[indexPath[1]].phone_num)"
         
         // Set cell color
         if guestList[indexPath[1]].confirmed == true {
@@ -54,6 +126,9 @@ class GuestsViewController: UIViewController, UITableViewDataSource, UITableView
         }
         
         cell.textLabel?.textColor = UIColor.black
+        cell.detailTextLabel?.textColor = UIColor.black
+        cell.textLabel?.font = UIFont.init( name: "Zapfino", size: 20 )
+        cell.detailTextLabel?.font = UIFont.init( name: "Zapfino", size: 16 )
         // Prevent cell from turning gray when selected
         cell.selectionStyle = .none
         
@@ -100,19 +175,35 @@ class GuestsViewController: UIViewController, UITableViewDataSource, UITableView
             result in
             let firstTextField = alertController.textFields![0] as UITextField
             let secondTextField = alertController.textFields![1] as UITextField
-            if let nameText = firstTextField.text {
-                if let numberText = secondTextField.text {
+            if var nameText = firstTextField.text {
+                if var numberText = secondTextField.text {
                     
                     if nameText != "" && numberText != "" {
                         
-                        let newGuest: Guest = Guest.init(name: nameText)
+                        /*let newGuest: Guest = Guest.init(name: nameText)
                         newGuest.phone_num = numberText
                         newGuest.confirmed = false
-                        self.guestList.append(newGuest)
-                    
-                        DispatchQueue.main.async{
-                            self.table.reloadData()
-                        }
+                        self.guestList.append(newGuest)*/
+                        //grab stuff from the database
+                        nameText = nameText.replacingOccurrences(of: " ", with: "_")
+                        numberText = numberText.replacingOccurrences(of: " ", with: "_")
+                        let url = URL( string:"https://cs.okstate.edu/~asaph/insert_guest.php?u=\(self.dbUsername)&p=\(self.dbPassword)&i=\(self.event_id)&g=\(nameText)&n=\(numberText)" )!
+                        let config = URLSessionConfiguration.default
+                        let session = URLSession( configuration: config )
+                        let task = session.dataTask( with: url, completionHandler: { (data, response, error) in
+                            guard error == nil else {
+                                print("Error in session call: \(error)")
+                                return
+                            }
+                            
+                            self.refresh( )
+                            
+                            DispatchQueue.main.async{
+                                self.table.reloadData()
+                            }
+                        } )
+                        
+                        task.resume( )
                     }
                 }
             }
@@ -139,6 +230,22 @@ class GuestsViewController: UIViewController, UITableViewDataSource, UITableView
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        //upload the db for each guest
+        for guest in guestList {
+            let rsvp = guest.confirmed ? 1 : 0
+            let url = URL( string:"https://cs.okstate.edu/~asaph/insert_guest.php?u=\(self.dbUsername)&p=\(self.dbPassword)&i=\(guest.db_id)&r=\(rsvp)" )!
+            let config = URLSessionConfiguration.default
+            let session = URLSession( configuration: config )
+            let task = session.dataTask( with: url, completionHandler: { (data, response, error) in
+                guard error == nil else {
+                    print("Error in session call: \(error)")
+                    return
+                }
+            } )
+            
+            task.resume( )
+        }
     }
 
 }

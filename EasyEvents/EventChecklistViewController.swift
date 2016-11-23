@@ -226,6 +226,15 @@ class EventChecklistViewController: UIViewController {
             vc.completion = self.completion_percentage
             vc.date = self.date
         }
+        else if segue.identifier == "guest" {
+            guard let vc = segue.destination as? GuestsViewController else {
+                return
+            }
+            
+            vc.dbPassword = self.dbPassword
+            vc.dbUsername = self.dbUsername
+            vc.event_id = self.event_id
+        }
         else {}
         update_event( )
     }
