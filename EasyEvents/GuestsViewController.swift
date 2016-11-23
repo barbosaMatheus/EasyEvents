@@ -121,8 +121,8 @@ class GuestsViewController: UIViewController, UITableViewDataSource, UITableView
             cell.backgroundColor = UIColor(red: 0.467, green: 0.950, blue: 0.282, alpha: 1.0)
         }
         else {
-            cell.contentView.backgroundColor = UIColor.clear
-            cell.backgroundColor = UIColor.clear
+            cell.contentView.backgroundColor = UIColor.gray
+            cell.backgroundColor = UIColor.gray
         }
         
         cell.textLabel?.textColor = UIColor.black
@@ -151,16 +151,51 @@ class GuestsViewController: UIViewController, UITableViewDataSource, UITableView
         // Toggle guest back to not confirmed
         else {
             guestList[indexPath[1]].confirmed = false
-            cell?.contentView.backgroundColor = UIColor.clear
-            cell?.backgroundColor = UIColor.clear
+            cell?.contentView.backgroundColor = UIColor.gray
+            cell?.backgroundColor = UIColor.gray
         }
-        print(guestList[indexPath[1]].confirmed)
+        
+        let rsvp = guestList[indexPath[1]].confirmed ? 1 : 0
+        let id = guestList[indexPath[1]].db_id
+        let url = URL( string:"https://cs.okstate.edu/~asaph/update_guest.php?u=\(self.dbUsername)&p=\(self.dbPassword)&i=\(id)&r=\(rsvp)" )!
+        let config = URLSessionConfiguration.default
+        let session = URLSession( configuration: config )
+        let task = session.dataTask( with: url, completionHandler: { (data, response, error) in
+            guard error == nil else {
+                print("Error in session call: \(error)")
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self.table.reloadData( )
+            }
+        } )
+        
+        task.resume( )
     }
     
     
     // Override to support editing the table view.
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            //delete from db first
+            let id = guestList[indexPath[1]].db_id
+            let url = URL( string:"https://cs.okstate.edu/~asaph/remove_guest.php?u=\(self.dbUsername)&p=\(self.dbPassword)&i=\(id)" )!
+            let config = URLSessionConfiguration.default
+            let session = URLSession( configuration: config )
+            let task = session.dataTask( with: url, completionHandler: { (data, response, error) in
+                guard error == nil else {
+                    print("Error in session call: \(error)")
+                    return
+                }
+                
+                DispatchQueue.main.async {
+                    self.table.reloadData( )
+                }
+            } )
+            
+            task.resume( )
+            
             // Delete the row from the data source
             guestList.remove(at: indexPath[1])
             tableView.deleteRows(at: [indexPath], with: .fade)
@@ -180,11 +215,7 @@ class GuestsViewController: UIViewController, UITableViewDataSource, UITableView
                     
                     if nameText != "" && numberText != "" {
                         
-                        /*let newGuest: Guest = Guest.init(name: nameText)
-                        newGuest.phone_num = numberText
-                        newGuest.confirmed = false
-                        self.guestList.append(newGuest)*/
-                        //grab stuff from the database
+                        //write stuff to the database
                         nameText = nameText.replacingOccurrences(of: " ", with: "_")
                         numberText = numberText.replacingOccurrences(of: " ", with: "_")
                         let url = URL( string:"https://cs.okstate.edu/~asaph/insert_guest.php?u=\(self.dbUsername)&p=\(self.dbPassword)&i=\(self.event_id)&g=\(nameText)&n=\(numberText)" )!
@@ -224,28 +255,12 @@ class GuestsViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     
-    // MARK: - Navigation
+    /*// MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        
-        //upload the db for each guest
-        for guest in guestList {
-            let rsvp = guest.confirmed ? 1 : 0
-            let url = URL( string:"https://cs.okstate.edu/~asaph/insert_guest.php?u=\(self.dbUsername)&p=\(self.dbPassword)&i=\(guest.db_id)&r=\(rsvp)" )!
-            let config = URLSessionConfiguration.default
-            let session = URLSession( configuration: config )
-            let task = session.dataTask( with: url, completionHandler: { (data, response, error) in
-                guard error == nil else {
-                    print("Error in session call: \(error)")
-                    return
-                }
-            } )
-            
-            task.resume( )
-        }
-    }
+    }*/
 
 }
