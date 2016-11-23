@@ -22,7 +22,7 @@ class HomeScreenViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.navigationItem.setHidesBackButton(true, animated:true)
-        self.view.backgroundColor = UIColor( patternImage: UIImage( named: "table.jpeg" )! )
+        self.view.backgroundColor = UIColor( patternImage: UIImage( named: "tea.jpg" )! )
         self.navigationItem.setHidesBackButton( true, animated:true )
         
         
@@ -45,11 +45,11 @@ class HomeScreenViewController: UIViewController, UITableViewDataSource, UITable
             do {
                 let json = try JSONSerialization.jsonObject( with: result, options: .allowFragments ) as? [[String: AnyObject]]
                 
+                if json == nil {
+                    return
+                }
+                
                 for event in json! {
-                    if json == nil {
-                        return
-                    }
-                    
                     //get event id
                     guard let id = event["id"] as? String else {
                         return
@@ -93,7 +93,7 @@ class HomeScreenViewController: UIViewController, UITableViewDataSource, UITable
         } )
         
         task.resume( )
-        usleep( 700000 ) //seriously I can't fix this async bug
+        usleep( 900000 ) //seriously I can't fix this async bug
                    //so this at least gives the db a chance to update
     }
 
@@ -118,7 +118,8 @@ class HomeScreenViewController: UIViewController, UITableViewDataSource, UITable
         cell.textLabel?.text = "\(eventList[indexPath[1]].title)"
         cell.detailTextLabel?.text = "\(eventList[indexPath[1]].date)    \(eventList[indexPath[1]].completion)%"
         cell.backgroundColor = UIColor.clear
-        cell.textLabel?.textColor = UIColor.black
+        cell.textLabel?.textColor = UIColor.white
+        cell.detailTextLabel?.textColor = UIColor.white
         cell.textLabel?.font = UIFont.init( name: "Zapfino", size: 22 )
         cell.detailTextLabel?.font = UIFont.init( name: "Zapfino", size: 16 )
         

@@ -202,6 +202,30 @@ class EventChecklistViewController: UIViewController {
             vc.completion = self.completion_percentage
             vc.date = self.date
         }
+        else if segue.identifier == "Business" {
+            guard let vc = segue.destination as? BusinessViewController else {
+                return
+            }
+            
+            vc.completion = self.completion_percentage
+            vc.date = self.date
+        }
+        else if segue.identifier == "Baby" {
+            guard let vc = segue.destination as? BabyShowerViewController else {
+                return
+            }
+            
+            vc.completion = self.completion_percentage
+            vc.date = self.date
+        }
+        else if segue.identifier == "Custom" {
+            guard let vc = segue.destination as? CustomViewController else {
+                return
+            }
+            
+            vc.completion = self.completion_percentage
+            vc.date = self.date
+        }
         else {}
         update_event( )
     }
@@ -249,8 +273,6 @@ class EventChecklistViewController: UIViewController {
                 } )
                 
                 task.resume( )
-                //usleep( 2 ) //seriously I can't fix this async bug
-                //so this at least gives the db a chance to update
             }
         }
     }

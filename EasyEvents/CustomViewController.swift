@@ -12,37 +12,25 @@ class CustomViewController: UIViewController {
 
     let gC = UIImage(named: "GeneralCalendarColor.png")
     
-    //choice IS THE VARIABLE TO CHANGE DEPENDING ON NUMBER OF CUSTOM STEPS
-    //NEEDED, (8-18), AT MOMENT OF SEGUE.
-    var choice = 12  //8-18
+    var levels = 8
     
     var levelCount = 0
     var imageFractions = [UIView]()
     
     @IBOutlet weak var DateLabel: UILabel!
     @IBOutlet weak var PercentLabel: UILabel!
-    var date = Date()
     var completion : Double = 0.0
-    
-    @IBAction func AddLevelButton(_ sender: UIButton) {
-        if(levelCount < choice){
-            view.addSubview(imageFractions[levelCount])
-            levelCount = levelCount + 1
-        }
+    var date: String = ""
 
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor( patternImage: UIImage( named: "celebration.jpeg" )! )
         
         //EDIT THIS TO CHANGE THE PERCENT AND DATE LABELS WHEN SEGUEING IN
-        completion = 27.0
-        PercentLabel.text = "\(completion)%"
-        let format = DateFormatter()
-        format.dateFormat = "MM/dd/yyyy"
-        let thisDate = format.string(from: date)
-        DateLabel.text = thisDate
+        PercentLabel.text = "\(completion)% completed"
+        DateLabel.text = date
+        levelCount = Int( ( completion/100.0 )*Double( levels ) ) - 1
+        if levelCount < 0 { levelCount = 0 }
         
         //Draws greyed out version of the briefcase, meaning no progress made yet
         let genCalRect = CGRect(x: (self.view.bounds.size.width / 5), y: (self.view.bounds.size.height / 3), width: (gC?.size.width)!, height: (gC?.size.height)!)
@@ -52,7 +40,7 @@ class CustomViewController: UIViewController {
         view.addSubview(genCalImage)
         
         splitImage()
-        
+        view.addSubview( imageFractions[levelCount] )
     }
     
     override func didReceiveMemoryWarning() {
@@ -65,9 +53,9 @@ class CustomViewController: UIViewController {
         let tempImage = gC?.cgImage
         var fractionsCount = 0
         
-        while(fractionsCount < choice){
+        while(fractionsCount < levels ){
             
-            let f1 = tempImage!.cropping(to: CGRect(x: 0, y: 0, width: (gC?.size.width)!, height: ( ((gC?.size.height)! / CGFloat(choice)) + (CGFloat(fractionsCount) * (gC?.size.height)! / CGFloat(choice)) )))
+            let f1 = tempImage!.cropping(to: CGRect(x: 0, y: 0, width: (gC?.size.width)!, height: ( ((gC?.size.height)! / CGFloat(levels)) + (CGFloat(fractionsCount) * (gC?.size.height)! / CGFloat(levels)) )))
             let fractIm1 = UIImage(cgImage: f1!)
             let bcP1Rect = CGRect(x:(self.view.bounds.size.width / 5), y:(self.view.bounds.size.height / 3), width:(fractIm1.size.width), height: (fractIm1.size.height))
             let casePart = UIView.init(frame: bcP1Rect)

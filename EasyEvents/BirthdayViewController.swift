@@ -11,7 +11,7 @@ import UIKit
 class BirthdayViewController: UIViewController {
 
     let bP = UIImage(named: "BirthdayPresent_Color.png")
-    let levels = 11
+    let levels = 10
     var levelCount = 0
     var imageFractions = [UIView]()
     
@@ -27,6 +27,7 @@ class BirthdayViewController: UIViewController {
         PercentLabel.text = "\(completion)% completed"
         DateLabel.text = date
         levelCount = Int( ( completion/100.0 )*Double( levels ) ) - 1
+        if levelCount < 0 { levelCount = 0 }
         
         //Draws greyed out version of the birthday present, meaning no progress made yet
         let presentRect = CGRect(x: (self.view.bounds.size.width / 4), y: (self.view.bounds.size.height / 5), width: (bP?.size.width)!, height: (bP?.size.height)!)

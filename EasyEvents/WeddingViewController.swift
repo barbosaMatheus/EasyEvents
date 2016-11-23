@@ -18,8 +18,6 @@ class WeddingViewController: UIViewController {
     @IBOutlet weak var DateLabel: UILabel!
     @IBOutlet weak var PercentLabel: UILabel!
     var date: String = ""
-    
-    //Matheus edit:
     var completion : Double = 0.0
     
     override func viewDidLoad() {
@@ -29,6 +27,7 @@ class WeddingViewController: UIViewController {
         PercentLabel.text = "\(completion)% completed"
         DateLabel.text = date
         levelCount = Int( ( completion/100.0 )*Double( levels ) ) - 1
+        if levelCount < 0 { levelCount = 0 }
         
         //Draws greyed out version of the wedding cake, meaning no progress made yet
         let cakeGreyRect = CGRect(x: (self.view.bounds.size.width / 16), y: (self.view.bounds.size.height / 10), width: (wC?.size.width)!, height: (wC?.size.height)!)

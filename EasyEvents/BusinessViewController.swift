@@ -17,27 +17,18 @@ class BusinessViewController: UIViewController {
     
     @IBOutlet weak var DateLabel: UILabel!
     @IBOutlet weak var PercentLabel: UILabel!
-    var date = Date()
     var completion : Double = 0.0
-    
-    @IBAction func AddLevelButton(_ sender: AnyObject) {
-        if(levelCount < levels){
-            view.addSubview(imageFractions[levelCount])
-            levelCount = levelCount + 1
-        }
-    }
+    var date: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor( patternImage: UIImage( named: "celebration.jpeg" )! )
         
         //EDIT THIS TO CHANGE THE PERCENT AND DATE LABELS WHEN SEGUEING IN
-        completion = 27.0
-        PercentLabel.text = "\(completion)%"
-        let format = DateFormatter()
-        format.dateFormat = "MM/dd/yyyy"
-        let thisDate = format.string(from: date)
-        DateLabel.text = thisDate
+        PercentLabel.text = "\(completion)% completed"
+        DateLabel.text = date
+        levelCount = Int( ( completion/100.0 )*Double( levels ) ) - 1
+        if levelCount < 0 { levelCount = 0 }
         
         //Draws greyed out version of the briefcase, meaning no progress made yet
         let briefcaseRect = CGRect(x: (self.view.bounds.size.width / 4), y: (self.view.bounds.size.height / 3), width: (bC?.size.width)!, height: (bC?.size.height)!)
@@ -47,7 +38,8 @@ class BusinessViewController: UIViewController {
         view.addSubview(briefcase)
         
         splitImage()
-        
+        print( levelCount )
+        view.addSubview( imageFractions[levelCount] )
     }
 
     override func didReceiveMemoryWarning() {
